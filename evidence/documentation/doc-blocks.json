@@ -1,0 +1,42 @@
+[
+  {
+    "language": "sql",
+    "code": "SET memory_limit = '128MiB';\nSET threads = 1;\nSET max_temp_directory_size = '0B';\nINSTALL httpfs;\nLOAD httpfs;\nATTACH 'https://huggingface.co/datasets/Nason/qcew-database/resolve/334c467dba413928233fb1d8cd1c0ff8de5c0105/qcew.duckdb' AS qcew (READ_ONLY);\n\n-- The one published national all-industry, all-ownership total. Never sum the whole table.\nSELECT area_title, annual_avg_estabs, annual_avg_emplvl, total_annual_wages, avg_annual_pay\nFROM qcew.annual\nWHERE area_fips = 'US000' AND own_code = '0' AND industry_code = '10'\n  AND agglvl_code = '10' AND size_code = '0' AND year = '2025' AND qtr = 'A';"
+  },
+  {
+    "language": "python",
+    "code": "import duckdb\ncon = duckdb.connect(config={\"memory_limit\": \"128MiB\", \"threads\": \"1\", \"max_temp_directory_size\": \"0B\"})\ncon.sql(\"INSTALL httpfs; LOAD httpfs;\")\ncon.sql(\"ATTACH 'https://huggingface.co/datasets/Nason/qcew-database/resolve/334c467dba413928233fb1d8cd1c0ff8de5c0105/qcew.duckdb' AS qcew (READ_ONLY)\")\ncon.sql(\"SELECT * FROM qcew._metadata\").show()\ncon.sql(\"\"\"\n    SELECT area_fips, area_title, annual_avg_emplvl, avg_annual_pay, disclosure_code\n    FROM qcew.annual\n    WHERE agglvl_code = '74' AND own_code = '5' AND industry_code = '62'\n      AND right(area_fips, 3) <> '999' AND annual_avg_emplvl > 0\n    ORDER BY annual_avg_emplvl DESC, area_fips LIMIT 20\n\"\"\").show()\ncon.close()"
+  },
+  {
+    "language": "r",
+    "code": "library(DBI)\ncon <- dbConnect(duckdb::duckdb(config = list(memory_limit = \"128MiB\", threads = \"1\", max_temp_directory_size = \"0B\")))\ndbExecute(con, \"INSTALL httpfs\")\ndbExecute(con, \"LOAD httpfs\")\ndbExecute(con, \"ATTACH 'https://huggingface.co/datasets/Nason/qcew-database/resolve/334c467dba413928233fb1d8cd1c0ff8de5c0105/qcew.duckdb' AS qcew (READ_ONLY)\")\ndbGetQuery(con, \"SELECT area_fips, area_title, annual_avg_emplvl, avg_annual_pay\n                 FROM qcew.annual\n                 WHERE agglvl_code = '55' AND own_code = '5' AND industry_code = '621'\n                 ORDER BY annual_avg_emplvl DESC NULLS LAST, area_fips\")\ndbDisconnect(con, shutdown = TRUE)"
+  },
+  {
+    "language": "python",
+    "code": "import datapond\nprint(datapond.list())\ndatapond.describe('qcew', table='annual_raw')\ncon = datapond.connect('qcew')\ncon.sql(\"SELECT annual_avg_emplvl, total_annual_wages FROM annual WHERE area_fips = 'US000' AND own_code = '0' AND industry_code = '10' AND agglvl_code = '10'\").show()\ncon.close()"
+  },
+  {
+    "language": "r",
+    "code": "library(datapond)\ndp_list()\ncon <- dp_connect('qcew')\ndp_describe(con, table = 'annual_raw')\nDBI::dbGetQuery(con, \"SELECT annual_avg_emplvl, total_annual_wages FROM annual WHERE area_fips = 'US000' AND own_code = '0' AND industry_code = '10' AND agglvl_code = '10'\")\ndp_disconnect(con)"
+  },
+  {
+    "language": "python",
+    "code": "import datapond\ndatapond.download('qcew')\ncon = datapond.connect('qcew', local=True)\ncon.sql(\"SELECT annual_avg_emplvl, total_annual_wages FROM annual WHERE area_fips = 'US000' AND own_code = '0' AND industry_code = '10' AND agglvl_code = '10'\").show()\ncon.close()"
+  },
+  {
+    "language": "r",
+    "code": "library(datapond)\ndp_download('qcew')\ncon <- dp_connect('qcew', local = TRUE)\nDBI::dbGetQuery(con, \"SELECT annual_avg_emplvl, total_annual_wages FROM annual WHERE area_fips = 'US000' AND own_code = '0' AND industry_code = '10' AND agglvl_code = '10'\")\ndp_disconnect(con)"
+  },
+  {
+    "language": "sql",
+    "code": "SELECT disclosure_code, count(*) AS source_cells,\n       count(annual_avg_emplvl) AS published_employment_cells,\n       sum(annual_avg_estabs) AS published_establishments_rounded\nFROM qcew.annual\nWHERE agglvl_code = '74' AND own_code = '5' AND industry_code = '62'\n  AND right(area_fips, 3) <> '999'\nGROUP BY disclosure_code ORDER BY disclosure_code;"
+  },
+  {
+    "language": "sql",
+    "code": "SELECT area_fips, area_title, annual_avg_emplvl, avg_annual_pay,\n       oty_annual_avg_emplvl_pct_chg, oty_disclosure_code\nFROM qcew.annual\nWHERE agglvl_code = '55' AND own_code = '5' AND industry_code = '621'\nORDER BY annual_avg_emplvl DESC NULLS LAST, area_fips;"
+  },
+  {
+    "language": "sql",
+    "code": "WITH selected AS (\n  SELECT area_fips, area_title, industry_code, annual_avg_emplvl, avg_annual_pay\n  FROM qcew.annual\n  WHERE agglvl_code = '75' AND own_code = '5'\n    AND industry_code IN ('621', '622') AND right(area_fips, 3) <> '999'\n)\nSELECT a.area_fips, a.area_title,\n       a.annual_avg_emplvl AS ambulatory_jobs, h.annual_avg_emplvl AS hospital_jobs,\n       a.avg_annual_pay AS ambulatory_pay, h.avg_annual_pay AS hospital_pay\nFROM selected a JOIN selected h ON a.area_fips = h.area_fips\nWHERE a.industry_code = '621' AND h.industry_code = '622'\nORDER BY a.area_fips LIMIT 20;"
+  }
+]

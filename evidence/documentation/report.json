@@ -1,0 +1,1371 @@
+{
+  "dataset": "qcew",
+  "utc": "2026-10-18T16:40:49.616694+00:00",
+  "status": "passed",
+  "python": {
+    "executable": "/home/inason/datapond-maintenance/.venv-datapond/bin/python",
+    "version": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "datapond_version": "0.1.1",
+    "module_path": "/home/inason/datapond-maintenance/.venv-datapond/lib/python3.12/site-packages/datapond/__init__.py",
+    "package_files_sha256": {
+      "__init__.py": "c086c414b3f8509f658fd500ffdab416fcacf91695167d9b30a7b61451b7aefe",
+      "cli.py": "6b2ed419a56d542d53746d067b95bb7d31993c7d721baaa5865ce5d2e249ef3f",
+      "connection.py": "ce66fb2275df2508ea39de9465cf45be5492613d6b88316a70c3ea92d110102a",
+      "describe.py": "f864342f4605968967cb94205b33a5f943b8accfa13d6e60fe675db8f168878a",
+      "download.py": "e092afee664b616bbd6397b4f457b4b0a8f9fe0ed46d6cc7d405685e4355a1b2",
+      "registry.py": "6fb32b8c5a1a3fc6020d5315d9c647c2a8f331fb4f0de074901788fbee2d61e1"
+    },
+    "duckdb_version": "1.5.4",
+    "download_sha256": "89bf1cef54f42f821965df6e9079b24fc7c4c0c86046fadc98e6cedf9ebd8a1d"
+  },
+  "r": {
+    "cran": {
+      "version": "0.1.0",
+      "library": "/mnt/c/Users/ignna/Documents/Codex/2026-10-17/task-2/libraries/cran/datapond",
+      "files_sha256": {
+        "DESCRIPTION": "c6be4a8a88f6eda1fbcf9c7dcb057c80c72eec8103ddc8f71a31c2df8c117800",
+        "INDEX": "a436399fc6a2967b3a8f2f61309d23679c30d613112402e5e1f24c459f9fd01e",
+        "LICENSE": "19c4566c98cc428077ff2a0c8306c4fd3b7262e5032cab5261b29b3ab50d5144",
+        "Meta/Rd.rds": "80ab8b7125a69b67dd9e9af3e10056977c1de7734524bfe4294c6c0960a57eb9",
+        "Meta/features.rds": "3d0dc41bc2f8db966da9c2b0e2a291e6137e628e676f88a64a127d73b459b93e",
+        "Meta/hsearch.rds": "f095ef8abadd071b2dc283b1a8d9b3f0156d501d5525dd4ea1fbf156d71ab06d",
+        "Meta/links.rds": "bf90953ba50a26d3233303e466226273cc095186d1d5e35d16875c5ad1787d20",
+        "Meta/nsInfo.rds": "edf70be297cd1c0fab37c01b53612a4c558a584ac8199aa4f461c32c65a33406",
+        "Meta/package.rds": "3ede01ba288b6b55c160b7a71890f1e11a4dbada4e2a8ce2638e122f3a82b9a7",
+        "Meta/vignette.rds": "5ea3b913eb6299b4e9ce463255ac30f08b3ae1098826ad8b699626fa04c706f6",
+        "NAMESPACE": "2b34b9a1928b532268a713f2aa5b293d694bf4dfd34e93312bf76a22c84c30f9",
+        "NEWS.md": "950b8aaf81e245d1aa898157346e470f156d0fcc9c08fba9a0f651aebdb77b55",
+        "R/datapond": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "R/datapond.rdb": "5355bf813373cdabb238756187ba23f9a3bba4e892687e33375bf5339c0c45e1",
+        "R/datapond.rdx": "c7961225524caf58c8d4e0120ca79246cdf262ce6043b6f8cc325952f09c4e52",
+        "WORDLIST": "55db6e05b58eb30d29f606bf0d943d467eb6a405aebfc17038d23215b59719b4",
+        "doc/datapond.R": "b1a21a6fd3f2f0cc390144a530a41f90afc275d4c301ef6707fb6a3d8c45cefb",
+        "doc/datapond.Rmd": "176cc6cd700b3efa0c10e5197b9dba54fdd35b6b8b30467340cc70c44b7f44e9",
+        "doc/datapond.html": "df0e03013fc6599cd146b2ce800603fa611f17f32b41c675ae97306acfe35199",
+        "doc/index.html": "870c658cefad3c8cfd2508141669fa69c42095004caf1409e2e451abccbd39f9",
+        "help/AnIndex": "4422615141ac6939b966b886aca2f81bece192f24c9afde7f63a5656f273a890",
+        "help/aliases.rds": "3c03a4636ba9325f02caead03dcc219a1050e21725f0b6f4625d63fff6f62656",
+        "help/datapond.rdb": "5e844b91c1e158ea8196978e635fdcf17b7405be4452b6fb3ad8e51866ce9d76",
+        "help/datapond.rdx": "b49ec0bb232a9bf555aa785507520be18604c6b280c8be6506f6b2a7347b6d19",
+        "help/paths.rds": "f4bf897947ff300d1b067a56f7fa406725cc8ee410c8366e6fc68e73f09fb636",
+        "html/00Index.html": "9bf61c91f9738711cb73c901ef7a1c1808dda62137dd2801b018ad1df5a6656b",
+        "html/R.css": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b"
+      },
+      "download_sha256": "89bf1cef54f42f821965df6e9079b24fc7c4c0c86046fadc98e6cedf9ebd8a1d",
+      "status": "passed"
+    },
+    "patched": {
+      "version": "0.1.1",
+      "library": "/mnt/c/Users/ignna/Documents/Codex/2026-10-17/task-2/libraries/patched/datapond",
+      "files_sha256": {
+        "DESCRIPTION": "236878b062c25b025cfcf188d0908b4645db8a94e0215da9d695971fda91c61d",
+        "INDEX": "88b0ab6bad98d39c97cf926f027c342d6b712200ff6464cf9f88a16881159cb0",
+        "LICENSE": "19c4566c98cc428077ff2a0c8306c4fd3b7262e5032cab5261b29b3ab50d5144",
+        "Meta/Rd.rds": "ad529c9e8702435a0b60800d1e0e9cf42d7f6dca06086ea1ccfd7690df370019",
+        "Meta/features.rds": "3d0dc41bc2f8db966da9c2b0e2a291e6137e628e676f88a64a127d73b459b93e",
+        "Meta/hsearch.rds": "b7b23cfdef7dc6e4061b02853088acbc322943bf004d3e6ac0308e41be2622ab",
+        "Meta/links.rds": "bf90953ba50a26d3233303e466226273cc095186d1d5e35d16875c5ad1787d20",
+        "Meta/nsInfo.rds": "edf70be297cd1c0fab37c01b53612a4c558a584ac8199aa4f461c32c65a33406",
+        "Meta/package.rds": "d88e9042215486569cd64bf04fa1b05c39169f2deb2300deae47b83abb47047c",
+        "Meta/vignette.rds": "5ea3b913eb6299b4e9ce463255ac30f08b3ae1098826ad8b699626fa04c706f6",
+        "NAMESPACE": "2b34b9a1928b532268a713f2aa5b293d694bf4dfd34e93312bf76a22c84c30f9",
+        "NEWS.md": "4be1b78818d2980719e0d404d22f6c4f228a24e3e5900103230ef6ef1b84d660",
+        "R/datapond": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "R/datapond.rdb": "1d68d1ce062ec8697d1f391a753b9534635932ec5bb59fb692413d9b897a9f10",
+        "R/datapond.rdx": "f3da9e79f80fb13cdf39714ef3ab6a3e40078a44b2010c4a76abeb68700a5baa",
+        "WORDLIST": "55db6e05b58eb30d29f606bf0d943d467eb6a405aebfc17038d23215b59719b4",
+        "doc/datapond.R": "4bf881be8f3353a3ee2f7aa4537ae197e7fac1a58fa97d77a79c8ab340f4c91c",
+        "doc/datapond.Rmd": "3150ba1281868a0a3bc0830a11945095ab8b148120934c7e8a35c8393881fbb3",
+        "doc/datapond.html": "7fa3ca39f697f79df38e39cb54f9028d46725217808f314a18e49e38b7cb11d8",
+        "doc/index.html": "870c658cefad3c8cfd2508141669fa69c42095004caf1409e2e451abccbd39f9",
+        "help/AnIndex": "4422615141ac6939b966b886aca2f81bece192f24c9afde7f63a5656f273a890",
+        "help/aliases.rds": "3c03a4636ba9325f02caead03dcc219a1050e21725f0b6f4625d63fff6f62656",
+        "help/datapond.rdb": "bea5c70616c6113ee861ca21814dbebea614019091d27592e5d4262ccee11236",
+        "help/datapond.rdx": "c74190c0b083ded7cad542c5944292a648b375d2ea244e4c3f4532496a75fa25",
+        "help/paths.rds": "197785819eaa6edb60c75b6f3cdfecd222cbaaa14db88165e7398f343bf4c9fb",
+        "html/00Index.html": "c387e6cf3ab54de94599e909347742d86b2d0538e2e785bee98c0303ecde0ab1",
+        "html/R.css": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b"
+      },
+      "download_sha256": "89bf1cef54f42f821965df6e9079b24fc7c4c0c86046fadc98e6cedf9ebd8a1d",
+      "status": "passed"
+    }
+  },
+  "metadata_totals": [
+    6,
+    3096467,
+    48
+  ],
+  "schema": [
+    [
+      "_columns",
+      "table_name",
+      "VARCHAR"
+    ],
+    [
+      "_columns",
+      "column_name",
+      "VARCHAR"
+    ],
+    [
+      "_columns",
+      "data_type",
+      "VARCHAR"
+    ],
+    [
+      "_columns",
+      "source_file",
+      "VARCHAR"
+    ],
+    [
+      "_columns",
+      "example_value",
+      "VARCHAR"
+    ],
+    [
+      "_columns",
+      "join_hint",
+      "VARCHAR"
+    ],
+    [
+      "_columns",
+      "null_pct",
+      "DOUBLE"
+    ],
+    [
+      "_columns",
+      "description",
+      "VARCHAR"
+    ],
+    [
+      "_columns",
+      "source_header",
+      "VARCHAR"
+    ],
+    [
+      "_metadata",
+      "table_name",
+      "VARCHAR"
+    ],
+    [
+      "_metadata",
+      "description",
+      "VARCHAR"
+    ],
+    [
+      "_metadata",
+      "row_count",
+      "BIGINT"
+    ],
+    [
+      "_metadata",
+      "column_count",
+      "INTEGER"
+    ],
+    [
+      "_metadata",
+      "source_url",
+      "VARCHAR"
+    ],
+    [
+      "_metadata",
+      "license",
+      "VARCHAR"
+    ],
+    [
+      "_metadata",
+      "built_at",
+      "TIMESTAMP"
+    ],
+    [
+      "_metadata",
+      "source_file",
+      "VARCHAR"
+    ],
+    [
+      "_metadata",
+      "source_sha256",
+      "VARCHAR"
+    ],
+    [
+      "_metadata",
+      "source_release",
+      "VARCHAR"
+    ],
+    [
+      "aggregation_levels",
+      "agglvl_code",
+      "VARCHAR"
+    ],
+    [
+      "aggregation_levels",
+      "agglvl_title",
+      "VARCHAR"
+    ],
+    [
+      "annual",
+      "area_fips",
+      "VARCHAR"
+    ],
+    [
+      "annual",
+      "own_code",
+      "VARCHAR"
+    ],
+    [
+      "annual",
+      "industry_code",
+      "VARCHAR"
+    ],
+    [
+      "annual",
+      "agglvl_code",
+      "VARCHAR"
+    ],
+    [
+      "annual",
+      "size_code",
+      "VARCHAR"
+    ],
+    [
+      "annual",
+      "year",
+      "VARCHAR"
+    ],
+    [
+      "annual",
+      "qtr",
+      "VARCHAR"
+    ],
+    [
+      "annual",
+      "disclosure_code",
+      "VARCHAR"
+    ],
+    [
+      "annual",
+      "annual_avg_estabs",
+      "BIGINT"
+    ],
+    [
+      "annual",
+      "annual_avg_emplvl",
+      "BIGINT"
+    ],
+    [
+      "annual",
+      "total_annual_wages",
+      "BIGINT"
+    ],
+    [
+      "annual",
+      "taxable_annual_wages",
+      "BIGINT"
+    ],
+    [
+      "annual",
+      "annual_contributions",
+      "BIGINT"
+    ],
+    [
+      "annual",
+      "annual_avg_wkly_wage",
+      "BIGINT"
+    ],
+    [
+      "annual",
+      "avg_annual_pay",
+      "BIGINT"
+    ],
+    [
+      "annual",
+      "lq_disclosure_code",
+      "VARCHAR"
+    ],
+    [
+      "annual",
+      "lq_annual_avg_estabs",
+      "DECIMAL(18,2)"
+    ],
+    [
+      "annual",
+      "lq_annual_avg_emplvl",
+      "DECIMAL(18,2)"
+    ],
+    [
+      "annual",
+      "lq_total_annual_wages",
+      "DECIMAL(18,2)"
+    ],
+    [
+      "annual",
+      "lq_taxable_annual_wages",
+      "DECIMAL(18,2)"
+    ],
+    [
+      "annual",
+      "lq_annual_contributions",
+      "DECIMAL(18,2)"
+    ],
+    [
+      "annual",
+      "lq_annual_avg_wkly_wage",
+      "DECIMAL(18,2)"
+    ],
+    [
+      "annual",
+      "lq_avg_annual_pay",
+      "DECIMAL(18,2)"
+    ],
+    [
+      "annual",
+      "oty_disclosure_code",
+      "VARCHAR"
+    ],
+    [
+      "annual",
+      "oty_annual_avg_estabs_chg",
+      "BIGINT"
+    ],
+    [
+      "annual",
+      "oty_annual_avg_estabs_pct_chg",
+      "DECIMAL(18,1)"
+    ],
+    [
+      "annual",
+      "oty_annual_avg_emplvl_chg",
+      "BIGINT"
+    ],
+    [
+      "annual",
+      "oty_annual_avg_emplvl_pct_chg",
+      "DECIMAL(18,1)"
+    ],
+    [
+      "annual",
+      "oty_total_annual_wages_chg",
+      "BIGINT"
+    ],
+    [
+      "annual",
+      "oty_total_annual_wages_pct_chg",
+      "DECIMAL(18,1)"
+    ],
+    [
+      "annual",
+      "oty_taxable_annual_wages_chg",
+      "BIGINT"
+    ],
+    [
+      "annual",
+      "oty_taxable_annual_wages_pct_chg",
+      "DECIMAL(18,1)"
+    ],
+    [
+      "annual",
+      "oty_annual_contributions_chg",
+      "BIGINT"
+    ],
+    [
+      "annual",
+      "oty_annual_contributions_pct_chg",
+      "DECIMAL(18,1)"
+    ],
+    [
+      "annual",
+      "oty_annual_avg_wkly_wage_chg",
+      "BIGINT"
+    ],
+    [
+      "annual",
+      "oty_annual_avg_wkly_wage_pct_chg",
+      "DECIMAL(18,1)"
+    ],
+    [
+      "annual",
+      "oty_avg_annual_pay_chg",
+      "BIGINT"
+    ],
+    [
+      "annual",
+      "oty_avg_annual_pay_pct_chg",
+      "DECIMAL(18,1)"
+    ],
+    [
+      "annual",
+      "area_title",
+      "VARCHAR"
+    ],
+    [
+      "annual",
+      "own_title",
+      "VARCHAR"
+    ],
+    [
+      "annual",
+      "industry_title",
+      "VARCHAR"
+    ],
+    [
+      "annual",
+      "agglvl_title",
+      "VARCHAR"
+    ],
+    [
+      "annual",
+      "size_title",
+      "VARCHAR"
+    ],
+    [
+      "annual_raw",
+      "area_fips",
+      "VARCHAR"
+    ],
+    [
+      "annual_raw",
+      "own_code",
+      "VARCHAR"
+    ],
+    [
+      "annual_raw",
+      "industry_code",
+      "VARCHAR"
+    ],
+    [
+      "annual_raw",
+      "agglvl_code",
+      "VARCHAR"
+    ],
+    [
+      "annual_raw",
+      "size_code",
+      "VARCHAR"
+    ],
+    [
+      "annual_raw",
+      "year",
+      "VARCHAR"
+    ],
+    [
+      "annual_raw",
+      "qtr",
+      "VARCHAR"
+    ],
+    [
+      "annual_raw",
+      "disclosure_code",
+      "VARCHAR"
+    ],
+    [
+      "annual_raw",
+      "annual_avg_estabs",
+      "BIGINT"
+    ],
+    [
+      "annual_raw",
+      "annual_avg_emplvl",
+      "BIGINT"
+    ],
+    [
+      "annual_raw",
+      "total_annual_wages",
+      "BIGINT"
+    ],
+    [
+      "annual_raw",
+      "taxable_annual_wages",
+      "BIGINT"
+    ],
+    [
+      "annual_raw",
+      "annual_contributions",
+      "BIGINT"
+    ],
+    [
+      "annual_raw",
+      "annual_avg_wkly_wage",
+      "BIGINT"
+    ],
+    [
+      "annual_raw",
+      "avg_annual_pay",
+      "BIGINT"
+    ],
+    [
+      "annual_raw",
+      "lq_disclosure_code",
+      "VARCHAR"
+    ],
+    [
+      "annual_raw",
+      "lq_annual_avg_estabs",
+      "DECIMAL(18,2)"
+    ],
+    [
+      "annual_raw",
+      "lq_annual_avg_emplvl",
+      "DECIMAL(18,2)"
+    ],
+    [
+      "annual_raw",
+      "lq_total_annual_wages",
+      "DECIMAL(18,2)"
+    ],
+    [
+      "annual_raw",
+      "lq_taxable_annual_wages",
+      "DECIMAL(18,2)"
+    ],
+    [
+      "annual_raw",
+      "lq_annual_contributions",
+      "DECIMAL(18,2)"
+    ],
+    [
+      "annual_raw",
+      "lq_annual_avg_wkly_wage",
+      "DECIMAL(18,2)"
+    ],
+    [
+      "annual_raw",
+      "lq_avg_annual_pay",
+      "DECIMAL(18,2)"
+    ],
+    [
+      "annual_raw",
+      "oty_disclosure_code",
+      "VARCHAR"
+    ],
+    [
+      "annual_raw",
+      "oty_annual_avg_estabs_chg",
+      "BIGINT"
+    ],
+    [
+      "annual_raw",
+      "oty_annual_avg_estabs_pct_chg",
+      "DECIMAL(18,1)"
+    ],
+    [
+      "annual_raw",
+      "oty_annual_avg_emplvl_chg",
+      "BIGINT"
+    ],
+    [
+      "annual_raw",
+      "oty_annual_avg_emplvl_pct_chg",
+      "DECIMAL(18,1)"
+    ],
+    [
+      "annual_raw",
+      "oty_total_annual_wages_chg",
+      "BIGINT"
+    ],
+    [
+      "annual_raw",
+      "oty_total_annual_wages_pct_chg",
+      "DECIMAL(18,1)"
+    ],
+    [
+      "annual_raw",
+      "oty_taxable_annual_wages_chg",
+      "BIGINT"
+    ],
+    [
+      "annual_raw",
+      "oty_taxable_annual_wages_pct_chg",
+      "DECIMAL(18,1)"
+    ],
+    [
+      "annual_raw",
+      "oty_annual_contributions_chg",
+      "BIGINT"
+    ],
+    [
+      "annual_raw",
+      "oty_annual_contributions_pct_chg",
+      "DECIMAL(18,1)"
+    ],
+    [
+      "annual_raw",
+      "oty_annual_avg_wkly_wage_chg",
+      "BIGINT"
+    ],
+    [
+      "annual_raw",
+      "oty_annual_avg_wkly_wage_pct_chg",
+      "DECIMAL(18,1)"
+    ],
+    [
+      "annual_raw",
+      "oty_avg_annual_pay_chg",
+      "BIGINT"
+    ],
+    [
+      "annual_raw",
+      "oty_avg_annual_pay_pct_chg",
+      "DECIMAL(18,1)"
+    ],
+    [
+      "areas",
+      "area_fips",
+      "VARCHAR"
+    ],
+    [
+      "areas",
+      "area_title",
+      "VARCHAR"
+    ],
+    [
+      "industries",
+      "industry_code",
+      "VARCHAR"
+    ],
+    [
+      "industries",
+      "industry_title",
+      "VARCHAR"
+    ],
+    [
+      "ownerships",
+      "own_code",
+      "VARCHAR"
+    ],
+    [
+      "ownerships",
+      "own_title",
+      "VARCHAR"
+    ],
+    [
+      "size_classes",
+      "size_code",
+      "VARCHAR"
+    ],
+    [
+      "size_classes",
+      "size_title",
+      "VARCHAR"
+    ]
+  ],
+  "blocks": [
+    {
+      "block": 0,
+      "language": "sql",
+      "sha256": "1fc923eb016f6677944d0f2a12ae828a0e7ddac3441525a01d260c0b426be45e",
+      "rows": [
+        [
+          "U.S. TOTAL",
+          12112924,
+          155732363,
+          12259226899972,
+          78720
+        ]
+      ],
+      "columns": [
+        "area_title",
+        "annual_avg_estabs",
+        "annual_avg_emplvl",
+        "total_annual_wages",
+        "avg_annual_pay"
+      ]
+    },
+    {
+      "block": 1,
+      "language": "python",
+      "sha256": "d6dcff8e33765d4124c6c5561c40a61b939716a3cb4b335b673a8baf5396cce6",
+      "status": "passed"
+    },
+    {
+      "block": 3,
+      "language": "python",
+      "sha256": "dd16bf5aaa3dd7c72237d69602a913ad9cb64811f2cf10ff91e57582872422b3",
+      "status": "passed"
+    },
+    {
+      "block": 5,
+      "language": "python",
+      "sha256": "47259a0d2595dd9850fee35e1398aef04f71048024f779124604673ea0579ca2",
+      "status": "passed"
+    },
+    {
+      "block": 7,
+      "language": "sql",
+      "sha256": "7e593c64861ebdd240ee29dbbb0c1d23c576f86649b040255331d624c1a2470f",
+      "rows": [
+        [
+          "",
+          1773,
+          1773,
+          1918348
+        ],
+        [
+          "N",
+          1436,
+          0,
+          99078
+        ]
+      ],
+      "columns": [
+        "disclosure_code",
+        "source_cells",
+        "published_employment_cells",
+        "published_establishments_rounded"
+      ]
+    },
+    {
+      "block": 8,
+      "language": "sql",
+      "sha256": "aec08958d098705692262093d080b1efabaae51dc1f66fccf7a37d514c0ecfae",
+      "rows": [
+        [
+          "06000",
+          "California -- Statewide",
+          1079831,
+          91236,
+          "5.0",
+          ""
+        ],
+        [
+          "48000",
+          "Texas -- Statewide",
+          895257,
+          68749,
+          "3.7",
+          ""
+        ],
+        [
+          "36000",
+          "New York -- Statewide",
+          702328,
+          66599,
+          "-6.8",
+          ""
+        ],
+        [
+          "12000",
+          "Florida -- Statewide",
+          625354,
+          81877,
+          "3.0",
+          ""
+        ],
+        [
+          "42000",
+          "Pennsylvania -- Statewide",
+          387664,
+          85849,
+          "3.0",
+          ""
+        ],
+        [
+          "39000",
+          "Ohio -- Statewide",
+          316554,
+          78304,
+          "6.6",
+          ""
+        ],
+        [
+          "17000",
+          "Illinois -- Statewide",
+          313679,
+          72183,
+          "5.2",
+          ""
+        ],
+        [
+          "13000",
+          "Georgia -- Statewide",
+          285483,
+          79262,
+          "4.9",
+          ""
+        ],
+        [
+          "34000",
+          "New Jersey -- Statewide",
+          279793,
+          82422,
+          "4.8",
+          ""
+        ],
+        [
+          "37000",
+          "North Carolina -- Statewide",
+          252979,
+          75454,
+          "3.9",
+          ""
+        ],
+        [
+          "51000",
+          "Virginia -- Statewide",
+          234870,
+          78990,
+          "4.8",
+          ""
+        ],
+        [
+          "26000",
+          "Michigan -- Statewide",
+          228068,
+          71095,
+          "2.7",
+          ""
+        ],
+        [
+          "04000",
+          "Arizona -- Statewide",
+          218639,
+          77887,
+          "2.4",
+          ""
+        ],
+        [
+          "25000",
+          "Massachusetts -- Statewide",
+          200042,
+          89269,
+          "3.4",
+          ""
+        ],
+        [
+          "18000",
+          "Indiana -- Statewide",
+          181654,
+          79605,
+          "2.1",
+          ""
+        ],
+        [
+          "47000",
+          "Tennessee -- Statewide",
+          181376,
+          81660,
+          "3.1",
+          ""
+        ],
+        [
+          "53000",
+          "Washington -- Statewide",
+          178077,
+          86938,
+          "3.1",
+          ""
+        ],
+        [
+          "27000",
+          "Minnesota -- Statewide",
+          168810,
+          94952,
+          "2.5",
+          ""
+        ],
+        [
+          "24000",
+          "Maryland -- Statewide",
+          166181,
+          81626,
+          "1.6",
+          ""
+        ],
+        [
+          "08000",
+          "Colorado -- Statewide",
+          164733,
+          80298,
+          "5.1",
+          ""
+        ],
+        [
+          "55000",
+          "Wisconsin -- Statewide",
+          141125,
+          92514,
+          "2.9",
+          ""
+        ],
+        [
+          "29000",
+          "Missouri -- Statewide",
+          138092,
+          82790,
+          "2.1",
+          ""
+        ],
+        [
+          "45000",
+          "South Carolina -- Statewide",
+          119888,
+          78732,
+          "3.5",
+          ""
+        ],
+        [
+          "22000",
+          "Louisiana -- Statewide",
+          115409,
+          66828,
+          "1.1",
+          ""
+        ],
+        [
+          "01000",
+          "Alabama -- Statewide",
+          111343,
+          79318,
+          "1.7",
+          ""
+        ],
+        [
+          "41000",
+          "Oregon -- Statewide",
+          107450,
+          85230,
+          "4.0",
+          ""
+        ],
+        [
+          "21000",
+          "Kentucky -- Statewide",
+          103343,
+          80988,
+          "2.7",
+          ""
+        ],
+        [
+          "09000",
+          "Connecticut -- Statewide",
+          100489,
+          90513,
+          "2.1",
+          ""
+        ],
+        [
+          "40000",
+          "Oklahoma -- Statewide",
+          90911,
+          70555,
+          "3.5",
+          ""
+        ],
+        [
+          "49000",
+          "Utah -- Statewide",
+          86980,
+          63533,
+          "4.7",
+          ""
+        ],
+        [
+          "32000",
+          "Nevada -- Statewide",
+          78067,
+          78406,
+          "5.6",
+          ""
+        ],
+        [
+          "05000",
+          "Arkansas -- Statewide",
+          69502,
+          74475,
+          "2.8",
+          ""
+        ],
+        [
+          "20000",
+          "Kansas -- Statewide",
+          67618,
+          79597,
+          "3.5",
+          ""
+        ],
+        [
+          "19000",
+          "Iowa -- Statewide",
+          61290,
+          81069,
+          "0.6",
+          ""
+        ],
+        [
+          "28000",
+          "Mississippi -- Statewide",
+          60074,
+          71047,
+          "3.3",
+          ""
+        ],
+        [
+          "16000",
+          "Idaho -- Statewide",
+          55036,
+          57703,
+          "4.8",
+          ""
+        ],
+        [
+          "31000",
+          "Nebraska -- Statewide",
+          52752,
+          83383,
+          "5.0",
+          ""
+        ],
+        [
+          "35000",
+          "New Mexico -- Statewide",
+          50341,
+          58410,
+          "3.8",
+          ""
+        ],
+        [
+          "72000",
+          "Puerto Rico -- Statewide",
+          47460,
+          36471,
+          "2.5",
+          ""
+        ],
+        [
+          "54000",
+          "West Virginia -- Statewide",
+          43436,
+          72700,
+          "2.1",
+          ""
+        ],
+        [
+          "33000",
+          "New Hampshire -- Statewide",
+          38468,
+          98930,
+          "3.3",
+          ""
+        ],
+        [
+          "23000",
+          "Maine -- Statewide",
+          37554,
+          81264,
+          "3.2",
+          ""
+        ],
+        [
+          "15000",
+          "Hawaii -- Statewide",
+          34620,
+          92037,
+          "2.4",
+          ""
+        ],
+        [
+          "44000",
+          "Rhode Island -- Statewide",
+          30068,
+          78568,
+          "1.6",
+          ""
+        ],
+        [
+          "10000",
+          "Delaware -- Statewide",
+          25993,
+          73100,
+          "1.3",
+          ""
+        ],
+        [
+          "30000",
+          "Montana -- Statewide",
+          24571,
+          76569,
+          "-0.6",
+          ""
+        ],
+        [
+          "02000",
+          "Alaska -- Statewide",
+          23358,
+          80685,
+          "2.3",
+          ""
+        ],
+        [
+          "11000",
+          "District of Columbia, not unknown",
+          21264,
+          108440,
+          "4.7",
+          ""
+        ],
+        [
+          "46000",
+          "South Dakota -- Statewide",
+          20780,
+          92792,
+          "3.3",
+          ""
+        ],
+        [
+          "50000",
+          "Vermont -- Statewide",
+          17286,
+          82117,
+          "1.2",
+          ""
+        ],
+        [
+          "38000",
+          "North Dakota -- Statewide",
+          17039,
+          101052,
+          "4.7",
+          ""
+        ],
+        [
+          "56000",
+          "Wyoming -- Statewide",
+          11422,
+          71045,
+          "1.1",
+          ""
+        ],
+        [
+          "78000",
+          "Virgin Islands -- Statewide",
+          1215,
+          52708,
+          "-12.6",
+          ""
+        ]
+      ],
+      "columns": [
+        "area_fips",
+        "area_title",
+        "annual_avg_emplvl",
+        "avg_annual_pay",
+        "oty_annual_avg_emplvl_pct_chg",
+        "oty_disclosure_code"
+      ]
+    },
+    {
+      "block": 9,
+      "language": "sql",
+      "sha256": "504c9be7a4aae94ae5e9e20186245d5f9e9a2483b3f9fdc3a4c4a6cb2cf63cfb",
+      "rows": [
+        [
+          "01001",
+          "Autauga County, Alabama",
+          590,
+          3,
+          56211,
+          53999
+        ],
+        [
+          "01003",
+          "Baldwin County, Alabama",
+          5075,
+          2768,
+          74693,
+          71500
+        ],
+        [
+          "01005",
+          "Barbour County, Alabama",
+          328,
+          null,
+          62468,
+          null
+        ],
+        [
+          "01009",
+          "Blount County, Alabama",
+          405,
+          null,
+          50804,
+          null
+        ],
+        [
+          "01011",
+          "Bullock County, Alabama",
+          148,
+          null,
+          58283,
+          null
+        ],
+        [
+          "01013",
+          "Butler County, Alabama",
+          210,
+          null,
+          59505,
+          null
+        ],
+        [
+          "01015",
+          "Calhoun County, Alabama",
+          2523,
+          null,
+          60820,
+          null
+        ],
+        [
+          "01019",
+          "Cherokee County, Alabama",
+          226,
+          null,
+          63005,
+          null
+        ],
+        [
+          "01023",
+          "Choctaw County, Alabama",
+          132,
+          null,
+          59817,
+          null
+        ],
+        [
+          "01025",
+          "Clarke County, Alabama",
+          286,
+          null,
+          51513,
+          null
+        ],
+        [
+          "01027",
+          "Clay County, Alabama",
+          84,
+          null,
+          48073,
+          null
+        ],
+        [
+          "01031",
+          "Coffee County, Alabama",
+          1034,
+          null,
+          66765,
+          null
+        ],
+        [
+          "01033",
+          "Colbert County, Alabama",
+          1193,
+          null,
+          62771,
+          null
+        ],
+        [
+          "01035",
+          "Conecuh County, Alabama",
+          109,
+          null,
+          67583,
+          null
+        ],
+        [
+          "01039",
+          "Covington County, Alabama",
+          710,
+          null,
+          54199,
+          null
+        ],
+        [
+          "01041",
+          "Crenshaw County, Alabama",
+          52,
+          null,
+          58782,
+          null
+        ],
+        [
+          "01043",
+          "Cullman County, Alabama",
+          1433,
+          null,
+          63837,
+          null
+        ],
+        [
+          "01047",
+          "Dallas County, Alabama",
+          426,
+          null,
+          70849,
+          null
+        ],
+        [
+          "01049",
+          "DeKalb County, Alabama",
+          1102,
+          null,
+          54459,
+          null
+        ],
+        [
+          "01051",
+          "Elmore County, Alabama",
+          677,
+          null,
+          59799,
+          null
+        ]
+      ],
+      "columns": [
+        "area_fips",
+        "area_title",
+        "ambulatory_jobs",
+        "hospital_jobs",
+        "ambulatory_pay",
+        "hospital_pay"
+      ]
+    }
+  ],
+  "live_default_ids": [
+    "eoir",
+    "ice",
+    "fec",
+    "clinicaltrials",
+    "cms-medicare",
+    "openpayments",
+    "dol-visas",
+    "ipeds-db",
+    "fjc",
+    "cbp",
+    "ussc",
+    "cook-sao",
+    "fjc-judges",
+    "scdb",
+    "open-policing",
+    "courtlistener"
+  ],
+  "candidate_ids": [
+    "eoir",
+    "ice",
+    "fec",
+    "clinicaltrials",
+    "cms-medicare",
+    "openpayments",
+    "dol-visas",
+    "ipeds-db",
+    "fjc",
+    "cbp",
+    "ussc",
+    "cook-sao",
+    "fjc-judges",
+    "scdb",
+    "open-policing",
+    "courtlistener",
+    "onet",
+    "qcew",
+    "fars"
+  ],
+  "artifact_sha256": "89bf1cef54f42f821965df6e9079b24fc7c4c0c86046fadc98e6cedf9ebd8a1d",
+  "scope": "Final Markdown Python and R examples executed for remote, discovery/schema, download and local modes. Standalone SQL executed with Python DuckDB. Registry fixture supplied through isolated Python cache / R registry option. Default URL separately returned 16 entries without the additions. Constructors bounded to 128MiB/one thread/no spill; INSTALL replaced with LOAD of preinstalled httpfs. No software installed. Python Hugging Face optional dependency is absent, so download used the immutable requests fallback. No claim that a different default shell import or current source checkout was tested."
+}

@@ -1,0 +1,1196 @@
+R R version 4.5.3 (2026-03-11) duckdb 1.5.5 datapond 0.1.0 path /mnt/c/Users/ignna/Documents/Codex/2026-10-17/task-2/libraries/cran/datapond 
+ [1] "eoir"           "ice"            "fec"            "clinicaltrials"
+ [5] "cms-medicare"   "openpayments"   "dol-visas"      "ipeds-db"      
+ [9] "fjc"            "cbp"            "ussc"           "cook-sao"      
+[13] "fjc-judges"     "scdb"           "open-policing"  "courtlistener" 
+$databases
+$databases[[1]]
+$databases[[1]]$id
+[1] "eoir"
+
+$databases[[1]]$name
+[1] "EOIR Immigration Court Database"
+
+$databases[[1]]$description
+[1] "Every immigration court proceeding since the 1970s: hearings, charges, decisions, judges, representation, bond, appeals"
+
+$databases[[1]]$rows
+[1] 173278686
+
+$databases[[1]]$tables
+[1] 97
+
+$databases[[1]]$size_gb
+[1] 4.4
+
+$databases[[1]]$source
+[1] "DOJ Executive Office for Immigration Review"
+
+$databases[[1]]$source_url
+[1] "https://www.justice.gov/eoir/foia-library-0"
+
+$databases[[1]]$github
+[1] "https://github.com/ian-nason/eoir-database"
+
+$databases[[1]]$huggingface
+[1] "https://huggingface.co/datasets/Nason/eoir-database"
+
+$databases[[1]]$attach_url
+[1] "https://huggingface.co/datasets/Nason/eoir-database/resolve/main/eoir.duckdb"
+
+$databases[[1]]$dictionary_url
+[1] "https://github.com/ian-nason/eoir-database/blob/main/DICTIONARY.md"
+
+$databases[[1]]$data_date_range
+[1] "1990-2026"
+
+$databases[[1]]$last_rebuilt
+[1] "2026-09-14"
+
+$databases[[1]]$update_frequency
+[1] "Monthly"
+
+$databases[[1]]$maintainer
+[1] "Ian Nason"
+
+$databases[[1]]$license
+[1] "Public domain"
+
+$databases[[1]]$updated
+[1] "2026-09-14"
+
+
+$databases[[2]]
+$databases[[2]]$id
+[1] "ice"
+
+$databases[[2]]$name
+[1] "ICE Enforcement Database"
+
+$databases[[2]]$description
+[1] "Individual-level records of ICE arrests, detainers, detentions, removals, encounters, and RCA decisions with linked anonymized IDs"
+
+$databases[[2]]$rows
+[1] 23568538
+
+$databases[[2]]$tables
+[1] 6
+
+$databases[[2]]$size_gb
+[1] 1.8
+
+$databases[[2]]$source
+[1] "Deportation Data Project (FOIA litigation)"
+
+$databases[[2]]$source_url
+[1] "https://deportationdata.org"
+
+$databases[[2]]$github
+[1] "https://github.com/ian-nason/ice-database"
+
+$databases[[2]]$huggingface
+[1] "https://huggingface.co/datasets/Nason/ice-database"
+
+$databases[[2]]$attach_url
+[1] "https://huggingface.co/datasets/Nason/ice-database/resolve/main/ice.duckdb"
+
+$databases[[2]]$dictionary_url
+[1] "https://github.com/ian-nason/ice-database/blob/main/DICTIONARY.md"
+
+$databases[[2]]$data_date_range
+[1] "2003-2026"
+
+$databases[[2]]$last_rebuilt
+[1] "2026-09-14"
+
+$databases[[2]]$update_frequency
+[1] "Irregular (FOIA releases)"
+
+$databases[[2]]$maintainer
+[1] "Ian Nason"
+
+$databases[[2]]$license
+[1] "CC-0"
+
+$databases[[2]]$updated
+[1] "2026-09-14"
+
+
+$databases[[3]]
+$databases[[3]]$id
+[1] "fec"
+
+$databases[[3]]$name
+[1] "FEC Campaign Finance Database"
+
+$databases[[3]]$description
+[1] "Audited frozen October 18, 2026 FEC snapshot across 12 election cycles (2004-2026): individual donations, PAC contributions, committee expenditures and independent spending; historical parser/source changes, quote interpretation and malformed-date NULLs documented in the artifact provenance"
+
+$databases[[3]]$rows
+[1] 356327912
+
+$databases[[3]]$tables
+[1] 10
+
+$databases[[3]]$size_gb
+[1] 19.689
+
+$databases[[3]]$source
+[1] "Federal Election Commission"
+
+$databases[[3]]$source_url
+[1] "https://www.fec.gov/data/browse-data/?tab=bulk-data"
+
+$databases[[3]]$github
+[1] "https://github.com/ian-nason/fec-database"
+
+$databases[[3]]$huggingface
+[1] "https://huggingface.co/datasets/Nason/fec-database"
+
+$databases[[3]]$attach_url
+[1] "https://huggingface.co/datasets/Nason/fec-database/resolve/main/fec.duckdb"
+
+$databases[[3]]$dictionary_url
+[1] "https://huggingface.co/datasets/Nason/fec-database/resolve/main/DICTIONARY.md"
+
+$databases[[3]]$data_date_range
+[1] "2004-2026"
+
+$databases[[3]]$last_rebuilt
+[1] "2026-10-18"
+
+$databases[[3]]$update_frequency
+[1] "Quarterly rebuilds; frozen source editions recorded in artifact provenance"
+
+$databases[[3]]$maintainer
+[1] "Ian Nason"
+
+$databases[[3]]$license
+[1] "Public domain"
+
+$databases[[3]]$updated
+[1] "2026-10-18"
+
+
+$databases[[4]]
+$databases[[4]]$id
+[1] "clinicaltrials"
+
+$databases[[4]]$name
+[1] "ClinicalTrials.gov Database"
+
+$databases[[4]]$description
+[1] "Every registered clinical trial: protocols, conditions, interventions, outcomes, sponsors, facilities, eligibility, and results from AACT/ClinicalTrials.gov"
+
+$databases[[4]]$rows
+[1] 59028978
+
+$databases[[4]]$tables
+[1] 48
+
+$databases[[4]]$size_gb
+[1] 7.1
+
+$databases[[4]]$source
+[1] "AACT / Clinical Trials Transformation Initiative"
+
+$databases[[4]]$source_url
+[1] "https://aact.ctti-clinicaltrials.org/"
+
+$databases[[4]]$github
+[1] "https://github.com/ian-nason/clinicaltrials-database"
+
+$databases[[4]]$huggingface
+[1] "https://huggingface.co/datasets/Nason/clinicaltrials-database"
+
+$databases[[4]]$attach_url
+[1] "https://huggingface.co/datasets/Nason/clinicaltrials-database/resolve/main/clinicaltrials.duckdb"
+
+$databases[[4]]$dictionary_url
+[1] "https://github.com/ian-nason/clinicaltrials-database/blob/main/DICTIONARY.md"
+
+$databases[[4]]$data_date_range
+[1] "1999-2026"
+
+$databases[[4]]$last_rebuilt
+[1] "2026-09-14"
+
+$databases[[4]]$update_frequency
+[1] "Monthly (AACT updates daily, we rebuild monthly)"
+
+$databases[[4]]$maintainer
+[1] "Ian Nason"
+
+$databases[[4]]$license
+[1] "Public domain"
+
+$databases[[4]]$updated
+[1] "2026-09-14"
+
+
+$databases[[5]]
+$databases[[5]]$id
+[1] "cms-medicare"
+
+$databases[[5]]$name
+[1] "CMS Medicare Physician & Other Supplier Database"
+
+$databases[[5]]$description
+[1] "Provider-level Medicare Part B claims: what every physician billed, what Medicare paid, services and beneficiaries per NPI per HCPCS code (CY2013-CY2024)"
+
+$databases[[5]]$rows
+[1] 132947347
+
+$databases[[5]]$tables
+[1] 3
+
+$databases[[5]]$size_gb
+[1] 13
+
+$databases[[5]]$source
+[1] "Centers for Medicare & Medicaid Services"
+
+$databases[[5]]$source_url
+[1] "https://data.cms.gov/provider-summary-by-type-of-service/medicare-physician-other-practitioners"
+
+$databases[[5]]$github
+[1] "https://github.com/ian-nason/cms-medicare-database"
+
+$databases[[5]]$huggingface
+[1] "https://huggingface.co/datasets/Nason/cms-medicare-database"
+
+$databases[[5]]$attach_url
+[1] "https://huggingface.co/datasets/Nason/cms-medicare-database/resolve/main/cms_medicare.duckdb"
+
+$databases[[5]]$dictionary_url
+[1] "https://github.com/ian-nason/cms-medicare-database/blob/main/DICTIONARY.md"
+
+$databases[[5]]$data_date_range
+[1] "2013-2024"
+
+$databases[[5]]$last_rebuilt
+[1] "2026-07-06"
+
+$databases[[5]]$update_frequency
+[1] "Annual (CMS releases updated PUFs yearly)"
+
+$databases[[5]]$maintainer
+[1] "Ian Nason"
+
+$databases[[5]]$license
+[1] "Public domain (HCPCS descriptions include AMA CPT content)"
+
+$databases[[5]]$updated
+[1] "2026-07-05"
+
+
+$databases[[6]]
+$databases[[6]]$id
+[1] "openpayments"
+
+$databases[[6]]$name
+[1] "CMS Open Payments (Sunshine Act) Database"
+
+$databases[[6]]$description
+[1] "Every disclosed industry payment to physicians, non-physician practitioners, and teaching hospitals: general/research/ownership payments with manufacturer, recipient NPI, amount, and nature, PY2013-2025"
+
+$databases[[6]]$rows
+[1] 172450995
+
+$databases[[6]]$tables
+[1] 6
+
+$databases[[6]]$size_gb
+[1] 17.5
+
+$databases[[6]]$source
+[1] "CMS Open Payments (openpaymentsdata.cms.gov)"
+
+$databases[[6]]$source_url
+[1] "https://openpaymentsdata.cms.gov/datasets"
+
+$databases[[6]]$github
+[1] "https://github.com/ian-nason/openpayments-database"
+
+$databases[[6]]$huggingface
+[1] "https://huggingface.co/datasets/Nason/openpayments-database"
+
+$databases[[6]]$attach_url
+[1] "https://huggingface.co/datasets/Nason/openpayments-database/resolve/main/openpayments.duckdb"
+
+$databases[[6]]$dictionary_url
+[1] "https://github.com/ian-nason/openpayments-database/blob/main/DICTIONARY.md"
+
+$databases[[6]]$data_date_range
+[1] "2013-2025"
+
+$databases[[6]]$last_rebuilt
+[1] "2026-07-07"
+
+$databases[[6]]$update_frequency
+[1] "Annual (June publication; January refresh)"
+
+$databases[[6]]$maintainer
+[1] "Ian Nason"
+
+$databases[[6]]$license
+[1] "Public domain"
+
+$databases[[6]]$updated
+[1] "2026-07-07"
+
+
+$databases[[7]]
+$databases[[7]]$id
+[1] "dol-visas"
+
+$databases[[7]]$name
+[1] "DOL H-1B & PERM Labor Certification Database"
+
+$databases[[7]]$description
+[1] "Every H-1B/H-1B1/E-3 Labor Condition Application and PERM permanent labor certification disclosed by DOL OFLC: employer, job, SOC code, wages, worksite, case status, FY2015-present"
+
+$databases[[7]]$rows
+[1] 8812639
+
+$databases[[7]]$tables
+[1] 2
+
+$databases[[7]]$size_gb
+[1] 2.8
+
+$databases[[7]]$source
+[1] "DOL Office of Foreign Labor Certification disclosure files"
+
+$databases[[7]]$source_url
+[1] "https://www.dol.gov/agencies/eta/foreign-labor/performance"
+
+$databases[[7]]$github
+[1] "https://github.com/ian-nason/dol-visas-database"
+
+$databases[[7]]$huggingface
+[1] "https://huggingface.co/datasets/Nason/dol-visas-database"
+
+$databases[[7]]$attach_url
+[1] "https://huggingface.co/datasets/Nason/dol-visas-database/resolve/main/dol_visas.duckdb"
+
+$databases[[7]]$dictionary_url
+[1] "https://github.com/ian-nason/dol-visas-database/blob/main/DICTIONARY.md"
+
+$databases[[7]]$data_date_range
+[1] "FY2015-FY2026"
+
+$databases[[7]]$last_rebuilt
+[1] "2026-09-14"
+
+$databases[[7]]$update_frequency
+[1] "Quarterly (OFLC disclosure releases)"
+
+$databases[[7]]$maintainer
+[1] "Ian Nason"
+
+$databases[[7]]$license
+[1] "Public domain"
+
+$databases[[7]]$updated
+[1] "2026-09-14"
+
+
+$databases[[8]]
+$databases[[8]]$id
+[1] "ipeds-db"
+
+$databases[[8]]$name
+[1] "IPEDS Database"
+
+$databases[[8]]$description
+[1] "Database covering every U.S. postsecondary institution from 1997 to the 2025-26 provisional release—admissions, enrollment, completions, tuition, financial aid, graduation rates, staffing, and more"
+
+$databases[[8]]$rows
+[1] 27876978
+
+$databases[[8]]$tables
+[1] 23
+
+$databases[[8]]$size_gb
+[1] 1.3
+
+$databases[[8]]$source
+[1] "National Center for Education Statistics (NCES)"
+
+$databases[[8]]$source_url
+[1] "https://nces.ed.gov/ipeds/use-the-data"
+
+$databases[[8]]$github
+[1] "https://github.com/ian-nason/ipeds-database"
+
+$databases[[8]]$huggingface
+[1] "https://huggingface.co/datasets/Nason/ipeds-database"
+
+$databases[[8]]$attach_url
+[1] "https://huggingface.co/datasets/Nason/ipeds-database/resolve/main/ipeds.duckdb"
+
+$databases[[8]]$dictionary_url
+[1] "https://github.com/ian-nason/ipeds-database/blob/main/DICTIONARY.md"
+
+$databases[[8]]$data_date_range
+[1] "1997-2025"
+
+$databases[[8]]$last_rebuilt
+[1] "2026-09-14"
+
+$databases[[8]]$update_frequency
+[1] "Annual"
+
+$databases[[8]]$maintainer
+[1] "Ian Nason (build pipeline by Paul Goldsmith-Pinkham)"
+
+$databases[[8]]$license
+[1] "Public domain"
+
+$databases[[8]]$updated
+[1] "2026-09-14"
+
+
+$databases[[9]]
+$databases[[9]]$id
+[1] "fjc"
+
+$databases[[9]]$name
+[1] "FJC Integrated Database (Federal Courts)"
+
+$databases[[9]]$description
+[1] "Every civil case (1988-present), criminal defendant (FY1970-present) and appeal (1971-present) reported by the federal courts to the Administrative Office, from the Federal Judicial Center's Integrated Database: parties, nature of suit, offenses, dispositions, sentences, dates, judges"
+
+$databases[[9]]$rows
+[1] 21119023
+
+$databases[[9]]$tables
+[1] 3
+
+$databases[[9]]$size_gb
+[1] 2.5
+
+$databases[[9]]$source
+[1] "Federal Judicial Center (Integrated Database)"
+
+$databases[[9]]$source_url
+[1] "https://www.fjc.gov/research/idb"
+
+$databases[[9]]$github
+[1] "https://github.com/ian-nason/fjc-database"
+
+$databases[[9]]$huggingface
+[1] "https://huggingface.co/datasets/Nason/fjc-database"
+
+$databases[[9]]$attach_url
+[1] "https://huggingface.co/datasets/Nason/fjc-database/resolve/main/fjc.duckdb"
+
+$databases[[9]]$dictionary_url
+[1] "https://github.com/ian-nason/fjc-database/blob/main/DICTIONARY.md"
+
+$databases[[9]]$data_date_range
+[1] "1970-2026"
+
+$databases[[9]]$last_rebuilt
+[1] "2026-09-16"
+
+$databases[[9]]$update_frequency
+[1] "Quarterly (FJC extracts)"
+
+$databases[[9]]$maintainer
+[1] "Ian Nason"
+
+$databases[[9]]$license
+[1] "Public domain"
+
+$databases[[9]]$updated
+[1] "2026-09-16"
+
+
+$databases[[10]]
+$databases[[10]]$id
+[1] "cbp"
+
+$databases[[10]]$name
+[1] "CBP Border Enforcement Database"
+
+$databases[[10]]$description
+[1] "Individual-level Customs and Border Protection records from Deportation Data Project FOIA releases: Border Patrol apprehensions (FY2008-Dec 2025) and apprehensions with place of birth (FY2000-FY2022), encounters, port-of-entry inadmissibility events (CY2014-Jan 2026), Title 42 expulsions, CBP One appointments"
+
+$databases[[10]]$rows
+[1] 51345742
+
+$databases[[10]]$tables
+[1] 8
+
+$databases[[10]]$size_gb
+[1] 1.6
+
+$databases[[10]]$source
+[1] "Deportation Data Project (CBP FOIA releases)"
+
+$databases[[10]]$source_url
+[1] "https://deportationdata.org/data/cbp.html"
+
+$databases[[10]]$github
+[1] "https://github.com/ian-nason/cbp-database"
+
+$databases[[10]]$huggingface
+[1] "https://huggingface.co/datasets/Nason/cbp-database"
+
+$databases[[10]]$attach_url
+[1] "https://huggingface.co/datasets/Nason/cbp-database/resolve/main/cbp.duckdb"
+
+$databases[[10]]$dictionary_url
+[1] "https://github.com/ian-nason/cbp-database/blob/main/DICTIONARY.md"
+
+$databases[[10]]$data_date_range
+[1] "2000-2026"
+
+$databases[[10]]$last_rebuilt
+[1] "2026-09-15"
+
+$databases[[10]]$update_frequency
+[1] "Irregular (FOIA releases)"
+
+$databases[[10]]$maintainer
+[1] "Ian Nason"
+
+$databases[[10]]$license
+[1] "CC-0"
+
+$databases[[10]]$updated
+[1] "2026-09-15"
+
+
+$databases[[11]]
+$databases[[11]]$id
+[1] "ussc"
+
+$databases[[11]]$name
+[1] "U.S. Sentencing Commission Offender Datafiles"
+
+$databases[[11]]$description
+[1] "Every federal defendant sentenced FY2002-FY2025 from the U.S. Sentencing Commission's individual offender datafiles: demographics, offense, guideline range, sentence imposed and departures, with the 22,000-variable fixed-width record reshaped into a sentences table plus long tables per count of conviction, guideline computation, drug type and departure reason"
+
+$databases[[11]]$rows
+[1] 13962089
+
+$databases[[11]]$tables
+[1] 9
+
+$databases[[11]]$size_gb
+[1] 0.7
+
+$databases[[11]]$source
+[1] "U.S. Sentencing Commission"
+
+$databases[[11]]$source_url
+[1] "https://www.ussc.gov/research/datafiles/commission-datafiles"
+
+$databases[[11]]$github
+[1] "https://github.com/ian-nason/ussc-database"
+
+$databases[[11]]$huggingface
+[1] "https://huggingface.co/datasets/Nason/ussc-database"
+
+$databases[[11]]$attach_url
+[1] "https://huggingface.co/datasets/Nason/ussc-database/resolve/main/ussc.duckdb"
+
+$databases[[11]]$dictionary_url
+[1] "https://github.com/ian-nason/ussc-database/blob/main/DICTIONARY.md"
+
+$databases[[11]]$data_date_range
+[1] "FY2002-FY2025"
+
+$databases[[11]]$last_rebuilt
+[1] "2026-09-16"
+
+$databases[[11]]$update_frequency
+[1] "Annual (each fiscal year's datafile, typically spring)"
+
+$databases[[11]]$maintainer
+[1] "Ian Nason"
+
+$databases[[11]]$license
+[1] "Public domain"
+
+$databases[[11]]$updated
+[1] "2026-09-16"
+
+
+$databases[[12]]
+$databases[[12]]$id
+[1] "cook-sao"
+
+$databases[[12]]$name
+[1] "Cook County State's Attorney Felony Cases"
+
+$databases[[12]]$description
+[1] "Every felony case received by the Cook County (Chicago) State's Attorney's Office 2011 through 2024-12-30 (the series is closed), charge by charge: intake and felony review, initiation with statute/class/bond, dispositions with judge and court, sentences, and diversion referrals"
+
+$databases[[12]]$rows
+[1] 3171690
+
+$databases[[12]]$tables
+[1] 5
+
+$databases[[12]]$size_gb
+[1] 0.4
+
+$databases[[12]]$source
+[1] "Cook County State's Attorney's Office (county open-data portal)"
+
+$databases[[12]]$source_url
+[1] "https://datacatalog.cookcountyil.gov/browse?q=State%27s%20Attorney"
+
+$databases[[12]]$github
+[1] "https://github.com/ian-nason/cook-sao-database"
+
+$databases[[12]]$huggingface
+[1] "https://huggingface.co/datasets/Nason/cook-sao-database"
+
+$databases[[12]]$attach_url
+[1] "https://huggingface.co/datasets/Nason/cook-sao-database/resolve/main/cook-sao.duckdb"
+
+$databases[[12]]$dictionary_url
+[1] "https://github.com/ian-nason/cook-sao-database/blob/main/DICTIONARY.md"
+
+$databases[[12]]$data_date_range
+[1] "2011-2024"
+
+$databases[[12]]$last_rebuilt
+[1] "2026-09-15"
+
+$databases[[12]]$update_frequency
+[1] "None (series closed by the SAO on 2024-12-30)"
+
+$databases[[12]]$maintainer
+[1] "Ian Nason"
+
+$databases[[12]]$license
+[1] "Public domain"
+
+$databases[[12]]$updated
+[1] "2026-09-15"
+
+
+$databases[[13]]
+$databases[[13]]$id
+[1] "fjc-judges"
+
+$databases[[13]]$name
+[1] "Federal Judges Biographical Directory (FJC)"
+
+$databases[[13]]$description
+[1] "Every Article III federal judge since 1789 from the Federal Judicial Center's Biographical Directory: demographics, every appointment with its nomination, confirmation and commission dates, chief-judge and senior-status dates, education, professional career and other federal judicial service"
+
+$databases[[13]]$rows
+[1] 37797
+
+$databases[[13]]$tables
+[1] 6
+
+$databases[[13]]$size_gb
+[1] 0.003
+
+$databases[[13]]$source
+[1] "Federal Judicial Center (Biographical Directory of Article III Federal Judges)"
+
+$databases[[13]]$source_url
+[1] "https://www.fjc.gov/history/judges/biographical-directory-article-iii-federal-judges-export"
+
+$databases[[13]]$github
+[1] "https://github.com/ian-nason/fjc-judges-database"
+
+$databases[[13]]$huggingface
+[1] "https://huggingface.co/datasets/Nason/fjc-judges-database"
+
+$databases[[13]]$attach_url
+[1] "https://huggingface.co/datasets/Nason/fjc-judges-database/resolve/main/fjc-judges.duckdb"
+
+$databases[[13]]$dictionary_url
+[1] "https://github.com/ian-nason/fjc-judges-database/blob/main/DICTIONARY.md"
+
+$databases[[13]]$data_date_range
+[1] "1789-2026"
+
+$databases[[13]]$last_rebuilt
+[1] "2026-10-17"
+
+$databases[[13]]$update_frequency
+[1] "Continuous at the FJC; rebuilt with each datapond refresh"
+
+$databases[[13]]$maintainer
+[1] "Ian Nason"
+
+$databases[[13]]$license
+[1] "Public domain"
+
+$databases[[13]]$updated
+[1] "2026-10-17"
+
+
+$databases[[14]]
+$databases[[14]]$id
+[1] "scdb"
+
+$databases[[14]]$name
+[1] "Supreme Court Database (SCDB)"
+
+$databases[[14]]$description
+[1] "Every U.S. Supreme Court decision 1791-present from the Supreme Court Database (Washington University): case-level and justice-level rows with dates, citations, parties, issue, decision direction, disposition, votes and opinions, plus the full code book as a table"
+
+$databases[[14]]$rows
+[1] 677452
+
+$databases[[14]]$tables
+[1] 9
+
+$databases[[14]]$size_gb
+[1] 0.1
+
+$databases[[14]]$source
+[1] "The Supreme Court Database (Washington University in St. Louis)"
+
+$databases[[14]]$source_url
+[1] "http://scdb.wustl.edu/data.php"
+
+$databases[[14]]$github
+[1] "https://github.com/ian-nason/scdb-database"
+
+$databases[[14]]$huggingface
+[1] "https://huggingface.co/datasets/Nason/scdb-database"
+
+$databases[[14]]$attach_url
+[1] "https://huggingface.co/datasets/Nason/scdb-database/resolve/main/scdb.duckdb"
+
+$databases[[14]]$dictionary_url
+[1] "https://github.com/ian-nason/scdb-database/blob/main/DICTIONARY.md"
+
+$databases[[14]]$data_date_range
+[1] "1791-2026"
+
+$databases[[14]]$last_rebuilt
+[1] "2026-09-15"
+
+$databases[[14]]$update_frequency
+[1] "Annual (SCDB releases each fall)"
+
+$databases[[14]]$maintainer
+[1] "Ian Nason"
+
+$databases[[14]]$license
+[1] "CC BY-NC 3.0"
+
+$databases[[14]]$updated
+[1] "2026-09-15"
+
+
+$databases[[15]]
+$databases[[15]]$id
+[1] "open-policing"
+
+$databases[[15]]$name
+[1] "Stanford Open Policing Project"
+
+$databases[[15]]$description
+[1] "Every standardized police stop released by the Stanford Open Policing Project: 35 state patrols and 53 city or county departments, roughly 2000-2020, in one table with the project's standardized columns typed (date, time, place, subject race/sex/age, outcome, search, contraband, vehicle) plus each location's raw source columns, and a locations table with observed and stated coverage"
+
+$databases[[15]]$rows
+[1] 230002705
+
+$databases[[15]]$tables
+[1] 2
+
+$databases[[15]]$size_gb
+[1] 8.1
+
+$databases[[15]]$source
+[1] "Stanford Open Policing Project"
+
+$databases[[15]]$source_url
+[1] "https://openpolicing.stanford.edu/data/"
+
+$databases[[15]]$github
+[1] "https://github.com/ian-nason/open-policing-database"
+
+$databases[[15]]$huggingface
+[1] "https://huggingface.co/datasets/Nason/open-policing-database"
+
+$databases[[15]]$attach_url
+[1] "https://huggingface.co/datasets/Nason/open-policing-database/resolve/main/open-policing.duckdb"
+
+$databases[[15]]$dictionary_url
+[1] "https://github.com/ian-nason/open-policing-database/blob/main/DICTIONARY.md"
+
+$databases[[15]]$data_date_range
+[1] "2000-2020"
+
+$databases[[15]]$last_rebuilt
+[1] "2026-09-16"
+
+$databases[[15]]$update_frequency
+[1] "Irregular (project releases; last 2023-01-26)"
+
+$databases[[15]]$maintainer
+[1] "Ian Nason"
+
+$databases[[15]]$license
+[1] "ODC-By 1.0"
+
+$databases[[15]]$updated
+[1] "2026-09-16"
+
+
+$databases[[16]]
+$databases[[16]]$id
+[1] "courtlistener"
+
+$databases[[16]]$name
+[1] "CourtListener Judges, Disclosures and Oral Arguments"
+
+$databases[[16]]$description
+[1] "September 30, 2026 CourtListener snapshot: 16,191 judge-database people, 51,291 positions, 3,361 courts, 32,336 financial disclosure reports (1987-2022), and 103,710 oral-argument records including source speech-to-text transcripts; judges join the FJC directory on fjc_id"
+
+$databases[[16]]$rows
+[1] 2277934
+
+$databases[[16]]$tables
+[1] 20
+
+$databases[[16]]$size_gb
+[1] 3.028
+
+$databases[[16]]$source
+[1] "Free Law Project (CourtListener bulk data)"
+
+$databases[[16]]$source_url
+[1] "https://www.courtlistener.com/help/api/bulk-data/"
+
+$databases[[16]]$github
+[1] "https://github.com/ian-nason/courtlistener-database"
+
+$databases[[16]]$huggingface
+[1] "https://huggingface.co/datasets/Nason/courtlistener-database"
+
+$databases[[16]]$attach_url
+[1] "https://huggingface.co/datasets/Nason/courtlistener-database/resolve/main/courtlistener.duckdb"
+
+$databases[[16]]$dictionary_url
+[1] "https://github.com/ian-nason/courtlistener-database/blob/main/DICTIONARY.md"
+
+$databases[[16]]$data_date_range
+[1] "0022-3036 (source date outliers; see README)"
+
+$databases[[16]]$last_rebuilt
+[1] "2026-10-18"
+
+$databases[[16]]$update_frequency
+[1] "Quarterly (latest source snapshot 2026-09-30)"
+
+$databases[[16]]$maintainer
+[1] "Ian Nason"
+
+$databases[[16]]$license
+[1] "Public Domain Mark (CourtListener bulk data)"
+
+$databases[[16]]$updated
+[1] "2026-10-18"
+
+
+$databases[[17]]
+$databases[[17]]$id
+[1] "onet"
+
+$databases[[17]]$name
+[1] "O*NET 31.0 Occupations, Skills and Work Context"
+
+$databases[[17]]$description
+[1] "Versioned O*NET 31.0 subset: occupation titles, essential and transferable skill ratings, work-context means and category percentages, uncertainty flags and dictionaries. One release snapshot; not an annual panel."
+
+$databases[[17]]$rows
+[1] 468857
+
+$databases[[17]]$tables
+[1] 12
+
+$databases[[17]]$size_gb
+[1] 0.011284
+
+$databases[[17]]$source
+[1] "U.S. Department of Labor, Employment and Training Administration (O*NET)"
+
+$databases[[17]]$source_url
+[1] "https://www.onetcenter.org/database.html"
+
+$databases[[17]]$github
+[1] "https://github.com/ian-nason/onet-database"
+
+$databases[[17]]$huggingface
+[1] "https://huggingface.co/datasets/Nason/onet-database"
+
+$databases[[17]]$attach_url
+[1] "https://huggingface.co/datasets/Nason/onet-database/resolve/d0e84bacef02d4477423edbf7468cc3ec8fb79c2/onet.duckdb"
+
+$databases[[17]]$dictionary_url
+[1] "https://github.com/ian-nason/onet-database/blob/5ea8ac19db5246ee6641c082a26acc0fbf544ac2/DICTIONARY.md"
+
+$databases[[17]]$data_date_range
+[1] "31.0 snapshot; rating update months 2005-12–2026-08"
+
+$databases[[17]]$last_rebuilt
+[1] "2026-10-18"
+
+$databases[[17]]$update_frequency
+[1] "Quarterly source releases; manual version-pinned rebuilds"
+
+$databases[[17]]$maintainer
+[1] "Ian Nason"
+
+$databases[[17]]$license
+[1] "CC-BY-4.0"
+
+$databases[[17]]$updated
+[1] "2026-10-18"
+
+
+$databases[[18]]
+$databases[[18]]$id
+[1] "qcew"
+
+$databases[[18]]$name
+[1] "QCEW 2025 Annual Employment and Wages"
+
+$databases[[18]]$description
+[1] "Complete 2025 annual QCEW employment, establishment and wage records, exact source flags, version-matched dictionaries and a disclosure-aware view. Nested geographies/industries/ownership totals require explicit filtering."
+
+$databases[[18]]$rows
+[1] 3096467
+
+$databases[[18]]$tables
+[1] 6
+
+$databases[[18]]$size_gb
+[1] 0.195572
+
+$databases[[18]]$source
+[1] "U.S. Bureau of Labor Statistics, Quarterly Census of Employment and Wages"
+
+$databases[[18]]$source_url
+[1] "https://www.bls.gov/cew/downloadable-data-files.htm"
+
+$databases[[18]]$github
+[1] "https://github.com/ian-nason/qcew-database"
+
+$databases[[18]]$huggingface
+[1] "https://huggingface.co/datasets/Nason/qcew-database"
+
+$databases[[18]]$attach_url
+[1] "https://huggingface.co/datasets/Nason/qcew-database/resolve/334c467dba413928233fb1d8cd1c0ff8de5c0105/qcew.duckdb"
+
+$databases[[18]]$dictionary_url
+[1] "https://github.com/ian-nason/qcew-database/blob/e355b3744a09c5389783402be378f508acf0d4f5/DICTIONARY.md"
+
+$databases[[18]]$data_date_range
+[1] "2025 annual; snapshot acquired 2026-10-18"
+
+$databases[[18]]$last_rebuilt
+[1] "2026-10-18"
+
+$databases[[18]]$update_frequency
+[1] "Annual snapshot; BLS revises source files; manual pinned rebuilds"
+
+$databases[[18]]$maintainer
+[1] "Ian Nason"
+
+$databases[[18]]$license
+[1] "Public domain (U.S. Bureau of Labor Statistics)"
+
+$databases[[18]]$updated
+[1] "2026-10-18"
+
+
+$databases[[19]]
+$databases[[19]]$id
+[1] "fars"
+
+$databases[[19]]$name
+[1] "FARS 2024 National Annual Report File"
+
+$databases[[19]]$description
+[1] "NHTSA fatal crashes, vehicles and people in the pinned 2024 national ARF; preserved missing codes, observed dictionaries and crash summaries that prevent join inflation. Fatal crashes only; no exposure denominator."
+
+$databases[[19]]$rows
+[1] 190798
+
+$databases[[19]]$tables
+[1] 4
+
+$databases[[19]]$size_gb
+[1] 0.026489
+
+$databases[[19]]$source
+[1] "NHTSA National Center for Statistics and Analysis, Fatality Analysis Reporting System"
+
+$databases[[19]]$source_url
+[1] "https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars"
+
+$databases[[19]]$github
+[1] "https://github.com/ian-nason/fars-database"
+
+$databases[[19]]$huggingface
+[1] "https://huggingface.co/datasets/Nason/fars-database"
+
+$databases[[19]]$attach_url
+[1] "https://huggingface.co/datasets/Nason/fars-database/resolve/adb6da02a314c39d8b6caf776529bf4a373075da/fars.duckdb"
+
+$databases[[19]]$dictionary_url
+[1] "https://github.com/ian-nason/fars-database/blob/429596dd3a820a60c562ea631eb787e9c5d37569/DICTIONARY.md"
+
+$databases[[19]]$data_date_range
+[1] "2024 Annual Report File; first release 2026-04-01"
+
+$databases[[19]]$last_rebuilt
+[1] "2026-10-18"
+
+$databases[[19]]$update_frequency
+[1] "Annual source with ARF/final revisions; manual pinned rebuilds"
+
+$databases[[19]]$maintainer
+[1] "Ian Nason"
+
+$databases[[19]]$license
+[1] "NHTSA public information; copying/distribution permitted by official Ownership policy"
+
+$databases[[19]]$updated
+[1] "2026-10-18"
+
+
+
+
+DOC BLOCK 2 R
+[1] 0
+[1] 0
+[1] 0
+   area_fips                        area_title annual_avg_emplvl avg_annual_pay
+1      06000           California -- Statewide           1079831          91236
+2      48000                Texas -- Statewide            895257          68749
+3      36000             New York -- Statewide            702328          66599
+4      12000              Florida -- Statewide            625354          81877
+5      42000         Pennsylvania -- Statewide            387664          85849
+6      39000                 Ohio -- Statewide            316554          78304
+7      17000             Illinois -- Statewide            313679          72183
+8      13000              Georgia -- Statewide            285483          79262
+9      34000           New Jersey -- Statewide            279793          82422
+10     37000       North Carolina -- Statewide            252979          75454
+11     51000             Virginia -- Statewide            234870          78990
+12     26000             Michigan -- Statewide            228068          71095
+13     04000              Arizona -- Statewide            218639          77887
+14     25000        Massachusetts -- Statewide            200042          89269
+15     18000              Indiana -- Statewide            181654          79605
+16     47000            Tennessee -- Statewide            181376          81660
+17     53000           Washington -- Statewide            178077          86938
+18     27000            Minnesota -- Statewide            168810          94952
+19     24000             Maryland -- Statewide            166181          81626
+20     08000             Colorado -- Statewide            164733          80298
+21     55000            Wisconsin -- Statewide            141125          92514
+22     29000             Missouri -- Statewide            138092          82790
+23     45000       South Carolina -- Statewide            119888          78732
+24     22000            Louisiana -- Statewide            115409          66828
+25     01000              Alabama -- Statewide            111343          79318
+26     41000               Oregon -- Statewide            107450          85230
+27     21000             Kentucky -- Statewide            103343          80988
+28     09000          Connecticut -- Statewide            100489          90513
+29     40000             Oklahoma -- Statewide             90911          70555
+30     49000                 Utah -- Statewide             86980          63533
+31     32000               Nevada -- Statewide             78067          78406
+32     05000             Arkansas -- Statewide             69502          74475
+33     20000               Kansas -- Statewide             67618          79597
+34     19000                 Iowa -- Statewide             61290          81069
+35     28000          Mississippi -- Statewide             60074          71047
+36     16000                Idaho -- Statewide             55036          57703
+37     31000             Nebraska -- Statewide             52752          83383
+38     35000           New Mexico -- Statewide             50341          58410
+39     72000          Puerto Rico -- Statewide             47460          36471
+40     54000        West Virginia -- Statewide             43436          72700
+41     33000        New Hampshire -- Statewide             38468          98930
+42     23000                Maine -- Statewide             37554          81264
+43     15000               Hawaii -- Statewide             34620          92037
+44     44000         Rhode Island -- Statewide             30068          78568
+45     10000             Delaware -- Statewide             25993          73100
+46     30000              Montana -- Statewide             24571          76569
+47     02000               Alaska -- Statewide             23358          80685
+48     11000 District of Columbia, not unknown             21264         108440
+49     46000         South Dakota -- Statewide             20780          92792
+50     50000              Vermont -- Statewide             17286          82117
+51     38000         North Dakota -- Statewide             17039         101052
+52     56000              Wyoming -- Statewide             11422          71045
+53     78000       Virgin Islands -- Statewide              1215          52708
+
+DOC BLOCK 4 R
+ [1] "eoir"           "ice"            "fec"            "clinicaltrials"
+ [5] "cms-medicare"   "openpayments"   "dol-visas"      "ipeds-db"      
+ [9] "fjc"            "cbp"            "ussc"           "cook-sao"      
+[13] "fjc-judges"     "scdb"           "open-policing"  "courtlistener" 
+[17] "onet"           "qcew"           "fars"          
+# A tibble: 38 × 7
+   column_name       data_type null_pct example_value join_hint      description
+   <chr>             <chr>        <dbl> <chr>         <chr>          <chr>      
+ 1 area_fips         VARCHAR          0 "01000"       Join areas us… Exact 5-ch…
+ 2 own_code          VARCHAR          0 "0"           Join ownershi… Ownership …
+ 3 industry_code     VARCHAR          0 "10"          Join industri… Original N…
+ 4 agglvl_code       VARCHAR          0 "10"          Join aggregat… Aggregatio…
+ 5 size_code         VARCHAR          0 "0"           Join size_cla… Establishm…
+ 6 year              VARCHAR          0 "2025"        <NA>           Source ref…
+ 7 qtr               VARCHAR          0 "A"           <NA>           Original q…
+ 8 disclosure_code   VARCHAR          0 ""            Blank is publ… Empty stri…
+ 9 annual_avg_estabs BIGINT           0 "0"           <NA>           Annual mea…
+10 annual_avg_emplvl BIGINT           0 "0"           <NA>           Annual mea…
+# ℹ 28 more rows
+# ℹ 1 more variable: source_header <chr>
+  annual_avg_emplvl total_annual_wages
+1         155732363       1.225923e+13
+
+DOC BLOCK 6 R
+  annual_avg_emplvl total_annual_wages
+1         155732363       1.225923e+13
+          table_name row_count column_count
+1 aggregation_levels        36            2
+2         annual_raw   3089813           38
+3              areas      4451            2
+4         industries      2159            2
+5         ownerships         7            2
+6       size_classes         1            2
+FINAL DOCUMENTATION EXAMPLES PASS
+duckdb is storing downloaded extensions and secrets under ~/.duckdb:
+ℹ /home/inason/.duckdb
+This persists across sessions and is shared with the DuckDB CLI and other clients.
+ℹ Run duckdb(shared_home = FALSE) to use a temporary directory instead.
+ℹ See ?duckdb_storage for details and alternatives.
+duckdb is storing downloaded extensions and secrets under ~/.duckdb:
+ℹ /home/inason/.duckdb
+This persists across sessions and is shared with the DuckDB CLI and other clients.
+ℹ Run duckdb(shared_home = FALSE) to use a temporary directory instead.
+ℹ See ?duckdb_storage for details and alternatives.
+Connecting to QCEW 2025 Annual Employment and Wages (0.195572 GB remote)...
+Connected. 7 tables available.
+Downloading QCEW 2025 Annual Employment and Wages (0.195572 GB)...
+
+Download status: 0 done; 1 in progress (0 b/s). Total size: 6.73 Kb (0%)...
+Download status: 1 done; 0 in progress. Total size: 186.51 Mb (100%)... done!             
+Saved to /home/inason/datapond-maintenance/additions-2026-10-18/documentation-2026-10-18/qa/qcew/attempt01/r-data-cran/qcew.duckdb
+duckdb is storing downloaded extensions and secrets under ~/.duckdb:
+ℹ /home/inason/.duckdb
+This persists across sessions and is shared with the DuckDB CLI and other clients.
+ℹ Run duckdb(shared_home = FALSE) to use a temporary directory instead.
+ℹ See ?duckdb_storage for details and alternatives.
+Connecting to QCEW 2025 Annual Employment and Wages (local)...
+Connected. 7 tables available.
+duckdb is storing downloaded extensions and secrets under ~/.duckdb:
+ℹ /home/inason/.duckdb
+This persists across sessions and is shared with the DuckDB CLI and other clients.
+ℹ Run duckdb(shared_home = FALSE) to use a temporary directory instead.
+ℹ See ?duckdb_storage for details and alternatives.
+Ran 4/4 deferred expressions

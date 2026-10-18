@@ -1,0 +1,56 @@
+{
+  "onet": {
+    "original_readme_sha256": "fdf687b6ac9d6802a5bfac209c6c26bd3eceddd6ea8d85509337dc07a784630f",
+    "all_original_sections_preserved": {
+      "Scope and grain": true,
+      "Interpretation and joins": true,
+      "Concrete queries": true,
+      "Reproduce and update": true,
+      "Dictionary and codes": true,
+      "Attribution, license and modifications": true
+    },
+    "original_intro_preserved": true,
+    "regression_suite_count": 27,
+    "preservation_note": "Original section bodies retained exactly, except relative Markdown links adjusted one directory upward. Full original introduction also restored in the detailed guide.",
+    "download_caveat": "Added directly after the download/local blocks in both source README and HF card."
+  },
+  "qcew": {
+    "original_readme_sha256": "6f614d0a4e8b0114e90be9dd441e5faa20c328611b34c5c2f559a2ea6ab5f55c",
+    "all_original_sections_preserved": {
+      "Tables and grain": true,
+      "Disclosure and missingness": true,
+      "Safe comparisons": true,
+      "Examples": true,
+      "Sources, reproducibility and validation": true,
+      "Dictionary, update and license": true
+    },
+    "original_intro_preserved": true,
+    "regression_suite_count": 35,
+    "preservation_note": "Original section bodies retained exactly, except relative Markdown links adjusted one directory upward. Full original introduction also restored in the detailed guide.",
+    "download_caveat": "Added directly after the download/local blocks in both source README and HF card."
+  },
+  "fars": {
+    "original_readme_sha256": "6068ef83a6e6cb2e6a2e5a81fa47de68a35d5dd2b138b2aca9cf4089810ca561",
+    "all_original_sections_preserved": {
+      "Tables, keys and safe joins": true,
+      "Views and missing values": true,
+      "Dictionaries and ambiguous labels": true,
+      "Useful queries": true,
+      "Coverage and limitations": true,
+      "Reproduce and validate": true,
+      "Attribution and permitted redistribution": true
+    },
+    "original_intro_preserved": true,
+    "regression_suite_count": 44,
+    "preservation_note": "Original section bodies retained exactly, except relative Markdown links adjusted one directory upward. Full original introduction also restored in the detailed guide.",
+    "download_caveat": "Added directly after the download/local blocks in both source README and HF card."
+  },
+  "website": {
+    "original_crlf": 961,
+    "original_lf": 961,
+    "original_line_endings_preserved": true,
+    "wording": "links to table and field dictionaries",
+    "new_link_color": "#58a6ff matches existing announcements",
+    "wishlist_footer": "deferred to catalog integration; unrelated text preserved"
+  }
+}

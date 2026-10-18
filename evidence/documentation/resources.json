@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/home/inason/datapond-maintenance/.venv-datapond/bin/python",
+    "/mnt/c/Users/ignna/Documents/Codex/2026-10-18/task/verify_reader_examples.py",
+    "qcew",
+    "attempt01"
+  ],
+  "guard_sha256": "f27a2795c873ab19f6154656f29c049a9c733b323cbf1ce7cd74167149148493",
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 157.61840875400003,
+  "peak_process_group_rss_bytes_sampled": 310296576,
+  "peak_workspace_file_bytes_sampled": 662509450,
+  "workspace_file_scope": "All files under this isolated repository, including retained attempts and .git",
+  "minimum_available_memory_bytes": 9590390784,
+  "sample_interval_seconds": 0.25,
+  "completed_utc": "2026-10-18T16:40:49.778328+00:00"
+}

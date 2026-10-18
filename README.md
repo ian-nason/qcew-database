@@ -1,103 +1,235 @@
-> **Published October 18, 2026:** see [verified public release and immutable query URL](PUBLICATION.md). Audit/status statements below record the frozen pre-publication snapshot. Registry discovery awaits draft PR review.
+# QCEW 2025 Annual Employment and Wages
 
-# QCEW 2025 annual employment and wages
+A version-pinned DuckDB edition of the U.S. Bureau of Labor Statistics [Quarterly Census of Employment and Wages](https://www.bls.gov/cew/downloadable-data-files.htm), 2025 annual averages: **3,096,467 rows across 6 tables (48 columns)**, all 3,089,813 annual source rows plus five version-matched reference tables and a disclosure-aware view.
 
-A version-pinned DuckDB edition of the U.S. Bureau of Labor Statistics [Quarterly Census of Employment and Wages](https://www.bls.gov/cew/downloadable-data-files.htm), annual 2025 snapshot acquired October 18, 2026. It includes all **3,089,813 annual source rows**, five version-matched reference tables, and a disclosure-aware view. The six data tables contain **3,096,467 rows and 48 columns** in total; the view is excluded from those totals.
+Use it for descriptive questions about covered employment, establishments and nominal pay by place, industry and ownership. It is establishment-based industry data, not occupational wages, unique people, an employer panel or a causal analysis.
 
-Use it for descriptive questions about covered employment, establishments and nominal pay in places and industries. The examples focus on county health care and social assistance and state ambulatory health care. This is establishment-based industry data, not occupational wages, unique people, a longitudinal employer panel or a causal analysis. It has no direct O*NET occupation or ATUS respondent crosswalk.
+Download/query the [Hugging Face dataset](https://huggingface.co/datasets/Nason/qcew-database). Published to Hugging Face on 2026-10-18. The datapond registry entry is a draft pull request, so `datapond.connect('qcew')` does not resolve this database until it is merged; the direct URL below works now.
 
-## Tables and grain
+[Quick start](#quick-start) · [Tables](#tables) · [Views](#pre-built-views) · [Examples](#example-queries) · [Caveats](#researcher-caveats) · [Source](#data-source-and-version) · [License](#license-and-attribution) · [Build](#build-from-source) · [Changelog](#changelog)
 
-| Table | Rows | Meaning |
-|---|---:|---|
-| annual_raw | 3,089,813 | Exact 38 source fields, including all placeholder zeroes and three disclosure flags |
-| areas | 4,451 | Unique area code/title pairs present in the 2025 source |
-| ownerships | 7 | Ownership sectors and overlapping total groups |
-| industries | 2,159 | Industry, supersector, domain and aggregate codes present in the source |
-| aggregation_levels | 36 | Geographic/industry depth and special summary levels |
-| size_classes | 1 | Code 0, all establishment sizes |
+## Quick Start
 
-The complete raw key is `(area_fips, own_code, industry_code, agglvl_code, size_code, year, qtr)`. All key fields remain text, including leading-zero FIPS codes; `year='2025'`, `qtr='A'`, `size_code='0'`. `A` denotes annual, not a fifth quarter. The `annual` view retains this key, adds five labels through unique dictionaries, and applies disclosure rules.
+### DuckDB CLI
 
-The standalone BLS dictionary downloads returned HTTP 403 in this environment. Labels instead come from **every row of the official 2025 annual-by-area ZIP**, not a third-party list or a different vintage. Every code had one exact title. The derived reference CSVs are sorted distinct pairs, checksum-pinned and included in the source repository. They cover codes used in this snapshot; they are not a comprehensive historical code list. `profile_sources.py` can regenerate and compare them from the pinned archive without extracting it in full.
+```sql
+SET memory_limit = '128MiB';
+SET threads = 1;
+SET max_temp_directory_size = '0B';
+INSTALL httpfs;
+LOAD httpfs;
+ATTACH 'https://huggingface.co/datasets/Nason/qcew-database/resolve/334c467dba413928233fb1d8cd1c0ff8de5c0105/qcew.duckdb' AS qcew (READ_ONLY);
 
-## Disclosure and missingness
+-- The one published national all-industry, all-ownership total. Never sum the whole table.
+SELECT area_title, annual_avg_estabs, annual_avg_emplvl, total_annual_wages, avg_annual_pay
+FROM qcew.annual
+WHERE area_fips = 'US000' AND own_code = '0' AND industry_code = '10'
+  AND agglvl_code = '10' AND size_code = '0' AND year = '2025' AND qtr = 'A';
+```
 
-The raw source has no missing numeric fields. An empty disclosure string means published; `N` means not disclosed. Empty flags remain empty strings rather than SQL NULL. All source numeric values remain exact in `annual_raw`.
+The database is 196 MB. Filtered queries fetch only the byte ranges they touch; an unfiltered scan of `annual_raw` reads most of the file, so download it locally if you plan to scan repeatedly. The examples use this immutable artifact URL:
 
-The `annual` view treats the three flags independently:
+```
+https://huggingface.co/datasets/Nason/qcew-database/resolve/334c467dba413928233fb1d8cd1c0ff8de5c0105/qcew.duckdb
+```
 
-| Flag | Measures set to NULL on N | Source establishment measures retained |
-|---|---|---|
-| disclosure_code | Employment, total/taxable wages, contributions, weekly wage and annual pay | annual_avg_estabs |
-| lq_disclosure_code | Corresponding six location quotients | lq_annual_avg_estabs |
-| oty_disclosure_code | Corresponding absolute and percentage changes | oty_annual_avg_estabs_chg and oty_annual_avg_estabs_pct_chg |
-
-There are 1,860,359 `N` level rows, 1,872,172 `N` quotient rows and 1,937,791 `N` change rows. The four establishment measures are retained exactly as published; diagnostics report their nonzero values even when the corresponding flag is N. Never infer employment or pay from suppressed zeroes. Unsuppressed zeroes remain zero; some taxable-wage/contribution fields are not applicable to particular ownerships or programs, so a published zero is not automatically economic absence. Location quotients and percentage changes can also have source-defined zero-denominator limitations; this derivative preserves their published values without inventing replacements.
-
-Suppressed detailed values are included in published higher-level totals. Summing disclosed cells produces an incomplete total. The view intentionally does not estimate suppressed values or reconstruct them by subtraction. Reports should state how many eligible cells have published values. [BLS disclosure discussion](https://www.bls.gov/cew/publications/employment-and-wages-annual-averages/2025/home.htm#disclosure-restrictions).
-
-## Safe comparisons
-
-* Filter one geographic level, industry depth and ownership group. National, state, county, metro and combined-area rows overlap. Industry totals, sectors and subsectors nest. Ownership 0 is total covered; 8 is total government; 9 is total UI covered excluding federal government. These overlap sectors 1, 2, 3 and 5.
-* Use `agglvl_code`, not the length of an industry code, to select a consistent grain. For example, 74 is county/NAICS sector/by ownership; 75 is county/3-digit industry/by ownership; 55 is state/3-digit industry/by ownership.
-* County-equivalent geography is not fixed through time. Connecticut uses planning-region codes starting with 2024 QCEW data. County examples exclude codes ending in `999` for unallocated geography; they include available states and territories. Review the geography dictionary before restricting a study universe.
-* The 2025 data use **2022 NAICS**. Do not compare historical industry series without checking classification and geographic changes. `62` is health care **and social assistance**; `621` is ambulatory health care services and `622` is hospitals.
-* Employment counts covered jobs. A person with multiple covered employers can be counted more than once. UI/UCFE coverage excludes the self-employed and other groups; it is not the entire labor force. Annual employment is the mean of 12 monthly levels, while establishment counts average four quarters. Published rounding can prevent exact equality between summed components and totals.
-* Wage totals are nominal dollars. Annual/weekly average pay is a ratio, not an additive measure or an hourly wage. Full-time, part-time, part-year work and bonuses affect it. Do not take an unweighted average of county pay to estimate national pay. Use published aggregates, and do not calculate a weighted aggregate where suppressed components are missing.
-* The snapshot includes BLS's published year-over-year changes, not a separate 2024 table. Administrative reclassification, revisions, imputations and coverage changes affect comparisons; reported changes are not causal effects.
-
-## Examples
-
-Open a locally built candidate read-only:
+### Python (duckdb)
 
 ```python
 import duckdb
-con = duckdb.connect('releases/2025-release-final/qcew.duckdb', read_only=True)
-con.sql("SELECT * FROM _metadata").show()
+con = duckdb.connect(config={"memory_limit": "128MiB", "threads": "1", "max_temp_directory_size": "0B"})
+con.sql("INSTALL httpfs; LOAD httpfs;")
+con.sql("ATTACH 'https://huggingface.co/datasets/Nason/qcew-database/resolve/334c467dba413928233fb1d8cd1c0ff8de5c0105/qcew.duckdb' AS qcew (READ_ONLY)")
+con.sql("SELECT * FROM qcew._metadata").show()
+con.sql("""
+    SELECT area_fips, area_title, annual_avg_emplvl, avg_annual_pay, disclosure_code
+    FROM qcew.annual
+    WHERE agglvl_code = '74' AND own_code = '5' AND industry_code = '62'
+      AND right(area_fips, 3) <> '999' AND annual_avg_emplvl > 0
+    ORDER BY annual_avg_emplvl DESC, area_fips LIMIT 20
+""").show()
+con.close()
 ```
+
+### R (DBI + duckdb)
+
+```r
+library(DBI)
+con <- dbConnect(duckdb::duckdb(config = list(memory_limit = "128MiB", threads = "1", max_temp_directory_size = "0B")))
+dbExecute(con, "INSTALL httpfs")
+dbExecute(con, "LOAD httpfs")
+dbExecute(con, "ATTACH 'https://huggingface.co/datasets/Nason/qcew-database/resolve/334c467dba413928233fb1d8cd1c0ff8de5c0105/qcew.duckdb' AS qcew (READ_ONLY)")
+dbGetQuery(con, "SELECT area_fips, area_title, annual_avg_emplvl, avg_annual_pay
+                 FROM qcew.annual
+                 WHERE agglvl_code = '55' AND own_code = '5' AND industry_code = '621'
+                 ORDER BY annual_avg_emplvl DESC NULLS LAST, area_fips")
+dbDisconnect(con, shutdown = TRUE)
+```
+
+In the tested R DuckDB 1.5.5 configuration, BIGINT and DECIMAL results are exposed as doubles. Employment and wage integers here are below 2^53 and exact; location quotients and percentage changes may be approximate in R although the stored DECIMAL values are exact.
+
+### datapond package (after catalog integration)
+
+The public default catalog does not yet include `qcew`. After its registry entry is merged, these examples use the package's normal discovery and connection API:
+
+```python
+import datapond
+print(datapond.list())
+datapond.describe('qcew', table='annual_raw')
+con = datapond.connect('qcew')
+con.sql("SELECT annual_avg_emplvl, total_annual_wages FROM annual WHERE area_fips = 'US000' AND own_code = '0' AND industry_code = '10' AND agglvl_code = '10'").show()
+con.close()
+```
+
+```r
+library(datapond)
+dp_list()
+con <- dp_connect('qcew')
+dp_describe(con, table = 'annual_raw')
+DBI::dbGetQuery(con, "SELECT annual_avg_emplvl, total_annual_wages FROM annual WHERE area_fips = 'US000' AND own_code = '0' AND industry_code = '10' AND agglvl_code = '10'")
+dp_disconnect(con)
+```
+
+For repeated scans, after catalog integration, download once and connect locally:
+
+```python
+import datapond
+datapond.download('qcew')
+con = datapond.connect('qcew', local=True)
+con.sql("SELECT annual_avg_emplvl, total_annual_wages FROM annual WHERE area_fips = 'US000' AND own_code = '0' AND industry_code = '10' AND agglvl_code = '10'").show()
+con.close()
+```
+
+```r
+library(datapond)
+dp_download('qcew')
+con <- dp_connect('qcew', local = TRUE)
+DBI::dbGetQuery(con, "SELECT annual_avg_emplvl, total_annual_wages FROM annual WHERE area_fips = 'US000' AND own_code = '0' AND industry_code = '10' AND agglvl_code = '10'")
+dp_disconnect(con)
+```
+
+Verify the recorded artifact SHA-256 after downloading. In tested Python 0.1.1, the optional Hugging Face download path follows the default branch rather than the pinned URL; see [consumer verification](https://github.com/ian-nason/qcew-database/blob/main/docs/CONSUMERS.md) for the tested configuration.
+
+Package checks use an isolated candidate registry; default-catalog discovery remains pending. See [consumer verification](https://github.com/ian-nason/qcew-database/blob/main/docs/CONSUMERS.md) for exact client versions, paths, resource limits and download behavior. The direct URL examples above work independently of the catalog. The SQL examples below use the `qcew` catalog alias from the direct-URL quick start.
+
+
+## Tables
+
+| Table | Description | Rows | Columns |
+|---|---|---:|---:|
+| `annual_raw` | 2025 annual QCEW rows preserving all 38 source fields, numeric placeholders and disclosure flags. Mixed nested geographies, industries and ownership totals; do not sum unfiltered | 3,089,813 | 38 |
+| `areas` | Distinct exact area code/title pairs from the pinned 2025 BLS by-area archive | 4,451 | 2 |
+| `industries` | Distinct exact industry code/title pairs from the pinned archive | 2,159 | 2 |
+| `aggregation_levels` | Distinct exact aggregation-level code/title pairs | 36 | 2 |
+| `ownerships` | Distinct exact ownership code/title pairs | 7 | 2 |
+| `size_classes` | Code 0, all establishment sizes | 1 | 2 |
+
+The raw key is `(area_fips, own_code, industry_code, agglvl_code, size_code, year, qtr)`. All key fields are text, including leading-zero FIPS codes; `year='2025'`, `qtr='A'` (annual, not a fifth quarter), `size_code='0'`. Reference tables cover codes used in this snapshot, not a historical code list; every code had one exact title. `_metadata` has one row per data table; `_columns` carries column definitions.
+
+## Pre-built Views
+
+| View | What it does |
+|---|---|
+| `annual` | `annual_raw` with the full key, five labels joined through the unique dictionaries, and the three disclosure flags applied independently |
+
+In `annual`, `disclosure_code='N'` sets employment, wages, contributions, weekly wage and annual pay to NULL; `lq_disclosure_code='N'` nulls the six location quotients; `oty_disclosure_code='N'` nulls the over-the-year changes. The four establishment measures (`annual_avg_estabs`, `lq_annual_avg_estabs`, `oty_annual_avg_estabs_chg`, `oty_annual_avg_estabs_pct_chg`) are always retained as published. `annual_raw` keeps every source value, including placeholder zeroes on suppressed rows. The view is not counted in the row and table totals above.
+
+## Example Queries
+
+County disclosure coverage for private health care and social assistance, including valid establishment counts on suppressed rows:
 
 ```sql
-SELECT area_fips, area_title, annual_avg_estabs, annual_avg_emplvl,
-       avg_annual_pay, lq_annual_avg_emplvl, lq_disclosure_code
-FROM annual
-WHERE agglvl_code='74' AND own_code='5' AND industry_code='62'
-  AND right(area_fips,3)<>'999' AND annual_avg_emplvl>0
-ORDER BY annual_avg_emplvl DESC, area_fips LIMIT 20;
+SELECT disclosure_code, count(*) AS source_cells,
+       count(annual_avg_emplvl) AS published_employment_cells,
+       sum(annual_avg_estabs) AS published_establishments_rounded
+FROM qcew.annual
+WHERE agglvl_code = '74' AND own_code = '5' AND industry_code = '62'
+  AND right(area_fips, 3) <> '999'
+GROUP BY disclosure_code ORDER BY disclosure_code;
 ```
 
-[examples.sql](examples.sql) also selects one national total, reports disclosure coverage, compares state ambulatory-care employment/pay, and joins ambulatory and hospital rows after fixing their grain. Saved results bind to the artifact checksum. These queries establish useful behavior, not demand or adoption.
+State private ambulatory health care (NAICS 621) with published year-over-year change and its own flag:
 
-## Sources, reproducibility and validation
+```sql
+SELECT area_fips, area_title, annual_avg_emplvl, avg_annual_pay,
+       oty_annual_avg_emplvl_pct_chg, oty_disclosure_code
+FROM qcew.annual
+WHERE agglvl_code = '55' AND own_code = '5' AND industry_code = '621'
+ORDER BY annual_avg_emplvl DESC NULLS LAST, area_fips;
+```
 
-`source-lock.json` pins the original singlefile ZIP (62,799,396 bytes; SHA-256 `94ebbc589b1b500671c1fd507e2589a9eeb24dcd30eb07f1ce37b0018643f865`), its CSV member, the annual-by-area label ZIP (114,997,862 bytes), and each derived reference CSV. Both archives were last modified by BLS on August 21, 2026. The annual URL can be revised: this is the exact acquired snapshot, not a guarantee that a later download has identical content. A changed checksum fails closed. Source ZIP sizes are not memory or artifact-size estimates.
+Compare two disjoint subsectors after fixing the grain to one row per county and industry:
 
-The builder uses Python 3.12, DuckDB 1.5.5 and the already provisioned FJC judges environment's datapond-build helper. `pyproject.toml` pins DuckDB and the helper source revision. `helper-lock.json` and `runtime.json` verify the actual imported helper code, interpreter and package inventory. The installed helper distribution reports 0.1.1 but its used metadata functions match the pinned source bytes. No new software installation or clean-environment dependency test is claimed.
+```sql
+WITH selected AS (
+  SELECT area_fips, area_title, industry_code, annual_avg_emplvl, avg_annual_pay
+  FROM qcew.annual
+  WHERE agglvl_code = '75' AND own_code = '5'
+    AND industry_code IN ('621', '622') AND right(area_fips, 3) <> '999'
+)
+SELECT a.area_fips, a.area_title,
+       a.annual_avg_emplvl AS ambulatory_jobs, h.annual_avg_emplvl AS hospital_jobs,
+       a.avg_annual_pay AS ambulatory_pay, h.avg_annual_pay AS hospital_pay
+FROM selected a JOIN selected h ON a.area_fips = h.area_fips
+WHERE a.industry_code = '621' AND h.industry_code = '622'
+ORDER BY a.area_fips LIMIT 20;
+```
+
+The full set is in [examples.sql](https://github.com/ian-nason/qcew-database/blob/main/examples.sql); saved results are bound to the artifact hash.
+
+## Researcher Caveats
+
+1. **Suppression flags are independent and partial.** Three flags (`disclosure_code`, `lq_disclosure_code`, `oty_disclosure_code`) each govern their own measures. There are 1,860,359 suppressed level rows, 1,872,172 suppressed quotient rows and 1,937,791 suppressed change rows. Suppressed rows still carry valid establishment counts. Never read a suppressed zero as zero employment or pay.
+2. **Suppressed cells are inside published totals.** Summing disclosed detail gives an incomplete total; the view does not estimate or back out suppressed values. Report how many eligible cells have published values ([BLS disclosure note](https://www.bls.gov/cew/publications/employment-and-wages-annual-averages/2025/home.htm#disclosure-restrictions)).
+3. **Rows nest; pick one grain.** National, state, county, metro and combined-area rows overlap, industry totals nest, and ownership 0 (total), 8 (total government) and 9 (UI covered excluding federal) overlap sectors 1, 2, 3 and 5. Filter on `agglvl_code` (for example 74 county/sector/ownership, 75 county/3-digit, 55 state/3-digit), not on code length.
+4. **Geography moves.** Connecticut uses planning-region codes from 2024 data; codes ending `999` are unallocated. Check `areas` before fixing a study universe.
+5. **Industry is 2022 NAICS.** `62` is health care and social assistance; `621` ambulatory care; `622` hospitals. Do not splice historical series without checking classification changes.
+6. **Employment counts covered jobs, not people.** A worker with two covered employers counts twice; the self-employed and other uncovered groups are absent. Annual employment averages 12 monthly levels; establishments average four quarters; rounding can break exact additivity.
+7. **Pay is a nominal ratio.** Average annual and weekly pay are not hourly wages and not additive; do not average county pay to estimate national pay or build weighted aggregates where components are suppressed.
+8. **Changes are published, not computed.** Over-the-year fields come from BLS and reflect revisions, reclassification and coverage changes; they are not causal effects. There is no separate 2024 table.
+9. **Published zeros can be structural.** Some taxable-wage and contribution fields do not apply to particular ownerships, so a zero is not necessarily economic absence.
+
+10. **Source anomalies remain visible.** DC codes 11000 and 11001 both carry “District of Columbia, not unknown”. Los Angeles County’s private health care/social assistance row has 287,445 establishments and 859,824 jobs; this snapshot does not establish why the establishment count is unusually large.
+
+## Data Source and Version
+
+Bureau of Labor Statistics, Quarterly Census of Employment and Wages, 2025 annual singlefile, acquired 2026-10-18. Pinned source ZIP: 62,799,396 bytes, SHA-256 `94ebbc589b1b500671c1fd507e2589a9eeb24dcd30eb07f1ce37b0018643f865`; labels derived from the official 2025 annual-by-area ZIP (114,997,862 bytes). Both archives were last modified by BLS on August 21, 2026. The national row reports 155,732,363 jobs and $12,259,226,899,972 in wages. BLS may revise annual files; this is the exact acquired snapshot, with no automatic refresh promised.
+
+Artifact: `qcew.duckdb`, 195,571,712 bytes, SHA-256 `89bf1cef54f42f821965df6e9079b24fc7c4c0c86046fadc98e6cedf9ebd8a1d`, dataset commit `334c467dba413928233fb1d8cd1c0ff8de5c0105`.
+
+## License and Attribution
+
+BLS data are public domain; BLS requests source attribution ([BLS copyright information](https://www.bls.gov/opub/copyright-information.htm)). Cite: U.S. Bureau of Labor Statistics, Quarterly Census of Employment and Wages, 2025 annual, acquisition date and artifact hash. This derivative changes representation, adds dictionaries, metadata and the `annual` view, and preserves all source values in `annual_raw`. No BLS endorsement is implied.
+
+## Build from Source
+
+The audited build uses Python 3.12 and DuckDB 1.5.5; dependency and helper revisions are pinned in `pyproject.toml` and `helper-lock.json`.
 
 ```sh
 python -m unittest -v test_qcew test_guard
 python run_guarded.py evidence/new-build python qcew.py --download --output releases/new-candidate
-python audit_release.py releases/new-candidate/qcew.duckdb
+python run_guarded.py evidence/new-audit python audit_release.py releases/new-candidate/qcew.duckdb
 ```
 
-The five small derived dictionary CSVs are included in the source checkout. To regenerate their provenance, download the exact locked by-area ZIP into `data/` and run `profile_sources.py` under the guard; existing dictionary bytes must match. The builder hashes its cached extracted singlefile before every use. Output directories must stay within the guarded repository. Existing output directories and retained partial downloads/extractions are never overwritten. Extraction uses a `.partial` file, hashes it, and only then renames it into the cache; inspect and quarantine any interrupted partial before retrying. The first failed attempt logs and subsequent evidence remain available locally. A redundant extracted CSV from that failed attempt was removed only after matching its SHA-256 to the retained cache and pinned ZIP member; evidence/duplicate-source-cleanup.json records it.
+Use a fresh isolated checkout and output directory. The supervisor bounds memory, disk and runtime; source hashes fail closed. Every typed source cell is compared before checkpoint and after read-only reopen, and 35 regression fixtures cover failure cases. See [build, validation and update details](docs/REPRODUCE.md) for prerequisites, exact limits, source provenance, retained partials, measured resource use and the update procedure. See [the detailed researcher guide](docs/RESEARCHER-GUIDE.md) for the complete original interpretation and code notes.
 
-DuckDB uses one thread, 256 MiB memory and at most 512 MiB temporary spill. The Linux supervisor stops its process group above 768 MiB sampled RSS, 2 GiB of files in this isolated repository, less than 1.5 GiB available RAM, less than 10 GiB free disk, or a 15-minute deadline. It handles disappearing temporary files and worker-exit races. Measurements are saved per run; retained attempts and `.git` count toward the disk cap. Only one ingestion worker runs at a time.
+## GitHub, Dictionary and Website
 
-Every raw typed cell is compared against an independent streaming Python CSV/Decimal read of the original ZIP before checkpoint and again after read-only reopen. Types are explicit: text codes/flags, BIGINT counts and dollar values, DECIMAL(18,2) quotients, DECIMAL(18,1) percentage changes. No trimming, numeric coercion, rounding or hidden imputation is permitted. Code/title pairs, keys, relationships, counts, flag distributions, numeric ranges, dictionary statistics and metadata are checked. Raw order is only an audit mechanism; SQL users must specify `ORDER BY`.
+[Detailed researcher guide](https://github.com/ian-nason/qcew-database/blob/main/docs/RESEARCHER-GUIDE.md) · [Build and update instructions](https://github.com/ian-nason/qcew-database/blob/main/docs/REPRODUCE.md) · [Verified publication](https://github.com/ian-nason/qcew-database/blob/main/PUBLICATION.md)
 
-Additional checks cover every analytic NULL against its own flag, preservation of all four establishment measures, view row counts, a locked original source-row regression value (not an external benchmark), and the disjoint ownership partition with rounding tolerance. The national source row reports 155,732,363 jobs and $12,259,226,899,972 in wages. Failure fixtures cover source corruption, duplicate members/keys, join inflation, missing codes, leading zeros, blank flags, invalid codes, overprecision, oversized wage values and suppression mistakes.
+- Source, build scripts, tests and evidence: [github.com/ian-nason/qcew-database](https://github.com/ian-nason/qcew-database)
+- Column dictionary (all 48 columns, source headers, types, NULL shares, join hints): [DICTIONARY.md](https://github.com/ian-nason/qcew-database/blob/main/DICTIONARY.md); BLS [annual layout](https://www.bls.gov/cew/about-data/downloadable-file-layouts/annual/naics-based-annual-layout.htm)
+- Catalog: [datapond registry](https://github.com/datapond-db/registry); the entry for `qcew` is a draft pull request and the database will appear on the [datapond website](https://datapond-db.github.io/website/) once it is merged.
 
-All 35 failure-fixture tests pass. The release build took 267.26 seconds, with 411.7 MiB sampled peak process-group RSS; its DuckDB artifact is 195,571,712 bytes. Rebuilds reproduce typed table fingerprints and dictionary bytes; metadata timestamps and physical serialization mean the database files are not byte-identical.
+## Changelog
 
-The consumer harness uses the existing Python client/DuckDB 1.5.4 and R clients 0.1.0/0.1.1 with DuckDB 1.5.5 through localhost HTTP ranges. It bounds each client, uses fresh R caches, hashes the installed R package, and loads preinstalled httpfs instead of installing anything. R returns BIGINT/DECIMAL results as doubles in the tested clients; the checked integer values are below 2^53, while decimal fractions are approximate in the client. The DuckDB DECIMAL storage remains exact. Actual public-host hash, range-request and Python/R/DuckDB verification remains necessary after an authorized upload. Local consumer success is not public availability.
+### 2026-10-18 — Documentation refresh
 
-## Dictionary, update and license
+- Added Python/R quick starts, table descriptions and column counts, view guidance, navigation, and clearer researcher caveats.
+- Database bytes, schema, source locks and validated query results are unchanged. Catalog integration remains pending.
 
-[DICTIONARY.md](DICTIONARY.md) describes all 48 data columns, exact source headers, types, examples, NULL proportions and join hints. `_metadata` gives table provenance and `_columns` stores column definitions. BLS's [annual layout](https://www.bls.gov/cew/about-data/downloadable-file-layouts/annual/naics-based-annual-layout.htm) and [CSV-slice layout](https://www.bls.gov/cew/additional-resources/open-data/csv-data-slices.htm) explain the measures. The source singlefile uses `annual_avg_estabs`, while one BLS layout calls it `annual_avg_estabs_count`; this derivative retains the actual CSV header.
+### 2026-10-18 — Initial release
 
-To update, choose a reference year and acquisition snapshot; review release status, NAICS/geography changes and disclosure rules; independently pin both official archives and regenerate labels/schema; rebuild into a new directory; run all-cell, aggregate, fixture, example and installed-client checks; obtain Codex review and an independent Claude review and resolve findings. Then publish only to authorized destinations, verify the immutable remote artifact and consumers, and open the separate registry PR. Annual files may be revised; this repository does not promise automated refreshes.
-
-BLS data are **public domain**, with source attribution requested. Cite the U.S. Bureau of Labor Statistics, Quarterly Census of Employment and Wages, 2025 annual, acquisition date and artifact hash. See [BLS copyright information](https://www.bls.gov/opub/copyright-information.htm) and [LICENSE.md](LICENSE.md). This derivative converts representation, adds dictionaries/metadata and the analytic view, and preserves original source values in `annual_raw`. No BLS endorsement or ownership of its emblem is implied.
-
-The source labels for DC codes 11000 and 11001 both say “District of Columbia, not unknown”; they are retained verbatim. Los Angeles County’s 2025 private health care/social assistance row reports 287,445 establishments and 859,824 jobs. This snapshot does not independently establish the administrative explanation for that unusually large establishment count. Use the exact source definitions when comparing establishments across states.
+- QCEW 2025 annual: 3,096,467 rows across 6 tables (48 columns) and the `annual` view. Artifact 195,571,712 bytes, SHA-256 `89bf1cef…edbf8a1d`, commit `334c467d`.
+- Every typed cell verified against an independent read of the pinned source ZIP; disclosure NULLs checked against their own flags; public immutable URL, HTTP range requests and the installed Python and R clients tested after upload.
+- Registry entry opened as a draft pull request; catalog integration pending.

@@ -1,0 +1,208 @@
+{
+  "utc": "2026-10-18T16:40:52.859512+00:00",
+  "results": [
+    {
+      "url": "https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813794",
+      "http_status": 200,
+      "resolved_url": "https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813794",
+      "status": "reachable",
+      "method": "GET",
+      "head_status": 405
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "http_status": 200,
+      "resolved_url": "https://creativecommons.org/licenses/by/4.0/",
+      "status": "reachable"
+    },
+    {
+      "url": "https://datapond-db.github.io/website/",
+      "http_status": 200,
+      "resolved_url": "https://datapond-db.github.io/website/",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/datapond-db/registry",
+      "http_status": 200,
+      "resolved_url": "https://github.com/datapond-db/registry",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/ian-nason/fars-database",
+      "http_status": 200,
+      "resolved_url": "https://github.com/ian-nason/fars-database",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/ian-nason/fars-database/blob/main/DICTIONARY.md",
+      "status": "local_path_verified_pending_docs_publication",
+      "path": "/home/inason/datapond-maintenance/additions-2026-10-18/documentation-2026-10-18/fars/DICTIONARY.md"
+    },
+    {
+      "url": "https://github.com/ian-nason/fars-database/blob/main/PUBLICATION.md",
+      "status": "local_path_verified_pending_docs_publication",
+      "path": "/home/inason/datapond-maintenance/additions-2026-10-18/documentation-2026-10-18/fars/PUBLICATION.md"
+    },
+    {
+      "url": "https://github.com/ian-nason/fars-database/blob/main/docs/CONSUMERS.md",
+      "resolved_url": "https://github.com/ian-nason/fars-database/blob/main/docs/CONSUMERS.md",
+      "status": "local_path_verified_pending_docs_publication",
+      "path": "/home/inason/datapond-maintenance/additions-2026-10-18/documentation-2026-10-18/fars/docs/CONSUMERS.md"
+    },
+    {
+      "url": "https://github.com/ian-nason/fars-database/blob/main/docs/REPRODUCE.md",
+      "status": "local_path_verified_pending_docs_publication",
+      "path": "/home/inason/datapond-maintenance/additions-2026-10-18/documentation-2026-10-18/fars/docs/REPRODUCE.md"
+    },
+    {
+      "url": "https://github.com/ian-nason/fars-database/blob/main/docs/RESEARCHER-GUIDE.md",
+      "status": "local_path_verified_pending_docs_publication",
+      "path": "/home/inason/datapond-maintenance/additions-2026-10-18/documentation-2026-10-18/fars/docs/RESEARCHER-GUIDE.md"
+    },
+    {
+      "url": "https://github.com/ian-nason/fars-database/blob/main/examples.sql",
+      "status": "local_path_verified_pending_docs_publication",
+      "path": "/home/inason/datapond-maintenance/additions-2026-10-18/documentation-2026-10-18/fars/examples.sql"
+    },
+    {
+      "url": "https://github.com/ian-nason/onet-database",
+      "http_status": 200,
+      "resolved_url": "https://github.com/ian-nason/onet-database",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/ian-nason/onet-database/blob/main/DICTIONARY.md",
+      "status": "local_path_verified_pending_docs_publication",
+      "path": "/home/inason/datapond-maintenance/additions-2026-10-18/documentation-2026-10-18/onet/DICTIONARY.md"
+    },
+    {
+      "url": "https://github.com/ian-nason/onet-database/blob/main/PUBLICATION.md",
+      "status": "local_path_verified_pending_docs_publication",
+      "path": "/home/inason/datapond-maintenance/additions-2026-10-18/documentation-2026-10-18/onet/PUBLICATION.md"
+    },
+    {
+      "url": "https://github.com/ian-nason/onet-database/blob/main/docs/CONSUMERS.md",
+      "resolved_url": "https://github.com/ian-nason/onet-database/blob/main/docs/CONSUMERS.md",
+      "status": "local_path_verified_pending_docs_publication",
+      "path": "/home/inason/datapond-maintenance/additions-2026-10-18/documentation-2026-10-18/onet/docs/CONSUMERS.md"
+    },
+    {
+      "url": "https://github.com/ian-nason/onet-database/blob/main/docs/REPRODUCE.md",
+      "status": "local_path_verified_pending_docs_publication",
+      "path": "/home/inason/datapond-maintenance/additions-2026-10-18/documentation-2026-10-18/onet/docs/REPRODUCE.md"
+    },
+    {
+      "url": "https://github.com/ian-nason/onet-database/blob/main/docs/RESEARCHER-GUIDE.md",
+      "status": "local_path_verified_pending_docs_publication",
+      "path": "/home/inason/datapond-maintenance/additions-2026-10-18/documentation-2026-10-18/onet/docs/RESEARCHER-GUIDE.md"
+    },
+    {
+      "url": "https://github.com/ian-nason/onet-database/blob/main/examples.sql",
+      "status": "local_path_verified_pending_docs_publication",
+      "path": "/home/inason/datapond-maintenance/additions-2026-10-18/documentation-2026-10-18/onet/examples.sql"
+    },
+    {
+      "url": "https://github.com/ian-nason/qcew-database",
+      "http_status": 200,
+      "resolved_url": "https://github.com/ian-nason/qcew-database",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/ian-nason/qcew-database/blob/main/DICTIONARY.md",
+      "status": "local_path_verified_pending_docs_publication",
+      "path": "/home/inason/datapond-maintenance/additions-2026-10-18/documentation-2026-10-18/qcew/DICTIONARY.md"
+    },
+    {
+      "url": "https://github.com/ian-nason/qcew-database/blob/main/PUBLICATION.md",
+      "status": "local_path_verified_pending_docs_publication",
+      "path": "/home/inason/datapond-maintenance/additions-2026-10-18/documentation-2026-10-18/qcew/PUBLICATION.md"
+    },
+    {
+      "url": "https://github.com/ian-nason/qcew-database/blob/main/docs/CONSUMERS.md",
+      "resolved_url": "https://github.com/ian-nason/qcew-database/blob/main/docs/CONSUMERS.md",
+      "status": "local_path_verified_pending_docs_publication",
+      "path": "/home/inason/datapond-maintenance/additions-2026-10-18/documentation-2026-10-18/qcew/docs/CONSUMERS.md"
+    },
+    {
+      "url": "https://github.com/ian-nason/qcew-database/blob/main/docs/REPRODUCE.md",
+      "status": "local_path_verified_pending_docs_publication",
+      "path": "/home/inason/datapond-maintenance/additions-2026-10-18/documentation-2026-10-18/qcew/docs/REPRODUCE.md"
+    },
+    {
+      "url": "https://github.com/ian-nason/qcew-database/blob/main/docs/RESEARCHER-GUIDE.md",
+      "status": "local_path_verified_pending_docs_publication",
+      "path": "/home/inason/datapond-maintenance/additions-2026-10-18/documentation-2026-10-18/qcew/docs/RESEARCHER-GUIDE.md"
+    },
+    {
+      "url": "https://github.com/ian-nason/qcew-database/blob/main/examples.sql",
+      "status": "local_path_verified_pending_docs_publication",
+      "path": "/home/inason/datapond-maintenance/additions-2026-10-18/documentation-2026-10-18/qcew/examples.sql"
+    },
+    {
+      "url": "https://static.nhtsa.gov/nhtsa/downloads/FARS/README-BAC.pdf",
+      "http_status": 200,
+      "resolved_url": "https://static.nhtsa.gov/nhtsa/downloads/FARS/README-BAC.pdf",
+      "status": "reachable"
+    },
+    {
+      "url": "https://www.bls.gov/cew/about-data/downloadable-file-layouts/annual/naics-based-annual-layout.htm",
+      "http_status": 403,
+      "resolved_url": "https://www.bls.gov/cew/about-data/downloadable-file-layouts/annual/naics-based-annual-layout.htm",
+      "status": "blocked"
+    },
+    {
+      "url": "https://www.bls.gov/cew/downloadable-data-files.htm",
+      "http_status": 403,
+      "resolved_url": "https://www.bls.gov/cew/downloadable-data-files.htm",
+      "status": "blocked"
+    },
+    {
+      "url": "https://www.bls.gov/cew/publications/employment-and-wages-annual-averages/2025/home.htm#disclosure-restrictions",
+      "http_status": 403,
+      "resolved_url": "https://www.bls.gov/cew/publications/employment-and-wages-annual-averages/2025/home.htm#disclosure-restrictions",
+      "status": "blocked"
+    },
+    {
+      "url": "https://www.bls.gov/opub/copyright-information.htm",
+      "http_status": 403,
+      "resolved_url": "https://www.bls.gov/opub/copyright-information.htm",
+      "status": "blocked"
+    },
+    {
+      "url": "https://www.nhtsa.gov/about-nhtsa/privacy-policy",
+      "http_status": 403,
+      "resolved_url": "https://www.nhtsa.gov/about-nhtsa/privacy-policy",
+      "status": "blocked"
+    },
+    {
+      "url": "https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars",
+      "http_status": 403,
+      "resolved_url": "https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars",
+      "status": "blocked"
+    },
+    {
+      "url": "https://www.onetcenter.org/database.html",
+      "http_status": 200,
+      "resolved_url": "https://www.onetcenter.org/database.html",
+      "status": "reachable"
+    },
+    {
+      "url": "https://www.onetcenter.org/dictionary/31.0/csv/appendix_analyst.html",
+      "http_status": 200,
+      "resolved_url": "https://www.onetcenter.org/dictionary/31.0/csv/appendix_analyst.html",
+      "status": "reachable"
+    },
+    {
+      "url": "https://www.onetcenter.org/dictionary/31.0/csv/appendix_incumbent.html",
+      "http_status": 200,
+      "resolved_url": "https://www.onetcenter.org/dictionary/31.0/csv/appendix_incumbent.html",
+      "status": "reachable"
+    },
+    {
+      "url": "https://www.onetcenter.org/license_db.html",
+      "http_status": 200,
+      "resolved_url": "https://www.onetcenter.org/license_db.html",
+      "status": "reachable"
+    }
+  ]
+}

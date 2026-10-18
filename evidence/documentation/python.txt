@@ -1,0 +1,125 @@
+SQL BLOCK 0 rows 1 first ('U.S. TOTAL', 12112924, 155732363, 12259226899972, 78720)
+
+DOC BLOCK 1 python
+┌────────────────────┬───────────────────────────────────┬───────────┬───┬──────────────────────┬──────────────────────┐
+│     table_name     │            description            │ row_count │ … │    source_sha256     │    source_release    │
+│      varchar       │              varchar              │   int64   │ … │       varchar        │       varchar        │
+├────────────────────┼───────────────────────────────────┼───────────┼───┼──────────────────────┼──────────────────────┤
+│ annual_raw         │ 2025 annual QCEW rows preserving… │   3089813 │ … │ 53ca18a0d19db190189… │ 2025 annual; snapsh… │
+│ areas              │ Distinct exact code/title pairs … │      4451 │ … │ 9ebedc6873fcea68665… │ 2025 annual; snapsh… │
+│ ownerships         │ Distinct exact code/title pairs … │         7 │ … │ 9e7b4ef729834ef7a6f… │ 2025 annual; snapsh… │
+│ industries         │ Distinct exact code/title pairs … │      2159 │ … │ df50d8e10959db15881… │ 2025 annual; snapsh… │
+│ aggregation_levels │ Distinct exact code/title pairs … │        36 │ … │ edda34aed96e25397f9… │ 2025 annual; snapsh… │
+│ size_classes       │ Distinct exact code/title pairs … │         1 │ … │ dc5d7d7adad023f26ac… │ 2025 annual; snapsh… │
+└────────────────────┴───────────────────────────────────┴───────────┴───┴──────────────────────┴──────────────────────┘
+  6 rows                                                                                          10 columns (5 shown)
+
+┌───────────┬───────────────────────────────────┬───────────────────┬────────────────┬─────────────────┐
+│ area_fips │            area_title             │ annual_avg_emplvl │ avg_annual_pay │ disclosure_code │
+│  varchar  │              varchar              │       int64       │     int64      │     varchar     │
+├───────────┼───────────────────────────────────┼───────────────────┼────────────────┼─────────────────┤
+│ 06037     │ Los Angeles County, California    │            859824 │          57293 │                 │
+│ 17031     │ Cook County, Illinois             │            398700 │          66257 │                 │
+│ 36047     │ Kings County, New York            │            365318 │          46448 │                 │
+│ 04013     │ Maricopa County, Arizona          │            345778 │          70797 │                 │
+│ 48201     │ Harris County, Texas              │            288243 │          71747 │                 │
+│ 36061     │ New York County, New York         │            268810 │          88267 │                 │
+│ 06059     │ Orange County, California         │            238351 │          65092 │                 │
+│ 06073     │ San Diego County, California      │            232562 │          67338 │                 │
+│ 36081     │ Queens County, New York           │            203702 │          55322 │                 │
+│ 42101     │ Philadelphia County, Pennsylvania │            202186 │          68252 │                 │
+│ 48113     │ Dallas County, Texas              │            189773 │          75085 │                 │
+│ 12086     │ Miami-Dade County, Florida        │            179291 │          72743 │                 │
+│ 53033     │ King County, Washington           │            166929 │          80207 │                 │
+│ 27053     │ Hennepin County, Minnesota        │            161134 │          69907 │                 │
+│ 06085     │ Santa Clara County, California    │            157751 │          88914 │                 │
+│ 36059     │ Nassau County, New York           │            150413 │          82208 │                 │
+│ 25025     │ Suffolk County, Massachusetts     │            150397 │         101625 │                 │
+│ 06071     │ San Bernardino County, California │            143581 │          60101 │                 │
+│ 06065     │ Riverside County, California      │            142965 │          53391 │                 │
+│ 48029     │ Bexar County, Texas               │            136031 │          60815 │                 │
+└───────────┴───────────────────────────────────┴───────────────────┴────────────────┴─────────────────┘
+  20 rows                                                                                    5 columns
+
+
+DOC BLOCK 3 python
+['eoir', 'ice', 'fec', 'clinicaltrials', 'cms-medicare', 'openpayments', 'dol-visas', 'ipeds-db', 'fjc', 'cbp', 'ussc', 'cook-sao', 'fjc-judges', 'scdb', 'open-policing', 'courtlistener', 'onet', 'qcew', 'fars']
+  annual_raw (3,089,813 rows)
+
+  Column                            Type            Nulls  Example                                   Join
+  --------------------------------  -------------  ------  ----------------------------------------  ----
+  area_fips                         VARCHAR          0.0%  01000                                     Join areas using the entire string code. Filter one aggregation/ownership/industry level before aggregating.
+  own_code                          VARCHAR          0.0%  0                                         Join ownerships using the entire string code. Filter one aggregation/ownership/industry level before aggregating.
+  industry_code                     VARCHAR          0.0%  10                                        Join industries using the entire string code. Filter one aggregation/ownership/industry level before aggregating.
+  agglvl_code                       VARCHAR          0.0%  10                                        Join aggregation_levels using the entire string code. Filter one aggregation/ownership/industry level before aggregating.
+  size_code                         VARCHAR          0.0%  0                                         Join size_classes using the entire string code. Filter one aggregation/ownership/industry level before aggregating.
+  year                              VARCHAR          0.0%  2025                                      
+  qtr                               VARCHAR          0.0%  A                                         
+  disclosure_code                   VARCHAR          0.0%                                            Blank is published; N is not disclosed. Raw numeric zeros are retained; use the annual view for disclosure-aware values.
+  annual_avg_estabs                 BIGINT           0.0%  0                                         
+  annual_avg_emplvl                 BIGINT           0.0%  0                                         
+  total_annual_wages                BIGINT           0.0%  0                                         
+  taxable_annual_wages              BIGINT           0.0%  0                                         
+  annual_contributions              BIGINT           0.0%  0                                         
+  annual_avg_wkly_wage              BIGINT           0.0%  0                                         
+  avg_annual_pay                    BIGINT           0.0%  0                                         
+  lq_disclosure_code                VARCHAR          0.0%                                            Blank is published; N is not disclosed. Raw numeric zeros are retained; use the annual view for disclosure-aware values.
+  lq_annual_avg_estabs              DECIMAL(18,2)    0.0%  0.00                                      
+  lq_annual_avg_emplvl              DECIMAL(18,2)    0.0%  0.00                                      
+  lq_total_annual_wages             DECIMAL(18,2)    0.0%  0.00                                      
+  lq_taxable_annual_wages           DECIMAL(18,2)    0.0%  0.00                                      
+  lq_annual_contributions           DECIMAL(18,2)    0.0%  0.00                                      
+  lq_annual_avg_wkly_wage           DECIMAL(18,2)    0.0%  0.00                                      
+  lq_avg_annual_pay                 DECIMAL(18,2)    0.0%  0.00                                      
+  oty_disclosure_code               VARCHAR          0.0%                                            Blank is published; N is not disclosed. Raw numeric zeros are retained; use the annual view for disclosure-aware values.
+  oty_annual_avg_estabs_chg         BIGINT           0.0%  -1                                        
+  oty_annual_avg_estabs_pct_chg     DECIMAL(18,1)    0.0%  -0.1                                      
+  oty_annual_avg_emplvl_chg         BIGINT           0.0%  -1                                        
+  oty_annual_avg_emplvl_pct_chg     DECIMAL(18,1)    0.0%  -0.1                                      
+  oty_total_annual_wages_chg        BIGINT           0.0%  -1                                        
+  oty_total_annual_wages_pct_chg    DECIMAL(18,1)    0.0%  -0.1                                      
+  oty_taxable_annual_wages_chg      BIGINT           0.0%  -1                                        
+  oty_taxable_annual_wages_pct_chg  DECIMAL(18,1)    0.0%  -0.1                                      
+  oty_annual_contributions_chg      BIGINT           0.0%  -1                                        
+  oty_annual_contributions_pct_chg  DECIMAL(18,1)    0.0%  -0.1                                      
+  oty_annual_avg_wkly_wage_chg      BIGINT           0.0%  -1                                        
+  oty_annual_avg_wkly_wage_pct_chg  DECIMAL(18,1)    0.0%  -0.1                                      
+  oty_avg_annual_pay_chg            BIGINT           0.0%  -1                                        
+  oty_avg_annual_pay_pct_chg        DECIMAL(18,1)    0.0%  -0.1                                      
+Connecting to QCEW 2025 Annual Employment and Wages (0.195572 GB remote)...
+Connected. 9 tables available.
+┌───────────────────┬────────────────────┐
+│ annual_avg_emplvl │ total_annual_wages │
+│       int64       │       int64        │
+├───────────────────┼────────────────────┤
+│         155732363 │     12259226899972 │
+└───────────────────┴────────────────────┘
+
+
+DOC BLOCK 5 python
+Downloading QCEW 2025 Annual Employment and Wages (0.195572 GB)...
+  qcew: 0%
+  qcew: 10%
+  qcew: 20%
+  qcew: 30%
+  qcew: 40%
+  qcew: 50%
+  qcew: 60%
+  qcew: 70%
+  qcew: 80%
+  qcew: 90%
+  qcew: 100%
+  qcew: complete (186.5 MB)
+Saved to /home/inason/datapond-maintenance/additions-2026-10-18/documentation-2026-10-18/qa/qcew/attempt01/python-home/.datapond/qcew.duckdb
+Connecting to QCEW 2025 Annual Employment and Wages (local)...
+Connected. 9 tables available.
+┌───────────────────┬────────────────────┐
+│ annual_avg_emplvl │ total_annual_wages │
+│       int64       │       int64        │
+├───────────────────┼────────────────────┤
+│         155732363 │     12259226899972 │
+└───────────────────┴────────────────────┘
+
+SQL BLOCK 7 rows 2 first ('', 1773, 1773, 1918348)
+SQL BLOCK 8 rows 53 first ('06000', 'California -- Statewide', 1079831, 91236, Decimal('5.0'), '')
+SQL BLOCK 9 rows 20 first ('01001', 'Autauga County, Alabama', 590, 3, 56211, 53999)

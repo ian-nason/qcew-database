@@ -1,0 +1,154 @@
+{
+  "pattern_findings": [
+    "Established cards (EOIR, Open Payments, FEC) open with a one-paragraph purpose statement and a bold headline count, then a Quick Start that attaches the public Hugging Face URL with a fixed catalog alias (eoir, op, fec). The three new cards open with pre-publication status prose, and their only runnable Python example opens a local path under releases/, which a Hugging Face reader cannot run.",
+    "Hugging Face YAML must be the first bytes of README.md. onet/README.md places a blockquote publication note above the frontmatter, and qcew/README.md and fars/README.md carry no frontmatter at all, so license, pretty_name, tags and size_categories are not parsed on the dataset page. Every established card has valid frontmatter at the top.",
+    "Established cards present a Tables section as a Markdown table with per-table rows (Open Payments also gives column counts and coverage). The new cards have row tables but mix grain, key and column counts into free text; dataset-facts.json supplies exact row and column counts for all 22 tables and should be the single source.",
+    "EOIR and Open Payments ship an explicit 'Researcher caveats' block as a short numbered list that a reader can scan before publishing numbers. The new cards contain the same substance (suppression flags, non-one-to-one SOC, person-join hazards, BAC 940, omitted MI files) but as dense paragraphs under headings like 'Interpretation and joins' and 'Safe comparisons'.",
+    "Established cards end with a concise dated Changelog that states what changed and the resulting counts. The new cards have no changelog; their last sections are rebuild and supervisor detail (memory caps, partial-file handling, guard receipts) that belongs in the source repository, not the researcher-facing card.",
+    "Established cards give a GitHub link, the data source with its update cadence, and a one-line license statement separating build code (MIT) from data terms. The new cards state license terms carefully (CC BY 4.0, BLS public domain, NHTSA own policy) but bury them below several screens of audit text and do not link a source repository or dictionary from a navigation block.",
+    "No reference card distinguishes R client versions, because the R package did not need it. For these three datasets the supplied consumer evidence shows CRAN datapond 0.1.0 and a patched 0.1.1 behave differently with DuckDB configuration, and neither resolves these ids until the registry entries merge, so the cards must offer a direct DBI/duckdb R example now and label package examples as post-integration.",
+    "Open Payments and FEC cards mention the datapond package only as an alternative to direct ATTACH. For these three the registry PRs are draft, so a card that says datapond.connect('onet') works would be false today; the correct pattern is direct URL first, package second with its precondition stated.",
+    "The source READMEs for the new datasets are currently identical in purpose to the HF cards, whereas EOIR and Open Payments keep two documents: a researcher card on HF and a builder-oriented README on GitHub with Quick start, Researcher caveats, Remote access, Usage, Tables, Views, Known issues, Data validation. The new source READMEs lack a table of contents and the 'Reproduce and validate' sections run 8 to 12 paragraphs without subheadings.",
+    "Artifact identity (bytes, SHA-256, dataset commit) is stated in the new FARS card but not in a consistent place across the three. Established practice (FEC) is one line near the end; the pinned-commit resolve URL is the practical reproducibility hook and should appear next to the main URL in Quick Start."
+  ],
+  "source_readme_plan": {
+    "goal": "Make each source README read like eoir-source.md and openpayments-source.md: a researcher can find purpose, quick start, tables, views, caveats and license in the first two screens, while every operational and audit sentence is retained verbatim in linked documents.",
+    "preservation_rule": "No sentence is deleted. Paragraphs that move are cut and pasted unchanged into the target file, and the README keeps a one-line pointer with the target's heading. Counts, hashes, dates and limits are not retyped by hand; they are moved as text.",
+    "frontmatter_rule": "Hugging Face copies must start with the YAML block. Move the 'Published October 18, 2026' blockquote below the H1 as a normal paragraph linking PUBLICATION.md. The GitHub source README needs no YAML.",
+    "target_structure": [
+      "H1 title, one-paragraph purpose, bold headline counts, link to the Hugging Face dataset and PUBLICATION.md",
+      "Table of contents (links to the sections below)",
+      "Quick start: direct DuckDB ATTACH (CLI, Python, R), then the datapond package block labelled 'after catalog integration'",
+      "Tables (rows and columns from dataset-facts.json), keys and grain",
+      "Pre-built views",
+      "Researcher caveats as a numbered list (same substance as the HF card, may be longer)",
+      "Example queries (link to examples.sql; keep the current inline examples)",
+      "Data source, version and provenance summary (ZIP bytes/hash, acquisition date, release vintage) with a link to source-lock.json",
+      "Dictionary and codes (DICTIONARY.md, _metadata, _columns, code-source notes)",
+      "Build from source: the three or four command lines only, with a link to docs/REPRODUCE.md",
+      "Validation summary: three sentences and a link to docs/VALIDATION.md and the evidence folder",
+      "Update procedure: short list, link to docs/UPDATE.md",
+      "License and attribution (unchanged text)",
+      "Status: publication date, artifact hash, registry PR state"
+    ],
+    "moves": [
+      {
+        "from": "README 'Reproduce and validate' / 'Sources, reproducibility and validation' paragraphs about memory caps, spill sizes, supervisor thresholds, partial-file handling, guard receipts, helper-lock and runtime.json",
+        "to": "docs/REPRODUCE.md",
+        "note": "Keep the command block in the README. Each dataset's exact figures (O*NET 14.3 s and 230.5 MiB; QCEW 267.26 s, 411.7 MiB, 512 MiB spill; FARS 37.10 s, 407.7 MiB) move with their paragraphs."
+      },
+      {
+        "from": "README paragraphs on all-cell comparison, fixture lists, locked regression values, consumer harness and R double conversion",
+        "to": "docs/VALIDATION.md (FARS may instead point to the existing AUDIT-RESULT.md and append the moved text there)",
+        "note": "The README keeps: 'Every typed cell is compared against an independent read of the pinned source before checkpoint and after read-only reopen; all N fixtures pass; see docs/VALIDATION.md.'"
+      },
+      {
+        "from": "README 'To update' paragraphs",
+        "to": "docs/UPDATE.md",
+        "note": "README keeps a three-item list: pick the release, rebuild in a fresh checkout under the guard, run audits and reviews before publishing."
+      },
+      {
+        "from": "QCEW README paragraphs on the HTTP 403 dictionary downloads, derived CSV regeneration and the duplicate-source cleanup record",
+        "to": "docs/REPRODUCE.md under 'Reference tables and label provenance'",
+        "note": "README keeps one sentence: labels come from every row of the official 2025 annual-by-area ZIP, pinned in source-lock.json."
+      },
+      {
+        "from": "O*NET README 'Reproduce and update' environment paragraphs (FJC virtual environment, installed distribution 0.1.1 vs pinned helper)",
+        "to": "docs/REPRODUCE.md under 'Environment'",
+        "note": "README keeps: Python 3.12, DuckDB 1.5.5, pins in pyproject.toml and helper-lock.json."
+      }
+    ],
+    "per_dataset": {
+      "onet": "Promote the two inline SQL examples into 'Example queries' using the HF alias-free form (local open) and add the HF ATTACH quick start. Keep 'Attribution, license and modifications' verbatim as the License section. Add the Tables table with the 89 column counts.",
+      "qcew": "Convert 'Safe comparisons' bullets and 'Disclosure and missingness' into Researcher caveats; keep the flag table as a sub-table under Pre-built views. Keep the Los Angeles establishment-count and DC label notes as caveat items so they are not lost.",
+      "fars": "Keep the two view field tables under Pre-built views. Move the city-conflict table into Dictionary and codes. Replace the trailing sentence 'Public destination approval remains pending; no public repository or registry availability is claimed' with the current status (published 2026-10-18, registry PR draft), since the README is now public and that sentence is stale."
+    },
+    "catalog_dependency": "The website cards and headline stats are rendered from registry.json on the registry main branch, which has 16 entries. The three datasets are published on Hugging Face and queryable by URL, but they do not appear on the site, and datapond.connect / dp_connect do not resolve their ids, until the three draft registry PRs are reviewed and merged by the parent. Documentation must say exactly that, link the Hugging Face pages directly, and must not point clients at a self-hosted registry as if it were official. The R consumer test used options(datapond.registry_url=...) only as a localhost harness; it is not offered as a user instruction.",
+    "link_integrity": "Before publishing, confirm the GitHub repository names, that DICTIONARY.md and examples.sql exist at the linked paths on main, that the Hugging Face artifact filenames are onet.duckdb and qcew.duckdb, and that PUBLICATION.md states the dataset commit shown in dataset-facts.json."
+  },
+  "website_changes": [
+    {
+      "file": "website/index.html",
+      "location": "Updates section, first child of .container after the h2",
+      "change": "Insert the October 18, 2026 block from website_announcement_html above the September 17 block.",
+      "why": "The newest release is absent; the section currently stops at September 17."
+    },
+    {
+      "file": "website/index.html",
+      "location": "header nav",
+      "change": "Add <a href=\"#updates\">Updates</a> after the Get Started link.",
+      "why": "The Updates section exists with id=updates but has no navigation entry, so announcements are only found by scrolling."
+    },
+    {
+      "file": "website/index.html",
+      "location": "CSS, inside @media (max-width: 768px)",
+      "change": "Add: header .container { flex-wrap: wrap; row-gap: 0.5rem; } header nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; } header nav a { margin-left: 0; }",
+      "why": "Five nav links with margin-left: 1.5rem sit beside the logo in a single flex row; at phone widths they overflow or wrap unpredictably. Rendering must be confirmed from screenshots, which were not supplied."
+    },
+    {
+      "file": "website/index.html",
+      "location": "renderCards(), sizeDisplay",
+      "change": "Replace with: var sizeDisplay = (db.size_gb == null) ? '--' : (db.size_gb < 1 ? Math.round(db.size_gb * 1000) + ' MB' : (Math.round(db.size_gb * 10) / 10) + ' GB');",
+      "why": "size_gb is bytes/1e9 (registry entries use 0.026489 for 26,488,832 bytes), but the code multiplies by 1024 and only below 0.1 GB. O*NET would show 12 MB instead of 11 MB, FARS 27 MB instead of 26 MB, and QCEW would print the raw decimal '0.195571712 GB' instead of '196 MB'. Existing larger databases keep one decimal in GB."
+    },
+    {
+      "file": "website/index.html",
+      "location": "renderCards(), after card.className = 'card'",
+      "change": "Add card.id = 'db-' + db.id; and add CSS .card { scroll-margin-top: 1rem; }",
+      "why": "Announcements and external docs cannot deep-link to a dataset card; anchors like #db-onet make that possible once the entries are merged."
+    },
+    {
+      "file": "website/index.html",
+      "location": "renderCards() and renderSteps()",
+      "change": "Keep the fetched databases array in a module variable; render the .card-code snippet as datapond.connect('id') for Python and con <- dp_connect('id') (highlighted with highlightR) for R, and call renderCards again from setLang so the toggle applies to the cards.",
+      "why": "The Python/R toggle only changes the Getting Started steps; every card still shows the Python call while R is selected, which contradicts the tab state. The toggle itself works: setLang stores the choice, renderSteps swaps snippets and highlighters."
+    },
+    {
+      "file": "website/index.html",
+      "location": "lang-tabs buttons",
+      "change": "Add role=\"tab\" and aria-selected=\"true|false\" to each button and update aria-selected in renderSteps; move the inline active/inactive colours into .lang-tab and .lang-tab.active rules.",
+      "why": "The container is role=tablist but the buttons expose no selected state; the active class exists in JS but has no CSS."
+    },
+    {
+      "file": "website/index.html",
+      "location": "Getting Started intro paragraph",
+      "change": "Append one sentence: 'Databases announced below but not yet listed in the catalog can be attached directly by URL from their Hugging Face page until their registry entry is merged.'",
+      "why": "Readers who follow the October 18 announcement will otherwise try datapond.connect on ids the registry does not have."
+    },
+    {
+      "file": "website/index.html",
+      "location": "Add a Database wishlist",
+      "change": "Remove the 'BLS' and 'NHTSA' list items; keep 'DOT'.",
+      "why": "QCEW (BLS) and FARS (NHTSA) are now published; the list should not request sources that already exist."
+    },
+    {
+      "file": "website/index.html",
+      "location": "footer-credits",
+      "change": "Change the parenthetical to '(registry, Python and R clients, website, and most of the databases; each card shows its maintainer)' and keep the IPEDS credit.",
+      "why": "The explicit database list is already stale (fjc, cbp, ussc, scdb, open-policing, courtlistener are missing) and would need editing again when the three new entries merge."
+    },
+    {
+      "file": "website/index.html",
+      "location": "none (explanation only)",
+      "change": "No shadow registry. Cards, stats and footer links keep reading registry.json from datapond-db/registry main. The three new databases appear automatically when the draft PRs merge; no site code change is needed for that step.",
+      "why": "Catalog listing is a registry decision the parent resolves; the site must not fake it."
+    }
+  ],
+  "correctness_watchlist": [
+    "Hugging Face artifact filenames for O*NET and QCEW are assumed to be onet.duckdb and qcew.duckdb from the local release paths; only fars.duckdb is established in supplied text. Confirm from PUBLICATION.md or the dataset file list and fix every ATTACH URL if different.",
+    "GitHub repository URLs github.com/ian-nason/onet-database and github.com/ian-nason/qcew-database are inferred from the fars-database naming; they are not in the supplied sources. Confirm or substitute, including the DICTIONARY.md and examples.sql links derived from them.",
+    "The datapond website URL was not supplied, so the cards refer to 'the datapond website' without a link; add the URL if it should be linked.",
+    "Pinned-commit URLs use artifact_commit from dataset-facts.json; confirm each resolve URL returns the byte size and SHA-256 listed (11,284,480 / 195,571,712 / 26,488,832).",
+    "R version note: that patched datapond 0.1.1 honours options(datapond.duckdb_config) is inferred from consumer.R, which mocks the duckdb constructor only for the CRAN 0.1.0 flavor. Verify against the 0.1.1 source before publishing the sentence; also confirm dp_connect issues INSTALL httpfs in both versions.",
+    "R direct examples call dbExecute twice for INSTALL and LOAD rather than one multi-statement string; confirm the duckdb R client accepts them and that ATTACH with (READ_ONLY) works over HTTP in the tested DuckDB 1.5.5 R build.",
+    "Python examples pass two statements in one con.sql string, matching the EOIR card; confirm against DuckDB 1.5.4 and 1.5.5 Python.",
+    "QCEW size_categories uses 1M<n<10M for 3,096,467 rows; HF license: other requires license_name, which is set. Validate the three YAML blocks with the Hub card validator after moving them to the top of each file.",
+    "All SQL in the cards reuses examples.sql column names with a catalog alias prefix; Codex should execute each against the public artifacts and confirm the alias-qualified view names (onet.v_skills, qcew.annual, fars.crashes) resolve and that GROUP BY ALL is accepted in the tested DuckDB versions.",
+    "Stated counts to re-check against the artifacts: O*NET 910/911/902 occupation coverage and 57 elements; QCEW 1,860,359 / 1,872,172 / 1,937,791 suppressed rows and the national row figures; FARS 9,020 nonoccupants, 426 parked occupants, 39,254 fatalities, 170 crashes without coordinates.",
+    "Website size formatting assumes registry size_gb is bytes/1e9 as in the FARS registry entry; confirm the O*NET and QCEW draft entries use the same convention before relying on the MB rounding.",
+    "The announcement says 'verified at its public URL with HTTP range requests from Python and R'; this relies on the user's statement that public immutable-byte, range, Python and R tests passed, which is not in the supplied evidence files. Keep only if PUBLICATION.md records it.",
+    "Changelog entries state only the initial release; if the Hugging Face repos received more than one commit (for example a card-only update after the artifact), add dated entries rather than editing the initial one.",
+    "Mobile navigation and toggle changes are untested here; screenshots at 375 px and 768 px are needed before merging the CSS, and the wishlist/footer edits should be reviewed by the parent as they touch text outside the three datasets.",
+    "Do not add the three ids to any registry.json served from another host; the site must continue to read datapond-db/registry main until the draft PRs are merged."
+  ]
+}

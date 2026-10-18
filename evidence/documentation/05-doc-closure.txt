@@ -1,0 +1,20 @@
+Both blocking findings from the 04-doc-review are closed.
+
+**Finding 1, content preservation: closed.** By text comparison against the original READMEs I reviewed earlier, every item I listed is present verbatim in the supplied moved documents:
+
+- O*NET: job-title `sources` codes 01 to 10 and `shown_in_my_next_move`; the occupation-level `item`/`response` guidance with its dictionary link; "complete three or five categories"; the QCEW/ATUS no-ready-made-key sentence (all in `onet/docs/RESEARCHER-GUIDE.md`); build limits, 0.03-point category tolerance and update procedure (in `onet/docs/REPRODUCE.md`).
+- QCEW: HTTP 403 label provenance and `profile_sources.py`; CSV-slice layout link; `annual_avg_estabs_count` header note; `../LICENSE.md` link; DC 11000/11001 and Los Angeles notes (RESEARCHER-GUIDE); duplicate-source-cleanup record (REPRODUCE).
+- FARS: four-row city-label table; `build-report.json` label listing; "Dates/times remain source codes"; "no record linkage … or direct O*NET/QCEW/ATUS crosswalk" (RESEARCHER-GUIDE); `AUDIT-RESULT.md` reference (REPRODUCE).
+
+Only relative links changed (`../`), as stated. The receipt's section-by-section flags are consistent with what I read. I did not run the preservation script.
+
+**Finding 2, download pinning caveat: closed.** All three final cards now state, directly after the download/local blocks, that the SHA-256 should be verified and that the tested Python 0.1.1 optional Hugging Face download path follows the default branch rather than the pinned URL, with a link to consumer verification. That matches the limitation documented in CONSUMERS.md and does not overstate it.
+
+**Remaining observations, none blocking:**
+
+- The moved guides retain stale stage statements verbatim, most visibly the FARS attribution sentence "Public destination approval remains pending; no public repository or registry availability is claimed by this local checkpoint" and the O*NET "Registry inclusion and public-host verification remain separate release gates". The preamble on each doc ("describe that earlier build stage; PUBLICATION.md records the completed public-host verification; catalog integration is still pending") covers this. Acceptable for a preservation document; a reader skipping the preamble could be briefly misled.
+- `qcew/docs/REPRODUCE.md` keeps the original unguarded `python audit_release.py …` line while the new README uses the guarded form. Both are valid; the guarded one is the better instruction.
+- Fixture counts 27/35/44 rest on the receipt; I have not seen the O*NET suite listing.
+- HF heading-anchor behaviour and live rendering remain post-publication checks, as already planned.
+
+**Conclusion.** Within the approved docs-only scope, I see no remaining concrete issue that should hold the publication. Catalog status, licensing distinctions and artifact identity are stated accurately; registry and R-package changes remain untouched.

@@ -1,0 +1,29 @@
+{
+  "03-doc-design": {
+    "session_id": "6945c837-efac-4ee7-8206-17354fdf79f8",
+    "prompt_sha256": "efca529324720eb3bc115e8f2c055390dea4348a23ba008b458637af1e49843d",
+    "started_utc": "2026-10-18T16:22:03.781325+00:00",
+    "completed_utc": "2026-10-18T16:29:14.088351+00:00",
+    "tools_enabled": false,
+    "peak_group_rss_bytes_sampled": 296534016,
+    "response_sha256": "d5847d549b8d0b36238d9202ba3fe875b36005cfcd75196656238a3d29288ed2"
+  },
+  "04-doc-review": {
+    "session_id": "6945c837-efac-4ee7-8206-17354fdf79f8",
+    "prompt_sha256": "7eb45a6d730400c9abab135cee25933679b115cd55657f9db0c39a614e933e04",
+    "started_utc": "2026-10-18T16:43:43.800854+00:00",
+    "completed_utc": "2026-10-18T16:45:48.375297+00:00",
+    "tools_enabled": false,
+    "peak_group_rss_bytes_sampled": 276803584,
+    "response_sha256": "07fc0ab2e18a682f01a40931f3825c920385129557eb9729bb1a6ef362e04a2d"
+  },
+  "05-doc-closure": {
+    "session_id": "6945c837-efac-4ee7-8206-17354fdf79f8",
+    "prompt_sha256": "4e494dd4c29675bfbceba74674bbe3c1967f08958a45f0d94d4c9656ef357318",
+    "started_utc": "2026-10-18T16:47:37.639476+00:00",
+    "completed_utc": "2026-10-18T16:48:01.331196+00:00",
+    "tools_enabled": false,
+    "peak_group_rss_bytes_sampled": 298262528,
+    "response_sha256": "ec8cd7db9ebe51bdc76eb7e4bd72a5d680ca28ab317f7a9de8f150af9f209538"
+  }
+}
