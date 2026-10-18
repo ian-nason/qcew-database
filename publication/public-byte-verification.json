@@ -1,0 +1,31 @@
+{
+  "hf_commit": "334c467dba413928233fb1d8cd1c0ff8de5c0105",
+  "verified_utc": "2026-10-18T16:02:23.890763+00:00",
+  "files": {
+    "DICTIONARY.md": {
+      "bytes": 15573,
+      "sha256": "18db9d3d554f3859205e00113a506eae2dda1c9b3dedab918327188f1db84961",
+      "public_anonymous_url": "https://huggingface.co/datasets/Nason/qcew-database/resolve/334c467dba413928233fb1d8cd1c0ff8de5c0105/DICTIONARY.md"
+    },
+    "README.md": {
+      "bytes": 5625,
+      "sha256": "76c418f8a8936faa31ac8d280c04d23091fd10e889d58c8241b77c829a4fc74c",
+      "public_anonymous_url": "https://huggingface.co/datasets/Nason/qcew-database/resolve/334c467dba413928233fb1d8cd1c0ff8de5c0105/README.md"
+    },
+    "qcew.duckdb": {
+      "bytes": 195571712,
+      "sha256": "89bf1cef54f42f821965df6e9079b24fc7c4c0c86046fadc98e6cedf9ebd8a1d",
+      "public_anonymous_url": "https://huggingface.co/datasets/Nason/qcew-database/resolve/334c467dba413928233fb1d8cd1c0ff8de5c0105/qcew.duckdb",
+      "range": {
+        "status": 206,
+        "content_range": "bytes 0-4095/195571712",
+        "bytes": 4096
+      }
+    },
+    "sources-2025.json": {
+      "bytes": 25292,
+      "sha256": "997024fb9abc0527274aa1939588cdda4d76a16bcdf4d2bc110102511f76e8eb",
+      "public_anonymous_url": "https://huggingface.co/datasets/Nason/qcew-database/resolve/334c467dba413928233fb1d8cd1c0ff8de5c0105/sources-2025.json"
+    }
+  }
+}

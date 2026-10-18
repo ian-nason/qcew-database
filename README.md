@@ -1,3 +1,5 @@
+> **Published October 18, 2026:** see [verified public release and immutable query URL](PUBLICATION.md). Audit/status statements below record the frozen pre-publication snapshot. Registry discovery awaits draft PR review.
+
 # QCEW 2025 annual employment and wages
 
 A version-pinned DuckDB edition of the U.S. Bureau of Labor Statistics [Quarterly Census of Employment and Wages](https://www.bls.gov/cew/downloadable-data-files.htm), annual 2025 snapshot acquired October 18, 2026. It includes all **3,089,813 annual source rows**, five version-matched reference tables, and a disclosure-aware view. The six data tables contain **3,096,467 rows and 48 columns** in total; the view is excluded from those totals.

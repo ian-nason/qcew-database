@@ -1,0 +1,12 @@
+{
+  "databases": [
+    {
+      "id": "qcew",
+      "name": "QCEW audited release",
+      "rows": 3096467,
+      "tables": 6,
+      "size_gb": 0.195571712,
+      "attach_url": "https://huggingface.co/datasets/Nason/qcew-database/resolve/334c467dba413928233fb1d8cd1c0ff8de5c0105/qcew.duckdb"
+    }
+  ]
+}

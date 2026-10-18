@@ -1,0 +1,48 @@
+  aggregation_levels            36 rows  Distinct exact code/title pairs from the pinned 2025 BLS by-area archive. Covers codes used in this release, not all historical classifications.
+  annual_raw             3,089,813 rows  2025 annual QCEW rows preserving all 38 source fields, numeric placeholders and disclosure flags. Mixed nested geographies, industries and ownership totals; do not sum unfiltered.
+  areas                      4,451 rows  Distinct exact code/title pairs from the pinned 2025 BLS by-area archive. Covers codes used in this release, not all historical classifications.
+  industries                 2,159 rows  Distinct exact code/title pairs from the pinned 2025 BLS by-area archive. Covers codes used in this release, not all historical classifications.
+  ownerships                     7 rows  Distinct exact code/title pairs from the pinned 2025 BLS by-area archive. Covers codes used in this release, not all historical classifications.
+  size_classes                   1 rows  Distinct exact code/title pairs from the pinned 2025 BLS by-area archive. Covers codes used in this release, not all historical classifications.
+  annual_raw (3,089,813 rows)
+
+  Column                            Type            Nulls  Example                                   Join
+  --------------------------------  -------------  ------  ----------------------------------------  ----
+  area_fips                         VARCHAR          0.0%  01000                                     Join areas using the entire string code. Filter one aggregation/ownership/industry level before aggregating.
+  own_code                          VARCHAR          0.0%  0                                         Join ownerships using the entire string code. Filter one aggregation/ownership/industry level before aggregating.
+  industry_code                     VARCHAR          0.0%  10                                        Join industries using the entire string code. Filter one aggregation/ownership/industry level before aggregating.
+  agglvl_code                       VARCHAR          0.0%  10                                        Join aggregation_levels using the entire string code. Filter one aggregation/ownership/industry level before aggregating.
+  size_code                         VARCHAR          0.0%  0                                         Join size_classes using the entire string code. Filter one aggregation/ownership/industry level before aggregating.
+  year                              VARCHAR          0.0%  2025                                      
+  qtr                               VARCHAR          0.0%  A                                         
+  disclosure_code                   VARCHAR          0.0%                                            Blank is published; N is not disclosed. Raw numeric zeros are retained; use the annual view for disclosure-aware values.
+  annual_avg_estabs                 BIGINT           0.0%  0                                         
+  annual_avg_emplvl                 BIGINT           0.0%  0                                         
+  total_annual_wages                BIGINT           0.0%  0                                         
+  taxable_annual_wages              BIGINT           0.0%  0                                         
+  annual_contributions              BIGINT           0.0%  0                                         
+  annual_avg_wkly_wage              BIGINT           0.0%  0                                         
+  avg_annual_pay                    BIGINT           0.0%  0                                         
+  lq_disclosure_code                VARCHAR          0.0%                                            Blank is published; N is not disclosed. Raw numeric zeros are retained; use the annual view for disclosure-aware values.
+  lq_annual_avg_estabs              DECIMAL(18,2)    0.0%  0.00                                      
+  lq_annual_avg_emplvl              DECIMAL(18,2)    0.0%  0.00                                      
+  lq_total_annual_wages             DECIMAL(18,2)    0.0%  0.00                                      
+  lq_taxable_annual_wages           DECIMAL(18,2)    0.0%  0.00                                      
+  lq_annual_contributions           DECIMAL(18,2)    0.0%  0.00                                      
+  lq_annual_avg_wkly_wage           DECIMAL(18,2)    0.0%  0.00                                      
+  lq_avg_annual_pay                 DECIMAL(18,2)    0.0%  0.00                                      
+  oty_disclosure_code               VARCHAR          0.0%                                            Blank is published; N is not disclosed. Raw numeric zeros are retained; use the annual view for disclosure-aware values.
+  oty_annual_avg_estabs_chg         BIGINT           0.0%  -1                                        
+  oty_annual_avg_estabs_pct_chg     DECIMAL(18,1)    0.0%  -0.1                                      
+  oty_annual_avg_emplvl_chg         BIGINT           0.0%  -1                                        
+  oty_annual_avg_emplvl_pct_chg     DECIMAL(18,1)    0.0%  -0.1                                      
+  oty_total_annual_wages_chg        BIGINT           0.0%  -1                                        
+  oty_total_annual_wages_pct_chg    DECIMAL(18,1)    0.0%  -0.1                                      
+  oty_taxable_annual_wages_chg      BIGINT           0.0%  -1                                        
+  oty_taxable_annual_wages_pct_chg  DECIMAL(18,1)    0.0%  -0.1                                      
+  oty_annual_contributions_chg      BIGINT           0.0%  -1                                        
+  oty_annual_contributions_pct_chg  DECIMAL(18,1)    0.0%  -0.1                                      
+  oty_annual_avg_wkly_wage_chg      BIGINT           0.0%  -1                                        
+  oty_annual_avg_wkly_wage_pct_chg  DECIMAL(18,1)    0.0%  -0.1                                      
+  oty_avg_annual_pay_chg            BIGINT           0.0%  -1                                        
+  oty_avg_annual_pay_pct_chg        DECIMAL(18,1)    0.0%  -0.1                                      
