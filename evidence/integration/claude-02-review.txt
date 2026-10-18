@@ -1,0 +1,10 @@
+**No unresolved blockers.** The final candidates for registry PRs 5, 6 and 7 and datapond-r PR1 are clear to merge under the stated plan.
+
+**What the follow-up changes.** PR7's new head changes only two prose lines. The CHANGELOG now says the GiB unit follows the updater and that the six-decimal values may be rounded on a future refresh, which is accurate. The README format section now names GiB for `size_gb`. The `registry.json` hash for PR7 is unchanged from the previously validated tree, so no data or metadata moved. PR5 and PR6 heads are identical to the ones I reviewed. The R head is identical and still bound by the closure hash trace.
+
+**Validation.** Ancestry is now asserted for each staged branch and the original PR heads, which closes the only procedural gap from my last report. The negative fixtures, refreshed-entry preservation, row total and rendered tables are unchanged and still consistent with the file contents.
+
+**Remaining conditions, all already in the plan, none blocking.**
+- The dataset and website status prose stays unpublished until the live integration report exists and records the six datasets across the three clients.
+- The pkgdown 404 is a publication question, not a merge question. If it is not resolved within the existing workflow configuration, report it rather than widen authorization.
+- The GB labels in the R and Python clients remain a cosmetic follow-up outside PR1.

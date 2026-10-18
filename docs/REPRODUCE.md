@@ -2,7 +2,7 @@
 
 [Overview](../README.md) · [Dictionary](../DICTIONARY.md) · [Publication verification](../PUBLICATION.md)
 
-These detailed notes preserve the audited release documentation. Statements about local-only checks and later publication gates describe that earlier build stage; [PUBLICATION.md](../PUBLICATION.md) records the completed public-host verification. Catalog integration is still pending.
+These detailed notes preserve the audited release documentation. Statements about local-only checks and later publication gates describe that earlier build stage; [PUBLICATION.md](../PUBLICATION.md) records the completed public-host verification. Catalog integration is complete; see the current [consumer verification](CONSUMERS.md).
 
 
 `source-lock.json` pins the original singlefile ZIP (62,799,396 bytes; SHA-256 `94ebbc589b1b500671c1fd507e2589a9eeb24dcd30eb07f1ce37b0018643f865`), its CSV member, the annual-by-area label ZIP (114,997,862 bytes), and each derived reference CSV. Both archives were last modified by BLS on August 21, 2026. The annual URL can be revised: this is the exact acquired snapshot, not a guarantee that a later download has identical content. A changed checksum fails closed. Source ZIP sizes are not memory or artifact-size estimates.

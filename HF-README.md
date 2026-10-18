@@ -21,7 +21,7 @@ A version-pinned DuckDB edition of the U.S. Bureau of Labor Statistics [Quarterl
 
 Use it for descriptive questions about covered employment, establishments and nominal pay by place, industry and ownership. It is establishment-based industry data, not occupational wages, unique people, an employer panel or a causal analysis.
 
-Built with [qcew-database](https://github.com/ian-nason/qcew-database). Published to Hugging Face on 2026-10-18. The datapond registry entry is a draft pull request, so `datapond.connect('qcew')` does not resolve this database until it is merged; the direct URL below works now.
+Built with [qcew-database](https://github.com/ian-nason/qcew-database). Published to Hugging Face on 2026-10-18. The dataset is included in the public datapond catalog as `qcew`. Use normal package discovery and connections, or the immutable direct URL below.
 
 [Quick start](#quick-start) · [Tables](#tables) · [Views](#pre-built-views) · [Examples](#example-queries) · [Caveats](#researcher-caveats) · [Source](#data-source-and-version) · [License](#license-and-attribution) · [Changelog](#changelog)
 
@@ -85,9 +85,9 @@ dbDisconnect(con, shutdown = TRUE)
 
 In the tested R DuckDB 1.5.5 configuration, BIGINT and DECIMAL results are exposed as doubles. Employment and wage integers here are below 2^53 and exact; location quotients and percentage changes may be approximate in R although the stored DECIMAL values are exact.
 
-### datapond package (after catalog integration)
+### datapond package
 
-The public default catalog does not yet include `qcew`. After its registry entry is merged, these examples use the package's normal discovery and connection API:
+These examples use the public default catalog and the package's normal discovery and connection API:
 
 ```python
 import datapond
@@ -107,7 +107,7 @@ DBI::dbGetQuery(con, "SELECT annual_avg_emplvl, total_annual_wages FROM annual W
 dp_disconnect(con)
 ```
 
-For repeated scans, after catalog integration, download once and connect locally:
+For repeated scans, download once and connect locally:
 
 ```python
 import datapond
@@ -127,7 +127,7 @@ dp_disconnect(con)
 
 Verify the recorded artifact SHA-256 after downloading. In tested Python 0.1.1, the optional Hugging Face download path follows the default branch rather than the pinned URL; see [consumer verification](https://github.com/ian-nason/qcew-database/blob/main/docs/CONSUMERS.md) for the tested configuration.
 
-Package checks use an isolated candidate registry; default-catalog discovery remains pending. See [consumer verification](https://github.com/ian-nason/qcew-database/blob/main/docs/CONSUMERS.md) for exact client versions, paths, resource limits and download behavior. The direct URL examples above work independently of the catalog. The SQL examples below use the `qcew` catalog alias from the direct-URL quick start.
+Default-catalog discovery and representative remote queries were verified after the registry merge. Earlier full-download checks used an isolated candidate registry. See [consumer verification](https://github.com/ian-nason/qcew-database/blob/main/docs/CONSUMERS.md) for exact client versions, paths, resource limits and download behavior. The direct URL examples above work independently of the catalog. The SQL examples below use the `qcew` catalog alias from the direct-URL quick start.
 
 
 ## Tables
@@ -224,17 +224,17 @@ BLS data are public domain; BLS requests source attribution ([BLS copyright info
 
 - Source, build scripts, tests and evidence: [github.com/ian-nason/qcew-database](https://github.com/ian-nason/qcew-database)
 - Column dictionary (all 48 columns, source headers, types, NULL shares, join hints): [DICTIONARY.md](https://github.com/ian-nason/qcew-database/blob/main/DICTIONARY.md); BLS [annual layout](https://www.bls.gov/cew/about-data/downloadable-file-layouts/annual/naics-based-annual-layout.htm)
-- Catalog: [datapond registry](https://github.com/datapond-db/registry); the entry for `qcew` is a draft pull request and the database will appear on the [datapond website](https://datapond-db.github.io/website/) once it is merged.
+- Catalog: [datapond registry](https://github.com/datapond-db/registry); `qcew` is included in the public catalog and on the [datapond website](https://datapond-db.github.io/website/).
 
 ## Changelog
 
 ### 2026-10-18 — Documentation refresh
 
 - Added Python/R quick starts, table descriptions and column counts, view guidance, navigation, and clearer researcher caveats.
-- Database bytes, schema, source locks and validated query results are unchanged. Catalog integration remains pending.
+- Database bytes, schema, source locks and validated query results are unchanged. Catalog integration was pending at this documentation checkpoint; it is now complete.
 
 ### 2026-10-18 — Initial release
 
 - QCEW 2025 annual: 3,096,467 rows across 6 tables (48 columns) and the `annual` view. Artifact 195,571,712 bytes, SHA-256 `89bf1cef…edbf8a1d`, commit `334c467d`.
 - Every typed cell verified against an independent read of the pinned source ZIP; disclosure NULLs checked against their own flags; public immutable URL, HTTP range requests and the installed Python and R clients tested after upload.
-- Registry entry opened as a draft pull request; catalog integration pending.
+- Registry entry initially opened as a draft pull request; later merged after integration review.

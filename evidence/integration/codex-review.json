@@ -1,0 +1,53 @@
+{
+  "reviewer": "Codex",
+  "status": "no_unresolved_blockers",
+  "reviewed_utc": "2026-10-18T19:04:39.518693+00:00",
+  "registry_pr4_head": "26d3c13965245bbda307987bde84e86d24a040ac",
+  "registry_candidates": [
+    {
+      "pr": 5,
+      "branch": "integration/pr5",
+      "head": "02cfd80b6fdd3117de028917912d9049894e8e2f",
+      "tree": "d12ba6fb83502a574784ccf20af4adbf4454d4ed",
+      "count": 17,
+      "registry_sha256": "2b13f19e62ffc5d7a2c87cad8ba2ad1c1c176c7b345b1ba57595b42b5938a5a8"
+    },
+    {
+      "pr": 6,
+      "branch": "integration/pr6",
+      "head": "1f11ca30fbfb73ca699d46daa6dbc8f82da8688c",
+      "tree": "312bd7be512140f6cf0d8d7cf3f84fb21758b593",
+      "count": 18,
+      "registry_sha256": "5b9a63b5de7a35bbb07c42dbc5cde0c08966ba6d7615b08baf202926826cf8ee"
+    },
+    {
+      "pr": 7,
+      "branch": "integration/pr7",
+      "head": "81bcfa29a2b9460ad642ad97436569a29eff6dd6",
+      "tree": "7e8d7c149220af4548a10f290b76561047e51273",
+      "count": 19,
+      "registry_sha256": "ce472ac448d4c7d16a4213449ef6679cfeebc0c78510d8b2fccf2c0244faaf7c"
+    }
+  ],
+  "r_pr1_head": "4c03b087a8cdee2392329303f830b9dd79a1c1f7",
+  "assessment": "Reviewed final registry semantic combination, staged ancestry, preservation of all 16 prior entries and pinned additions, generated tables, conditional documentation, R transfer/cache/install/resume and startup config paths, full regression fixtures, fresh source package check and exact-head CI. No unresolved blocking findings. Prepublication status claims remain gated on successful live checks.",
+  "tests": {
+    "passed": 159,
+    "failed": 0,
+    "warnings": 0,
+    "skipped": 1,
+    "r": "R version 4.5.3 (2026-03-11)",
+    "duckdb": "1.5.5"
+  },
+  "package_check": {
+    "errors": [],
+    "warnings": [],
+    "notes": []
+  },
+  "remaining_limits": [
+    "Registry has no configured CI; explicit semantic/negative-fixture validation completed.",
+    "Minimum R 4.1/DuckDB 1.0 and PDF manual not retested; no CRAN submission.",
+    "Existing R/Python size displays still label legacy binary size_gb as GB; cosmetic follow-up outside PR1 scope.",
+    "GitHub Pages pkgdown currently404 although existing gh-pages workflow succeeds; verify and repair conventional existing publication configuration within authorization or report blocker."
+  ]
+}

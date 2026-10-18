@@ -1,0 +1,20 @@
+**No unresolved blockers for registry PRs 4 through 7 or datapond-r PR1.** The R diff is byte-identical in content to the closure I reviewed, the hash trace binds it, and the registry stack validates as claimed. Five non-blocking notes follow.
+
+**Registry stack, verified from the snapshot.**
+- The validator proves origin/pr4 differs from origin/main only in fec, fjc-judges and courtlistener, that every integration branch carries all 16 PR4 entries unchanged, and that each branch adds exactly the expected pinned entries in order. Counts 17, 18, 19 and the rendered table in each README are asserted, not assumed.
+- Row total 1,280,642,627 reproduces from the 19 entries. The three new size values reproduce from the artifact byte counts at bytes over 1024 cubed to six decimals. Website conversion to MiB for sub-GiB files is arithmetically correct for the new entries.
+- The ipeds description change is only an ASCII escape of the same em dash; JSON equality holds, which is why the validator passes while the file hash changes.
+
+**Non-blocking notes.**
+
+1. **Low. Size precision is not the updater's convention.** `scripts/update_registry.py` rounds to one decimal at or above 0.1 GiB and three below. The new entries carry six decimals, and the validator at the `additions` block enforces that six-decimal value, so it would reject a value the updater itself would write. A future updater run on qcew rewrites 0.18214 to 0.2 and restores the literal em dash in ipeds. Harmless, but the CHANGELOG sentence should say the unit follows the updater, not the convention. Optional fix: compute `additions[i]['size_gb']` with the updater's rounding rule.
+
+2. **Low. R client labels GiB values as GB.** `R/registry.R:143`, `R/download.R:285` and `R/connect.R:75` print registry `size_gb` with the suffix "GB". After this merge the registry documents the field as GiB. Outside PR1 scope. Fix in a follow-up by changing the three literals.
+
+3. **Procedural. Ancestry is not asserted.** The validator checks each integration branch's content but not that pr5 descends from pr4, pr6 from pr5, and pr7 from pr6. Run `git merge-base --is-ancestor` for each pair before the first merge. A failure would otherwise appear as a merge conflict in `registry.json`, and the planned post-merge tree comparison is the only backstop.
+
+4. **Publication precondition for the conditional diffs.** The three dataset `docs/CONSUMERS.md` diffs link `evidence/integration/live-consumers.json`. That file must exist and record the six datasets across Python 0.1.1, CRAN R 0.1.0 and merged R 0.1.1 before any of that prose is pushed, or the link is broken and the claims are unsupported. The website diff bundles the MiB and GiB unit fix with the status prose. If the unit fix should land with the registry merge rather than after live verification, split it out.
+
+5. **Doc nit.** The registry README format section describes `size_gb` as scale information without naming the unit. Add "in GiB" so contributors do not enter decimal gigabytes.
+
+**R PR1, reaffirmed.** Interrupted 206, missing status and 503 preserve the part and meta at `R/download.R:121-135`. Rejected and unsatisfiable ranges restart once. Completed files survive a failed install and a transient probe outage. Fresh responses adopt their own identity, weak tags never resume, identities are URL-scoped, and DuckDB config is applied in the driver constructor before `INSTALL httpfs` and any `ATTACH`. The suite's 159 passes and the clean check are consistent with the code as supplied. Minimum R 4.1 and DuckDB 1.0 remain untested, as the brief states.

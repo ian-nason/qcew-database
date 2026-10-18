@@ -12,7 +12,23 @@ The final reader examples were executed on October 18, 2026, against the immutab
 
 Package version labels alone do not identify editable or patched installations. The result file records the executable/module/library paths and SHA-256 for installed package files. These results do not claim that the default shell import, another R library also labeled 0.1.1, or the latest Python source checkout was tested. The patched R build is separate from the released CRAN 0.1.0 package; no CRAN submission was made.
 
-## Catalog and resource scope
+## Post-merge default catalog verification
+
+After the registry merge, fresh caches using the unchanged public default registry
+URL discovered all 19 IDs in installed Python datapond 0.1.1, released CRAN
+datapond 0.1.0, and an isolated R 0.1.1 installation built from the merged PR.
+Representative package connections and queries passed for O*NET, QCEW, FARS,
+FEC and CourtListener in all three clients, and for FJC judges in both R clients.
+Installed Python 0.1.1 fails to quote the hyphenated `fjc-judges` ID when attaching;
+its FJC package connection failed. A separate direct DuckDB connection using the
+quoted alias `"fjc-judges"` passed the FJC artifact queries. This fallback is not
+counted as a successful Python package connection. No registry fixture or URL
+override was used for these post-merge checks. The machine-readable [live integration report](../evidence/integration/live-consumers.json)
+records exact source commits, package paths, runtime versions and query results.
+The resource controls and preinstalled-extension substitution described below
+also apply to this check. The earlier full-download results remain unchanged.
+
+## Earlier candidate-catalog and resource scope
 
 The default public registry was fetched into a fresh cache and returned **16 existing IDs**, without `onet`, `qcew` or `fars`. The package examples then used a **local 19-entry candidate fixture**, preserving PR #4's refreshed metadata and the three proposed additions. That tests the clients against the proposed entries; it does **not** establish live default-catalog discovery. The direct DuckDB examples use immutable public URLs independently of the catalog.
 

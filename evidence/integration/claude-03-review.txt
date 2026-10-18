@@ -1,0 +1,9 @@
+**No unresolved blockers for these documentation changes.** The amended prose matches the live report and does not overclaim.
+
+**What checks out.**
+- The `docs/CONSUMERS.md` section in all three repositories states the result exactly as recorded: discovery of all 19 IDs in three clients, package connections passing for five datasets in all three clients and for FJC judges in both R clients, the Python attach failure on the hyphenated ID, and the direct quoted-alias fallback explicitly not counted as a package success. That matches the report's `known_failures` entry and its scope note.
+- The README and HF-README changes for onet, qcew and fars claim only package discovery and connection for those three unhyphenated IDs, which the report supports in every client. They do not generalize the FJC result.
+- The website paragraph claims the three are in the 19-database catalog and discoverable by the packages, which is true. It does not mention FJC and does not need to.
+- The linked live report path now resolves in each repository, and no document claims the pkgdown or Pages state. Leaving that open and unclaimed is correct.
+
+**One optional clarification, not blocking.** The registry CHANGELOG records that Python 0.1.2 fixed hyphenated IDs in connect and the CLI, and that 0.1.4 is the current release. The CONSUMERS prose correctly scopes the failure to "installed Python 0.1.1", but a reader may take it as a current-release defect. Consider adding one clause such as: "later Python releases from 0.1.2 record a fix for hyphenated IDs; that was not retested here." It states only what the changelog says and avoids a new untested claim.

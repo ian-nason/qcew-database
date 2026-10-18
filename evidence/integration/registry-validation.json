@@ -1,0 +1,66 @@
+{
+  "time": "2026-10-18T19:04:39.514735+00:00",
+  "candidate_checks": [
+    {
+      "pr": 5,
+      "head": "02cfd80b6fdd3117de028917912d9049894e8e2f",
+      "count": 17,
+      "readme_current": true,
+      "ancestry_verified": true
+    },
+    {
+      "pr": 6,
+      "head": "1f11ca30fbfb73ca699d46daa6dbc8f82da8688c",
+      "count": 18,
+      "readme_current": true,
+      "ancestry_verified": true
+    },
+    {
+      "pr": 7,
+      "head": "81bcfa29a2b9460ad642ad97436569a29eff6dd6",
+      "count": 19,
+      "readme_current": true,
+      "ancestry_verified": true
+    }
+  ],
+  "negative_fixtures_rejected": [
+    "duplicate",
+    "lost_existing",
+    "stale_fec",
+    "stale_courtlistener",
+    "lost_addition",
+    "mutable_url",
+    "wrong_size_unit"
+  ],
+  "unchanged_existing_entries": 13,
+  "refreshed_entries_preserved": [
+    "courtlistener",
+    "fec",
+    "fjc-judges"
+  ],
+  "final_rows": 1280642627,
+  "prior_r_audit_trace": {
+    "02": {
+      "session": "cfcbe38d-1e45-4bde-8bf1-3201b6263c8d",
+      "status": "completed",
+      "files_match": {
+        "R/download.R": false,
+        "R/connect.R": true,
+        "DESCRIPTION": true,
+        "tests/testthat/test-download.R": true,
+        "tests/testthat/helper-fixture.R": true,
+        "tests/testthat/helper-server.R": true,
+        "tests/testthat/test-maintenance-regressions.R": false
+      }
+    },
+    "03": {
+      "session": "cfcbe38d-1e45-4bde-8bf1-3201b6263c8d",
+      "status": "completed",
+      "files_match": {
+        "R/download.R": true,
+        "tests/testthat/test-maintenance-regressions.R": true
+      }
+    }
+  },
+  "registry_ci": "No configured workflows; explicit semantic validation substitutes for absent CI."
+}

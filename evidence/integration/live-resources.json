@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/inason/datapond-maintenance/.venv-datapond/bin/python",
+    "/mnt/c/Users/ignna/Documents/Codex/2026-10-18/task/verify_live_integration.py",
+    "03"
+  ],
+  "guard_sha256": "f27a2795c873ab19f6154656f29c049a9c733b323cbf1ce7cd74167149148493",
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 102.71644587000003,
+  "peak_process_group_rss_bytes_sampled": 281141248,
+  "peak_workspace_file_bytes_sampled": 2994495,
+  "workspace_file_scope": "All files under this isolated repository, including retained attempts and .git",
+  "minimum_available_memory_bytes": 9649442816,
+  "sample_interval_seconds": 0.25,
+  "completed_utc": "2026-10-18T19:11:23.441866+00:00"
+}

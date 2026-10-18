@@ -1,0 +1,13 @@
+{
+  "status": "verified_with_documented_python_0.1.1_limitation",
+  "registry_final_merge": "aa93c86f8c6f0f10778dd0ff8516c627ce07c1cc",
+  "r_merge": "64362395a68ac219deea9c4b22de6cb74f70446e",
+  "artifact_changed": false,
+  "live_report_sha256": "1dfc81b974c7cb39ed2f7c13ad6f98552ef15c59713b2d7d11fc3a2e130e2b6a",
+  "review_session": "cfcbe38d-1e45-4bde-8bf1-3201b6263c8d",
+  "limitations": [
+    "Python 0.1.1 fails to attach hyphenated FJC ID; direct quoted DuckDB fallback verified separately.",
+    "No CRAN submission; patched R installation is isolated.",
+    "Pre-existing optional huggingface_hub path in Python 0.1.1 does not honor artifact revision; use pinned direct URLs and recorded hashes."
+  ]
+}

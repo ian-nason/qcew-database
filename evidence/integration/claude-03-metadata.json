@@ -1,0 +1,20 @@
+{
+  "session_id": "cfcbe38d-1e45-4bde-8bf1-3201b6263c8d",
+  "status": "completed",
+  "reviewed_sha256": {
+    "prompt": "0ffab6348922eb7d846a3ac111f4d50949f1105c0315aa2aceb4d1f5ef4b747f",
+    "live_report": "1dfc81b974c7cb39ed2f7c13ad6f98552ef15c59713b2d7d11fc3a2e130e2b6a"
+  },
+  "prompt_sha256": "0ffab6348922eb7d846a3ac111f4d50949f1105c0315aa2aceb4d1f5ef4b747f",
+  "prompt_bytes": 76523,
+  "started_utc": "2026-10-18T19:12:13.201695+00:00",
+  "tools_enabled": false,
+  "cwd": "/home/inason/datapond-maintenance/datapond-python",
+  "new_trust_granted": false,
+  "exit_code": 0,
+  "stop_reason": null,
+  "peak_group_rss_bytes_sampled": 238673920,
+  "completed_utc": "2026-10-18T19:12:36.805045+00:00",
+  "returned_session_id": "cfcbe38d-1e45-4bde-8bf1-3201b6263c8d",
+  "is_error": false
+}

@@ -1,0 +1,661 @@
+{
+  "status": "completed_with_documented_client_limitation",
+  "completed_utc": "2026-10-18T19:11:23.270584+00:00",
+  "merge_commits": {
+    "started_utc": "2026-10-18T19:06:14.820391+00:00",
+    "codex_review": "evidence/codex-review.json",
+    "claude_session": "cfcbe38d-1e45-4bde-8bf1-3201b6263c8d",
+    "claude_review": "claude-evidence/02-review.txt",
+    "registry": [
+      {
+        "pr": 4,
+        "url": "https://github.com/datapond-db/registry/pull/4",
+        "reviewed_head": "26d3c13965245bbda307987bde84e86d24a040ac",
+        "merge_commit": "f2c743fa4012a070527e0ae161ca6f0ca438a72c",
+        "tree": "b3fff7fe580fda2e21932d877c076b50f9c3f8ae",
+        "merged_at": "2026-10-18T19:06:29Z",
+        "entry_count": 16
+      },
+      {
+        "pr": 5,
+        "url": "https://github.com/datapond-db/registry/pull/5",
+        "reviewed_head": "02cfd80b6fdd3117de028917912d9049894e8e2f",
+        "merge_commit": "56718b3f40e7206996b419e3eab91f86925c98ef",
+        "tree": "d12ba6fb83502a574784ccf20af4adbf4454d4ed",
+        "merged_at": "2026-10-18T19:06:34Z",
+        "entry_count": 17
+      },
+      {
+        "pr": 6,
+        "url": "https://github.com/datapond-db/registry/pull/6",
+        "reviewed_head": "1f11ca30fbfb73ca699d46daa6dbc8f82da8688c",
+        "merge_commit": "2a80234be2b3530fe7f60b42966fd1e62d217768",
+        "tree": "312bd7be512140f6cf0d8d7cf3f84fb21758b593",
+        "merged_at": "2026-10-18T19:06:37Z",
+        "entry_count": 18
+      },
+      {
+        "pr": 7,
+        "url": "https://github.com/datapond-db/registry/pull/7",
+        "reviewed_head": "81bcfa29a2b9460ad642ad97436569a29eff6dd6",
+        "merge_commit": "aa93c86f8c6f0f10778dd0ff8516c627ce07c1cc",
+        "tree": "7e8d7c149220af4548a10f290b76561047e51273",
+        "merged_at": "2026-10-18T19:06:41Z",
+        "entry_count": 19
+      }
+    ],
+    "r": {
+      "pr": 1,
+      "url": "https://github.com/datapond-db/datapond-r/pull/1",
+      "reviewed_head": "4c03b087a8cdee2392329303f830b9dd79a1c1f7",
+      "merge_commit": "64362395a68ac219deea9c4b22de6cb74f70446e",
+      "tree": "0a051ef174dc73d8c4bcb68f2e1a9094dfed76a6",
+      "merged_at": "2026-10-18T19:06:44Z",
+      "premerge_checks": [
+        {
+          "name": "ubuntu-latest (release)",
+          "conclusion": "success",
+          "url": "https://github.com/datapond-db/datapond-r/actions/runs/39080274895/job/117535630479"
+        },
+        {
+          "name": "windows-latest (release)",
+          "conclusion": "success",
+          "url": "https://github.com/datapond-db/datapond-r/actions/runs/39080274895/job/117535630478"
+        },
+        {
+          "name": "macos-latest (release)",
+          "conclusion": "success",
+          "url": "https://github.com/datapond-db/datapond-r/actions/runs/39080274895/job/117535630440"
+        }
+      ]
+    }
+  },
+  "registry_sha256": "731e28279c1ce7495247642daee0ec9392de7ff4b5025433eb8d234891d71241",
+  "default_registry_url": "https://raw.githubusercontent.com/datapond-db/registry/main/registry.json",
+  "registry_override": false,
+  "python": {
+    "datapond_version": "0.1.1",
+    "duckdb_version": "1.5.4",
+    "executable": "/home/inason/datapond-maintenance/.venv-datapond/bin/python",
+    "runtime": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "module_path": "/home/inason/datapond-maintenance/.venv-datapond/lib/python3.12/site-packages/datapond/__init__.py",
+    "package_files_sha256": {
+      "__init__.py": "c086c414b3f8509f658fd500ffdab416fcacf91695167d9b30a7b61451b7aefe",
+      "cli.py": "6b2ed419a56d542d53746d067b95bb7d31993c7d721baaa5865ce5d2e249ef3f",
+      "connection.py": "ce66fb2275df2508ea39de9465cf45be5492613d6b88316a70c3ea92d110102a",
+      "describe.py": "f864342f4605968967cb94205b33a5f943b8accfa13d6e60fe675db8f168878a",
+      "download.py": "e092afee664b616bbd6397b4f457b4b0a8f9fe0ed46d6cc7d405685e4355a1b2",
+      "registry.py": "6fb32b8c5a1a3fc6020d5315d9c647c2a8f331fb4f0de074901788fbee2d61e1"
+    },
+    "default_ids": [
+      "eoir",
+      "ice",
+      "fec",
+      "clinicaltrials",
+      "cms-medicare",
+      "openpayments",
+      "dol-visas",
+      "ipeds-db",
+      "fjc",
+      "cbp",
+      "ussc",
+      "cook-sao",
+      "fjc-judges",
+      "scdb",
+      "open-policing",
+      "courtlistener",
+      "onet",
+      "qcew",
+      "fars"
+    ],
+    "queries": {
+      "onet": {
+        "connection_mode": "datapond.connect",
+        "queries": [
+          {
+            "label": "metadata",
+            "sql": "SELECT count(*),sum(row_count),sum(column_count) FROM _metadata",
+            "result": [
+              12,
+              468857,
+              89
+            ]
+          },
+          {
+            "label": "skill_occupations",
+            "sql": "SELECT count(DISTINCT onet_soc_code) FROM v_skills",
+            "result": [
+              910
+            ]
+          }
+        ]
+      },
+      "qcew": {
+        "connection_mode": "datapond.connect",
+        "queries": [
+          {
+            "label": "metadata",
+            "sql": "SELECT count(*),sum(row_count),sum(column_count) FROM _metadata",
+            "result": [
+              6,
+              3096467,
+              48
+            ]
+          },
+          {
+            "label": "national_annual",
+            "sql": "SELECT annual_avg_emplvl,total_annual_wages FROM annual WHERE area_fips='US000' AND own_code='0' AND industry_code='10' AND agglvl_code='10'",
+            "result": [
+              155732363,
+              12259226899972
+            ]
+          },
+          {
+            "label": "suppressed",
+            "sql": "SELECT count(*) FILTER(WHERE disclosure_code='N'),count(*) FILTER(WHERE lq_disclosure_code='N'),count(*) FILTER(WHERE oty_disclosure_code='N') FROM annual_raw",
+            "result": [
+              1860359,
+              1872172,
+              1937791
+            ]
+          }
+        ]
+      },
+      "fars": {
+        "connection_mode": "datapond.connect",
+        "queries": [
+          {
+            "label": "metadata",
+            "sql": "SELECT count(*),sum(row_count),sum(column_count) FROM _metadata",
+            "result": [
+              4,
+              190798,
+              413
+            ]
+          },
+          {
+            "label": "safe_crash_aggregate",
+            "sql": "SELECT count(*),sum(fatals),sum(vehicle_records),sum(person_records) FROM crashes",
+            "result": [
+              36297,
+              39254,
+              56011,
+              88326
+            ]
+          }
+        ]
+      },
+      "fec": {
+        "connection_mode": "datapond.connect",
+        "queries": [
+          {
+            "label": "metadata",
+            "sql": "SELECT count(*),sum(row_count) FROM _metadata",
+            "result": [
+              10,
+              356327912
+            ]
+          },
+          {
+            "label": "candidate_cycles",
+            "sql": "SELECT min(cycle),max(cycle),count(DISTINCT cycle) FROM candidates",
+            "result": [
+              2004,
+              2026,
+              12
+            ]
+          }
+        ]
+      },
+      "fjc-judges": {
+        "connection_mode": "direct_DuckDB_quoted_alias",
+        "queries": [
+          {
+            "label": "metadata",
+            "sql": "SELECT count(*),sum(row_count) FROM _metadata",
+            "result": [
+              6,
+              37797
+            ]
+          },
+          {
+            "label": "judges",
+            "sql": "SELECT count(*) FROM judges",
+            "result": [
+              4077
+            ]
+          },
+          {
+            "label": "appointments",
+            "sql": "SELECT count(*) FROM federal_judicial_service",
+            "result": [
+              4777
+            ]
+          }
+        ]
+      },
+      "courtlistener": {
+        "connection_mode": "datapond.connect",
+        "queries": [
+          {
+            "label": "metadata",
+            "sql": "SELECT count(*),sum(row_count) FROM _metadata",
+            "result": [
+              20,
+              2277934
+            ]
+          },
+          {
+            "label": "judges",
+            "sql": "SELECT count(*) FROM judges",
+            "result": [
+              16191
+            ]
+          },
+          {
+            "label": "courts",
+            "sql": "SELECT count(*) FROM courts",
+            "result": [
+              3361
+            ]
+          },
+          {
+            "label": "oral_arguments",
+            "sql": "SELECT count(*) FROM oral_arguments",
+            "result": [
+              103710
+            ]
+          }
+        ]
+      }
+    },
+    "known_failures": [
+      {
+        "id": "fjc-judges",
+        "operation": "datapond.connect",
+        "error": "Parser Error: syntax error at or near \"-\"\n\nLINE 1: .../fjc-judges-database/resolve/main/fjc-judges.duckdb' AS fjc-judges (READ_ONLY)\n                                                                      ^",
+        "scope": "Installed Python 0.1.1 fails to quote hyphenated database IDs. This is a client compatibility limitation, not a failed artifact query. Direct DuckDB quoted-alias check follows separately."
+      }
+    ],
+    "status": "passed_with_documented_client_limitation"
+  },
+  "r": {
+    "cran": {
+      "status": "passed",
+      "datapond_version": "0.1.0",
+      "duckdb_version": "1.5.5",
+      "runtime": "R version 4.5.3 (2026-03-11)",
+      "library": "/mnt/c/Users/ignna/Documents/Codex/2026-10-17/task-2/libraries/cran/datapond",
+      "default_ids": [
+        "eoir",
+        "ice",
+        "fec",
+        "clinicaltrials",
+        "cms-medicare",
+        "openpayments",
+        "dol-visas",
+        "ipeds-db",
+        "fjc",
+        "cbp",
+        "ussc",
+        "cook-sao",
+        "fjc-judges",
+        "scdb",
+        "open-policing",
+        "courtlistener",
+        "onet",
+        "qcew",
+        "fars"
+      ],
+      "queries": {
+        "onet": [
+          {
+            "label": "metadata",
+            "sql": "SELECT count(*),sum(row_count),sum(column_count) FROM _metadata",
+            "result": [
+              12,
+              468857,
+              89
+            ]
+          },
+          {
+            "label": "skill_occupations",
+            "sql": "SELECT count(DISTINCT onet_soc_code) FROM v_skills",
+            "result": 910
+          }
+        ],
+        "qcew": [
+          {
+            "label": "metadata",
+            "sql": "SELECT count(*),sum(row_count),sum(column_count) FROM _metadata",
+            "result": [
+              6,
+              3096467,
+              48
+            ]
+          },
+          {
+            "label": "national_annual",
+            "sql": "SELECT annual_avg_emplvl,total_annual_wages FROM annual WHERE area_fips='US000' AND own_code='0' AND industry_code='10' AND agglvl_code='10'",
+            "result": [
+              155732363,
+              12259226899972
+            ]
+          },
+          {
+            "label": "suppressed",
+            "sql": "SELECT count(*) FILTER(WHERE disclosure_code='N'),count(*) FILTER(WHERE lq_disclosure_code='N'),count(*) FILTER(WHERE oty_disclosure_code='N') FROM annual_raw",
+            "result": [
+              1860359,
+              1872172,
+              1937791
+            ]
+          }
+        ],
+        "fars": [
+          {
+            "label": "metadata",
+            "sql": "SELECT count(*),sum(row_count),sum(column_count) FROM _metadata",
+            "result": [
+              4,
+              190798,
+              413
+            ]
+          },
+          {
+            "label": "safe_crash_aggregate",
+            "sql": "SELECT count(*),sum(fatals),sum(vehicle_records),sum(person_records) FROM crashes",
+            "result": [
+              36297,
+              39254,
+              56011,
+              88326
+            ]
+          }
+        ],
+        "fec": [
+          {
+            "label": "metadata",
+            "sql": "SELECT count(*),sum(row_count) FROM _metadata",
+            "result": [
+              10,
+              356327912
+            ]
+          },
+          {
+            "label": "candidate_cycles",
+            "sql": "SELECT min(cycle),max(cycle),count(DISTINCT cycle) FROM candidates",
+            "result": [
+              2004,
+              2026,
+              12
+            ]
+          }
+        ],
+        "fjc-judges": [
+          {
+            "label": "metadata",
+            "sql": "SELECT count(*),sum(row_count) FROM _metadata",
+            "result": [
+              6,
+              37797
+            ]
+          },
+          {
+            "label": "judges",
+            "sql": "SELECT count(*) FROM judges",
+            "result": 4077
+          },
+          {
+            "label": "appointments",
+            "sql": "SELECT count(*) FROM federal_judicial_service",
+            "result": 4777
+          }
+        ],
+        "courtlistener": [
+          {
+            "label": "metadata",
+            "sql": "SELECT count(*),sum(row_count) FROM _metadata",
+            "result": [
+              20,
+              2277934
+            ]
+          },
+          {
+            "label": "judges",
+            "sql": "SELECT count(*) FROM judges",
+            "result": 16191
+          },
+          {
+            "label": "courts",
+            "sql": "SELECT count(*) FROM courts",
+            "result": 3361
+          },
+          {
+            "label": "oral_arguments",
+            "sql": "SELECT count(*) FROM oral_arguments",
+            "result": 103710
+          }
+        ]
+      },
+      "package_files_sha256": {
+        "DESCRIPTION": "c6be4a8a88f6eda1fbcf9c7dcb057c80c72eec8103ddc8f71a31c2df8c117800",
+        "INDEX": "a436399fc6a2967b3a8f2f61309d23679c30d613112402e5e1f24c459f9fd01e",
+        "LICENSE": "19c4566c98cc428077ff2a0c8306c4fd3b7262e5032cab5261b29b3ab50d5144",
+        "Meta/Rd.rds": "80ab8b7125a69b67dd9e9af3e10056977c1de7734524bfe4294c6c0960a57eb9",
+        "Meta/features.rds": "3d0dc41bc2f8db966da9c2b0e2a291e6137e628e676f88a64a127d73b459b93e",
+        "Meta/hsearch.rds": "f095ef8abadd071b2dc283b1a8d9b3f0156d501d5525dd4ea1fbf156d71ab06d",
+        "Meta/links.rds": "bf90953ba50a26d3233303e466226273cc095186d1d5e35d16875c5ad1787d20",
+        "Meta/nsInfo.rds": "edf70be297cd1c0fab37c01b53612a4c558a584ac8199aa4f461c32c65a33406",
+        "Meta/package.rds": "3ede01ba288b6b55c160b7a71890f1e11a4dbada4e2a8ce2638e122f3a82b9a7",
+        "Meta/vignette.rds": "5ea3b913eb6299b4e9ce463255ac30f08b3ae1098826ad8b699626fa04c706f6",
+        "NAMESPACE": "2b34b9a1928b532268a713f2aa5b293d694bf4dfd34e93312bf76a22c84c30f9",
+        "NEWS.md": "950b8aaf81e245d1aa898157346e470f156d0fcc9c08fba9a0f651aebdb77b55",
+        "R/datapond": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "R/datapond.rdb": "5355bf813373cdabb238756187ba23f9a3bba4e892687e33375bf5339c0c45e1",
+        "R/datapond.rdx": "c7961225524caf58c8d4e0120ca79246cdf262ce6043b6f8cc325952f09c4e52",
+        "WORDLIST": "55db6e05b58eb30d29f606bf0d943d467eb6a405aebfc17038d23215b59719b4",
+        "doc/datapond.R": "b1a21a6fd3f2f0cc390144a530a41f90afc275d4c301ef6707fb6a3d8c45cefb",
+        "doc/datapond.Rmd": "176cc6cd700b3efa0c10e5197b9dba54fdd35b6b8b30467340cc70c44b7f44e9",
+        "doc/datapond.html": "df0e03013fc6599cd146b2ce800603fa611f17f32b41c675ae97306acfe35199",
+        "doc/index.html": "870c658cefad3c8cfd2508141669fa69c42095004caf1409e2e451abccbd39f9",
+        "help/AnIndex": "4422615141ac6939b966b886aca2f81bece192f24c9afde7f63a5656f273a890",
+        "help/aliases.rds": "3c03a4636ba9325f02caead03dcc219a1050e21725f0b6f4625d63fff6f62656",
+        "help/datapond.rdb": "5e844b91c1e158ea8196978e635fdcf17b7405be4452b6fb3ad8e51866ce9d76",
+        "help/datapond.rdx": "b49ec0bb232a9bf555aa785507520be18604c6b280c8be6506f6b2a7347b6d19",
+        "help/paths.rds": "f4bf897947ff300d1b067a56f7fa406725cc8ee410c8366e6fc68e73f09fb636",
+        "html/00Index.html": "9bf61c91f9738711cb73c901ef7a1c1808dda62137dd2801b018ad1df5a6656b",
+        "html/R.css": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b"
+      }
+    },
+    "patched": {
+      "status": "passed",
+      "datapond_version": "0.1.1",
+      "duckdb_version": "1.5.5",
+      "runtime": "R version 4.5.3 (2026-03-11)",
+      "library": "/home/inason/datapond-maintenance/merge-integration-2026-10-18/evidence/r-library/datapond",
+      "default_ids": [
+        "eoir",
+        "ice",
+        "fec",
+        "clinicaltrials",
+        "cms-medicare",
+        "openpayments",
+        "dol-visas",
+        "ipeds-db",
+        "fjc",
+        "cbp",
+        "ussc",
+        "cook-sao",
+        "fjc-judges",
+        "scdb",
+        "open-policing",
+        "courtlistener",
+        "onet",
+        "qcew",
+        "fars"
+      ],
+      "queries": {
+        "onet": [
+          {
+            "label": "metadata",
+            "sql": "SELECT count(*),sum(row_count),sum(column_count) FROM _metadata",
+            "result": [
+              12,
+              468857,
+              89
+            ]
+          },
+          {
+            "label": "skill_occupations",
+            "sql": "SELECT count(DISTINCT onet_soc_code) FROM v_skills",
+            "result": 910
+          }
+        ],
+        "qcew": [
+          {
+            "label": "metadata",
+            "sql": "SELECT count(*),sum(row_count),sum(column_count) FROM _metadata",
+            "result": [
+              6,
+              3096467,
+              48
+            ]
+          },
+          {
+            "label": "national_annual",
+            "sql": "SELECT annual_avg_emplvl,total_annual_wages FROM annual WHERE area_fips='US000' AND own_code='0' AND industry_code='10' AND agglvl_code='10'",
+            "result": [
+              155732363,
+              12259226899972
+            ]
+          },
+          {
+            "label": "suppressed",
+            "sql": "SELECT count(*) FILTER(WHERE disclosure_code='N'),count(*) FILTER(WHERE lq_disclosure_code='N'),count(*) FILTER(WHERE oty_disclosure_code='N') FROM annual_raw",
+            "result": [
+              1860359,
+              1872172,
+              1937791
+            ]
+          }
+        ],
+        "fars": [
+          {
+            "label": "metadata",
+            "sql": "SELECT count(*),sum(row_count),sum(column_count) FROM _metadata",
+            "result": [
+              4,
+              190798,
+              413
+            ]
+          },
+          {
+            "label": "safe_crash_aggregate",
+            "sql": "SELECT count(*),sum(fatals),sum(vehicle_records),sum(person_records) FROM crashes",
+            "result": [
+              36297,
+              39254,
+              56011,
+              88326
+            ]
+          }
+        ],
+        "fec": [
+          {
+            "label": "metadata",
+            "sql": "SELECT count(*),sum(row_count) FROM _metadata",
+            "result": [
+              10,
+              356327912
+            ]
+          },
+          {
+            "label": "candidate_cycles",
+            "sql": "SELECT min(cycle),max(cycle),count(DISTINCT cycle) FROM candidates",
+            "result": [
+              2004,
+              2026,
+              12
+            ]
+          }
+        ],
+        "fjc-judges": [
+          {
+            "label": "metadata",
+            "sql": "SELECT count(*),sum(row_count) FROM _metadata",
+            "result": [
+              6,
+              37797
+            ]
+          },
+          {
+            "label": "judges",
+            "sql": "SELECT count(*) FROM judges",
+            "result": 4077
+          },
+          {
+            "label": "appointments",
+            "sql": "SELECT count(*) FROM federal_judicial_service",
+            "result": 4777
+          }
+        ],
+        "courtlistener": [
+          {
+            "label": "metadata",
+            "sql": "SELECT count(*),sum(row_count) FROM _metadata",
+            "result": [
+              20,
+              2277934
+            ]
+          },
+          {
+            "label": "judges",
+            "sql": "SELECT count(*) FROM judges",
+            "result": 16191
+          },
+          {
+            "label": "courts",
+            "sql": "SELECT count(*) FROM courts",
+            "result": 3361
+          },
+          {
+            "label": "oral_arguments",
+            "sql": "SELECT count(*) FROM oral_arguments",
+            "result": 103710
+          }
+        ]
+      },
+      "package_files_sha256": {
+        "DESCRIPTION": "f8a17a73f5e71753eaa8d5bf8c0b1178e2aa12e7e45997fbcdce5e6d65d0dce6",
+        "INDEX": "88b0ab6bad98d39c97cf926f027c342d6b712200ff6464cf9f88a16881159cb0",
+        "LICENSE": "19c4566c98cc428077ff2a0c8306c4fd3b7262e5032cab5261b29b3ab50d5144",
+        "Meta/Rd.rds": "ad529c9e8702435a0b60800d1e0e9cf42d7f6dca06086ea1ccfd7690df370019",
+        "Meta/features.rds": "3d0dc41bc2f8db966da9c2b0e2a291e6137e628e676f88a64a127d73b459b93e",
+        "Meta/hsearch.rds": "b7b23cfdef7dc6e4061b02853088acbc322943bf004d3e6ac0308e41be2622ab",
+        "Meta/links.rds": "bf90953ba50a26d3233303e466226273cc095186d1d5e35d16875c5ad1787d20",
+        "Meta/nsInfo.rds": "edf70be297cd1c0fab37c01b53612a4c558a584ac8199aa4f461c32c65a33406",
+        "Meta/package.rds": "3b0a23ca40778162352dc43b95305a41ec1db8d60824875cce5f66aef51d57cb",
+        "Meta/vignette.rds": "5ea3b913eb6299b4e9ce463255ac30f08b3ae1098826ad8b699626fa04c706f6",
+        "NAMESPACE": "2b34b9a1928b532268a713f2aa5b293d694bf4dfd34e93312bf76a22c84c30f9",
+        "NEWS.md": "4be1b78818d2980719e0d404d22f6c4f228a24e3e5900103230ef6ef1b84d660",
+        "R/datapond": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "R/datapond.rdb": "0325739184db66cd506b877ef49529bf73c33990371b70ee4bdf80c8a301b54b",
+        "R/datapond.rdx": "c2b90a52f7c22e39e378a231bd8d760835d92c4d090e1aab65f7aa56a276de47",
+        "WORDLIST": "55db6e05b58eb30d29f606bf0d943d467eb6a405aebfc17038d23215b59719b4",
+        "doc/datapond.R": "4bf881be8f3353a3ee2f7aa4537ae197e7fac1a58fa97d77a79c8ab340f4c91c",
+        "doc/datapond.Rmd": "3150ba1281868a0a3bc0830a11945095ab8b148120934c7e8a35c8393881fbb3",
+        "doc/datapond.html": "7fa3ca39f697f79df38e39cb54f9028d46725217808f314a18e49e38b7cb11d8",
+        "doc/index.html": "870c658cefad3c8cfd2508141669fa69c42095004caf1409e2e451abccbd39f9",
+        "help/AnIndex": "4422615141ac6939b966b886aca2f81bece192f24c9afde7f63a5656f273a890",
+        "help/aliases.rds": "3c03a4636ba9325f02caead03dcc219a1050e21725f0b6f4625d63fff6f62656",
+        "help/datapond.rdb": "c8f14c4557bb02bb76d1d3aad54db88da1b653907ad872dc641f8868ad4f3648",
+        "help/datapond.rdx": "c6c3c0399ce4c152ae8bf6d159dcac9fb43a36b05c40730897285890c2dbbcbf",
+        "help/paths.rds": "fee3c74b27cf7e4df1dea7512636f9c700911acb0dda013f0fd332c69ae2ad12",
+        "html/00Index.html": "c387e6cf3ab54de94599e909347742d86b2d0538e2e785bee98c0303ecde0ab1",
+        "html/R.css": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b"
+      }
+    }
+  },
+  "scope": "Fresh test-owned caches use the unchanged default public registry. Sequential read-only remote queries; no full FEC/CourtListener downloads. Python/CRAN constructors bounded to 128MiB, one thread, no spill; patched R native config. INSTALL httpfs replaced with LOAD of preinstalled extension. Patched project package installed in isolated evidence library; no third-party software or extensions installed. Python 0.1.1 failed the hyphenated FJC identifier; its FJC query results use a separate direct DuckDB connection with a quoted alias, not a claimed successful package connection."
+}

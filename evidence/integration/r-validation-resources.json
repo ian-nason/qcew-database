@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python3",
+    "/mnt/c/Users/ignna/Documents/Codex/2026-10-18/task/run_integration_r.py"
+  ],
+  "guard_sha256": "f27a2795c873ab19f6154656f29c049a9c733b323cbf1ce7cd74167149148493",
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 24.902052200000014,
+  "peak_process_group_rss_bytes_sampled": 312508416,
+  "peak_workspace_file_bytes_sampled": 2344730,
+  "workspace_file_scope": "All files under this isolated repository, including retained attempts and .git",
+  "minimum_available_memory_bytes": 9066139648,
+  "sample_interval_seconds": 0.25,
+  "completed_utc": "2026-10-18T19:00:28.308384+00:00"
+}
