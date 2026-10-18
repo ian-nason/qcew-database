@@ -1,0 +1,80 @@
+{
+  "status": "passed_localhost_not_public_host",
+  "artifact_sha256": "9805c3c275dc29d18bbb4814aa5881d13b961dd8df7675d4a00b2759b197f5d5",
+  "python_client": "/home/inason/datapond-maintenance/.venv-datapond/lib/python3.12/site-packages/datapond/__init__.py",
+  "python_duckdb": "1.5.4",
+  "transferred_bytes": 113307668,
+  "r_output": [
+    "r-consumer-cran.txt",
+    "r-consumer-patched.txt"
+  ],
+  "r_client_provenance": {
+    "cran": {
+      "installed_files_sha256": {
+        "DESCRIPTION": "c6be4a8a88f6eda1fbcf9c7dcb057c80c72eec8103ddc8f71a31c2df8c117800",
+        "INDEX": "a436399fc6a2967b3a8f2f61309d23679c30d613112402e5e1f24c459f9fd01e",
+        "LICENSE": "19c4566c98cc428077ff2a0c8306c4fd3b7262e5032cab5261b29b3ab50d5144",
+        "Meta/Rd.rds": "80ab8b7125a69b67dd9e9af3e10056977c1de7734524bfe4294c6c0960a57eb9",
+        "Meta/features.rds": "3d0dc41bc2f8db966da9c2b0e2a291e6137e628e676f88a64a127d73b459b93e",
+        "Meta/hsearch.rds": "f095ef8abadd071b2dc283b1a8d9b3f0156d501d5525dd4ea1fbf156d71ab06d",
+        "Meta/links.rds": "bf90953ba50a26d3233303e466226273cc095186d1d5e35d16875c5ad1787d20",
+        "Meta/nsInfo.rds": "edf70be297cd1c0fab37c01b53612a4c558a584ac8199aa4f461c32c65a33406",
+        "Meta/package.rds": "3ede01ba288b6b55c160b7a71890f1e11a4dbada4e2a8ce2638e122f3a82b9a7",
+        "Meta/vignette.rds": "5ea3b913eb6299b4e9ce463255ac30f08b3ae1098826ad8b699626fa04c706f6",
+        "NAMESPACE": "2b34b9a1928b532268a713f2aa5b293d694bf4dfd34e93312bf76a22c84c30f9",
+        "NEWS.md": "950b8aaf81e245d1aa898157346e470f156d0fcc9c08fba9a0f651aebdb77b55",
+        "R/datapond": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "R/datapond.rdb": "5355bf813373cdabb238756187ba23f9a3bba4e892687e33375bf5339c0c45e1",
+        "R/datapond.rdx": "c7961225524caf58c8d4e0120ca79246cdf262ce6043b6f8cc325952f09c4e52",
+        "WORDLIST": "55db6e05b58eb30d29f606bf0d943d467eb6a405aebfc17038d23215b59719b4",
+        "doc/datapond.R": "b1a21a6fd3f2f0cc390144a530a41f90afc275d4c301ef6707fb6a3d8c45cefb",
+        "doc/datapond.Rmd": "176cc6cd700b3efa0c10e5197b9dba54fdd35b6b8b30467340cc70c44b7f44e9",
+        "doc/datapond.html": "df0e03013fc6599cd146b2ce800603fa611f17f32b41c675ae97306acfe35199",
+        "doc/index.html": "870c658cefad3c8cfd2508141669fa69c42095004caf1409e2e451abccbd39f9",
+        "help/AnIndex": "4422615141ac6939b966b886aca2f81bece192f24c9afde7f63a5656f273a890",
+        "help/aliases.rds": "3c03a4636ba9325f02caead03dcc219a1050e21725f0b6f4625d63fff6f62656",
+        "help/datapond.rdb": "5e844b91c1e158ea8196978e635fdcf17b7405be4452b6fb3ad8e51866ce9d76",
+        "help/datapond.rdx": "b49ec0bb232a9bf555aa785507520be18604c6b280c8be6506f6b2a7347b6d19",
+        "help/paths.rds": "f4bf897947ff300d1b067a56f7fa406725cc8ee410c8366e6fc68e73f09fb636",
+        "html/00Index.html": "9bf61c91f9738711cb73c901ef7a1c1808dda62137dd2801b018ad1df5a6656b",
+        "html/R.css": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b"
+      },
+      "installed_manifest_sha256": "7bf460c432fd266030b4560814e679fe8a4118ef7297f9ac7a010d5b6b6a3367"
+    },
+    "patched": {
+      "installed_files_sha256": {
+        "DESCRIPTION": "236878b062c25b025cfcf188d0908b4645db8a94e0215da9d695971fda91c61d",
+        "INDEX": "88b0ab6bad98d39c97cf926f027c342d6b712200ff6464cf9f88a16881159cb0",
+        "LICENSE": "19c4566c98cc428077ff2a0c8306c4fd3b7262e5032cab5261b29b3ab50d5144",
+        "Meta/Rd.rds": "ad529c9e8702435a0b60800d1e0e9cf42d7f6dca06086ea1ccfd7690df370019",
+        "Meta/features.rds": "3d0dc41bc2f8db966da9c2b0e2a291e6137e628e676f88a64a127d73b459b93e",
+        "Meta/hsearch.rds": "b7b23cfdef7dc6e4061b02853088acbc322943bf004d3e6ac0308e41be2622ab",
+        "Meta/links.rds": "bf90953ba50a26d3233303e466226273cc095186d1d5e35d16875c5ad1787d20",
+        "Meta/nsInfo.rds": "edf70be297cd1c0fab37c01b53612a4c558a584ac8199aa4f461c32c65a33406",
+        "Meta/package.rds": "d88e9042215486569cd64bf04fa1b05c39169f2deb2300deae47b83abb47047c",
+        "Meta/vignette.rds": "5ea3b913eb6299b4e9ce463255ac30f08b3ae1098826ad8b699626fa04c706f6",
+        "NAMESPACE": "2b34b9a1928b532268a713f2aa5b293d694bf4dfd34e93312bf76a22c84c30f9",
+        "NEWS.md": "4be1b78818d2980719e0d404d22f6c4f228a24e3e5900103230ef6ef1b84d660",
+        "R/datapond": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "R/datapond.rdb": "1d68d1ce062ec8697d1f391a753b9534635932ec5bb59fb692413d9b897a9f10",
+        "R/datapond.rdx": "f3da9e79f80fb13cdf39714ef3ab6a3e40078a44b2010c4a76abeb68700a5baa",
+        "WORDLIST": "55db6e05b58eb30d29f606bf0d943d467eb6a405aebfc17038d23215b59719b4",
+        "doc/datapond.R": "4bf881be8f3353a3ee2f7aa4537ae197e7fac1a58fa97d77a79c8ab340f4c91c",
+        "doc/datapond.Rmd": "3150ba1281868a0a3bc0830a11945095ab8b148120934c7e8a35c8393881fbb3",
+        "doc/datapond.html": "7fa3ca39f697f79df38e39cb54f9028d46725217808f314a18e49e38b7cb11d8",
+        "doc/index.html": "870c658cefad3c8cfd2508141669fa69c42095004caf1409e2e451abccbd39f9",
+        "help/AnIndex": "4422615141ac6939b966b886aca2f81bece192f24c9afde7f63a5656f273a890",
+        "help/aliases.rds": "3c03a4636ba9325f02caead03dcc219a1050e21725f0b6f4625d63fff6f62656",
+        "help/datapond.rdb": "bea5c70616c6113ee861ca21814dbebea614019091d27592e5d4262ccee11236",
+        "help/datapond.rdx": "c74190c0b083ded7cad542c5944292a648b375d2ea244e4c3f4532496a75fa25",
+        "help/paths.rds": "197785819eaa6edb60c75b6f3cdfecd222cbaaa14db88165e7398f343bf4c9fb",
+        "html/00Index.html": "c387e6cf3ab54de94599e909347742d86b2d0538e2e785bee98c0303ecde0ab1",
+        "html/R.css": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b"
+      },
+      "installed_manifest_sha256": "db693dd8735561cbc54c487a847aca929a59c51e6155f29ada04d29e9ad38f23"
+    }
+  },
+  "artifact_unchanged": true,
+  "resource_limits": "128 MiB per client, one thread, no spill; outer guard covers process group",
+  "note": "Local HTTP confirms reader/range compatibility. Actual Hugging Face verification remains required after authorized publication."
+}

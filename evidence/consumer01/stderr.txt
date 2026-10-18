@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/inason/datapond-maintenance/additions-2026-10-18/qcew-database/consumer_probe.py", line 5, in <module>
+    import qcew
+  File "/home/inason/datapond-maintenance/additions-2026-10-18/qcew-database/qcew.py", line 5, in <module>
+    from datapond_build import ensure_metadata,build_columns_table,export_dictionary
+ModuleNotFoundError: No module named 'datapond_build'

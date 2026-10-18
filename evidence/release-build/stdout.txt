@@ -1,0 +1,31 @@
+annual_raw 3089813
+areas 4451
+ownerships 7
+industries 2159
+aggregation_levels 36
+size_classes 1
+  annual_raw: 38 columns
+  areas: 2 columns
+  ownerships: 2 columns
+  industries: 2 columns
+  aggregation_levels: 2 columns
+  size_classes: 2 columns
+  Exported releases/2025-release/DICTIONARY.md
+{
+  "status": "validated_local_not_published",
+  "release": "2025 annual; snapshot acquired 2026-10-18",
+  "built_at_utc": "2026-10-18T14:23:07.216422+00:00",
+  "duckdb": "1.5.5",
+  "database_sha256": "e89f9ed648cdf6d3c36020c593108e13be8e2e58d812c58e676d491f5449b6a6",
+  "database_bytes": 195833856,
+  "rows": 3096467,
+  "data_tables": 6,
+  "dictionary_columns": 48,
+  "all_cells_reverified_after_read_only_reopen": true,
+  "build_input_sha256": {
+    "qcew.py": "c8ccc195c8d02b62e87de4267f1487ac8576f5aa62551c58701ca001ae3bceac",
+    "schema.json": "2192df3dc909ed070c52723a7d853f7ff6b055e6ee72dff841a7b872b39909dd",
+    "source-lock.json": "94d0a19573b9045296f1e86a41ba32013714c645021198e4548277172ef2cfaf",
+    "pyproject.toml": "2705c5cf6f2fa8f60a1893606346b9378ecf2c9b739209e83d1b8ab2abd2c14a"
+  }
+}

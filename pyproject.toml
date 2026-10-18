@@ -1,0 +1,9 @@
+[project]
+name = "qcew-database"
+version = "0.1.0"
+description = "Audited QCEW 2025 annual employment and wages with disclosure-aware analysis"
+requires-python = ">=3.10"
+dependencies = ["duckdb==1.5.5", "datapond-build"]
+
+[tool.uv.sources]
+datapond-build = { git = "https://github.com/datapond-db/datapond-build", rev = "ba9f7198a0aff3b604953b5f7bd612d15ef1755e" }

@@ -1,0 +1,117 @@
+{
+  "python": "3.12.3",
+  "interpreter": "/home/inason/datapond-maintenance/fjc-judges-database/.venv/bin/python",
+  "duckdb": "1.5.5",
+  "datapond_build_version": "0.1.1",
+  "datapond_build_install_origin": {
+    "url": "https://github.com/datapond-db/datapond-build",
+    "vcs_info": {
+      "vcs": "git",
+      "commit_id": "cee5ea7efcb4cab8650216f96fdadc6a6ac4c8c0",
+      "requested_revision": "v0.1.1"
+    }
+  },
+  "helper_source_pin": {
+    "repository": "https://github.com/datapond-db/datapond-build",
+    "commit": "ba9f7198a0aff3b604953b5f7bd612d15ef1755e",
+    "path": "src/datapond_build/metadata.py",
+    "metadata_py_sha256": "a75c3e140ecba0ed43f0dab91fe2732c32dd40d0a742dab0a982ee8b1f02c3f5",
+    "derivation": "SHA-256 of git show <commit>:<path> bytes; compared by audit_release against the actual imported helper"
+  },
+  "used_helpers": {
+    "ensure_metadata": {
+      "path": "/home/inason/datapond-maintenance/fjc-judges-database/.venv/lib/python3.12/site-packages/datapond_build/metadata.py",
+      "sha256": "a75c3e140ecba0ed43f0dab91fe2732c32dd40d0a742dab0a982ee8b1f02c3f5"
+    },
+    "build_columns_table": {
+      "path": "/home/inason/datapond-maintenance/fjc-judges-database/.venv/lib/python3.12/site-packages/datapond_build/metadata.py",
+      "sha256": "a75c3e140ecba0ed43f0dab91fe2732c32dd40d0a742dab0a982ee8b1f02c3f5"
+    },
+    "export_dictionary": {
+      "path": "/home/inason/datapond-maintenance/fjc-judges-database/.venv/lib/python3.12/site-packages/datapond_build/metadata.py",
+      "sha256": "a75c3e140ecba0ed43f0dab91fe2732c32dd40d0a742dab0a982ee8b1f02c3f5"
+    }
+  },
+  "installed_packages": [
+    {
+      "name": "anyio",
+      "version": "4.15.1"
+    },
+    {
+      "name": "certifi",
+      "version": "2026.7.22"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.1"
+    },
+    {
+      "name": "click",
+      "version": "8.5.0"
+    },
+    {
+      "name": "datapond-build",
+      "version": "0.1.1"
+    },
+    {
+      "name": "duckdb",
+      "version": "1.5.5"
+    },
+    {
+      "name": "filelock",
+      "version": "3.32.6"
+    },
+    {
+      "name": "fsspec",
+      "version": "2026.7.0"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0"
+    },
+    {
+      "name": "hf-xet",
+      "version": "1.6.0"
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9"
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1"
+    },
+    {
+      "name": "huggingface_hub",
+      "version": "1.31.0"
+    },
+    {
+      "name": "idna",
+      "version": "3.19"
+    },
+    {
+      "name": "packaging",
+      "version": "26.3"
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3"
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.70.1"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0"
+    },
+    {
+      "name": "urllib3",
+      "version": "2.7.0"
+    }
+  ]
+}

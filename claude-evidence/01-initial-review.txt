@@ -1,0 +1,42 @@
+I reviewed the supplied QCEW payload as text only. I did not run any script, open the artifact, or recompute any hash, so every numeric claim below is taken from the supplied evidence files, not independently reproduced.
+
+## Conclusion
+
+No local blocker remains in the supplied materials. The ingestion is fail-closed, the raw table preserves source values, the view's disclosure logic matches its documentation, and the evidence files are internally consistent with each other and with the README. One medium finding concerns an undocumented assumption about establishment measures under the quotient and change flags. It affects documentation accuracy, not stored data, and can be settled with one read-only query before publication.
+
+## Findings
+
+- **Medium. Establishment passthrough under lq and oty N is asserted, not evidenced.** The view passes `lq_annual_avg_estabs` and the two oty establishment columns through on flagged rows (`qcew.py:11`, `qcew.py:53`). The only diagnostic covers `disclosure_code` (`audit_release.py:34`). The one supplied N sample has a nonzero LQ but zero oty change, so the oty claim rests on BLS layout text that returned 403. Minimal correction: add two diagnostics counting rows where the flag is N and the passthrough column is nonzero. If either count is zero, soften the README table at `README.md:31-32` to say the value is retained as published rather than independently published.
+
+- **Low. Reference CSVs are opened without an explicit encoding.** `qcew.py:95` uses the locale default while the files were written as UTF-8 and DuckDB reads UTF-8. Titles with non-ASCII characters would fail the cell comparison on a non-UTF-8 locale. This is fail-closed, so it is a portability defect. Minimal correction: add `encoding='utf-8'` to that `open` call.
+
+- **Low. The national benchmark is self-derived.** The constants at `audit_release.py:27` and `README.md:87` come from the artifact itself, which the cell comparison already ties to the raw CSV. It is a regression lock, not an external check, because the BLS bulletin was unreachable. Minimal correction: describe it as a locked source-row value rather than an external benchmark.
+
+- **Low. Test evidence is not bound to the final source.** The fixture run finished before the release build, and reproduction.json records a code change between the candidate and release builds. `evidence/tests02/resources.json` records no hash of the test or ingestion files. Minimal correction: re-run the fixtures after the final edit, or record the build input hashes in the test evidence.
+
+- **Low. Interrupted extraction leaves a non-partial cache file.** `qcew.py:104` writes directly to the final cache path. A later run fails at the SHA check with no hint that deletion is required. Minimal correction: extract to a `.partial` name and rename after the hash passes, matching the download path.
+
+- **Low. Disk check targets the source tree, not the output.** `qcew.py:100` checks free space under the repo root. If the output directory is on another filesystem the guard is uninformative. Minimal correction: check both paths.
+
+- **Informational. Evidence files embed local paths and usernames.** `runtime.json`, `sources-2025.json` and `evidence/consumer03/resources.json` contain home directory and Windows user paths. These are not credentials. Decide whether they belong in a public repository.
+
+- **Informational. One area title looks unusual.** Example output shows code 11000 titled "District of Columbia, not unknown" at the state grain. The pipeline enforces one exact title per code from the official archive, so this is likely source-faithful. Spot-check the two DC rows in `data/area_fips_labels.csv` before publishing example output.
+
+- **Informational. California establishment counts dominate example two.** Los Angeles County reports an establishment count an order of magnitude above comparable counties. This reflects California's household-employer reporting in home care and is faithful to the source. A one-line note in README would prevent misreading.
+
+- **Informational. R consumers receive doubles.** The R output shows BIGINT and DECIMAL columns as `<dbl>`. All supplied values are below the exact-double range, so no current loss occurs. Consider noting this in the consumer section.
+
+## What checked out
+
+- Types, flags and NULLs: explicit VARCHAR, BIGINT, DECIMAL types with overprecision rejection (`qcew.py:28-30`), blank flags preserved as empty strings with a dedicated DuckDB fixture (`test_qcew.py:74-78`), unknown flags rejected in both the typed parser and the database check.
+- Keys and references: full seven-column key, duplicate-key and orphan checks on every table, join-inflation fixture, reference join coverage for all five code columns.
+- Vintage: year, quarter and size pinned by a database check (`qcew.py:71`) with a wrong-vintage fixture.
+- Provenance: both archives pinned by size and SHA-256 with retrieval headers, member size and SHA-256 pinned, derived dictionaries hashed and byte-compared on regeneration, 403s recorded rather than silently skipped.
+- Bounded resources: engine limits, outer guard with process-group kill, lock file, and guard fixtures including the supervisor-failure path.
+- Aggregates: national row, disjoint ownership partition with a one-establishment rounding gap, and pay arithmetic within tolerance.
+- Documentation arithmetic: row totals, column totals, N counts, peak RSS, elapsed time, artifact size, version numbers and client versions all agree between README, HF-README, registry entry and the evidence files.
+- Scope statements: local-only status, pending naming approval, Codex review labeled as primary, and public-host verification deferred are all stated consistently.
+
+## Scope limits
+
+I could not verify the artifact SHA-256, the build input hashes, the reproduction claim, the by-area agreement hash, or that the supplied script text matches the hashed files. The medium finding and the encoding fix are the only items I would resolve before publication approval. Remaining gates are external: naming approval, upload, and public-host hash, range and client verification.

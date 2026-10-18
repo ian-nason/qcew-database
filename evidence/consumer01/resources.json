@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/home/inason/datapond-maintenance/.venv-datapond/bin/python",
+    "consumer_probe.py",
+    "--rscript",
+    "/home/inason/miniconda3/envs/datapond-r/bin/Rscript",
+    "--r-lib-root",
+    "/mnt/c/Users/ignna/Documents/Codex/2026-10-17/task-2/libraries"
+  ],
+  "guard_sha256": "f27a2795c873ab19f6154656f29c049a9c733b323cbf1ce7cd74167149148493",
+  "exit_code": 1,
+  "stop_reason": null,
+  "elapsed_seconds": 0.5070226010002443,
+  "peak_process_group_rss_bytes_sampled": 65044480,
+  "peak_workspace_file_bytes_sampled": 814345616,
+  "workspace_file_scope": "All files under this isolated repository, including retained attempts and .git",
+  "minimum_available_memory_bytes": 9635123200,
+  "sample_interval_seconds": 0.25,
+  "completed_utc": "2026-10-18T14:14:22.997839+00:00"
+}

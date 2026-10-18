@@ -1,0 +1,39 @@
+test_archive_hash_mismatch (test_qcew.Archives.test_archive_hash_mismatch) ... ok
+test_csv_empty_flag_retained_as_string (test_qcew.Archives.test_csv_empty_flag_retained_as_string) ... ok
+test_duplicate_member_rejected (test_qcew.Archives.test_duplicate_member_rejected) ... /usr/lib/python3.12/zipfile/__init__.py:1620: UserWarning: Duplicate name: 'x'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+ok
+test_existing_output_refused (test_qcew.Archives.test_existing_output_refused) ... ok
+test_unknown_member_rejected (test_qcew.Archives.test_unknown_member_rejected) ... ok
+test_duplicate_key_rejected (test_qcew.Semantic.test_duplicate_key_rejected) ... ok
+test_duplicate_label_join_inflation_rejected (test_qcew.Semantic.test_duplicate_label_join_inflation_rejected) ... ok
+test_mutated_cell_detected (test_qcew.Semantic.test_mutated_cell_detected) ... ok
+test_negative_level_rejected (test_qcew.Semantic.test_negative_level_rejected) ... ok
+test_orphan_geography_rejected (test_qcew.Semantic.test_orphan_geography_rejected) ... ok
+test_separate_change_flag (test_qcew.Semantic.test_separate_change_flag) ... ok
+test_separate_lq_flag (test_qcew.Semantic.test_separate_lq_flag) ... ok
+test_suppressed_levels_null_establishments_retained (test_qcew.Semantic.test_suppressed_levels_null_establishments_retained) ... ok
+test_unknown_flag_rejected_by_database_check (test_qcew.Semantic.test_unknown_flag_rejected_by_database_check) ... ok
+test_unsuppressed_zero_is_zero (test_qcew.Semantic.test_unsuppressed_zero_is_zero) ... ok
+test_valid_fixture (test_qcew.Semantic.test_valid_fixture) ... ok
+test_wrong_vintage_rejected (test_qcew.Semantic.test_wrong_vintage_rejected) ... ok
+test_area_leading_zero (test_qcew.Values.test_area_leading_zero) ... ok
+test_blank_code_rejected (test_qcew.Values.test_blank_code_rejected) ... ok
+test_blank_numeric_rejected (test_qcew.Values.test_blank_numeric_rejected) ... ok
+test_empty_disclosure_preserved (test_qcew.Values.test_empty_disclosure_preserved) ... ok
+test_exact_quotient (test_qcew.Values.test_exact_quotient) ... ok
+test_excess_pct_precision_rejected (test_qcew.Values.test_excess_pct_precision_rejected) ... ok
+test_excess_quotient_precision_rejected (test_qcew.Values.test_excess_quotient_precision_rejected) ... ok
+test_nan_rejected (test_qcew.Values.test_nan_rejected) ... ok
+test_negative_change_valid (test_qcew.Values.test_negative_change_valid) ... ok
+test_no_fractional_employment (test_qcew.Values.test_no_fractional_employment) ... ok
+test_unknown_disclosure_rejected (test_qcew.Values.test_unknown_disclosure_rejected) ... ok
+test_wage_beyond_int32 (test_qcew.Values.test_wage_beyond_int32) ... ok
+test_sampler_failure_stops_worker (test_guard.Guard.test_sampler_failure_stops_worker) ... ok
+test_worker_exits_before_kill (test_guard.Guard.test_worker_exits_before_kill) ... ok
+test_worker_exits_before_term (test_guard.Guard.test_worker_exits_before_term) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 0.281s
+
+OK

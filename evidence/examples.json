@@ -1,0 +1,893 @@
+{
+  "artifact_sha256": "89bf1cef54f42f821965df6e9079b24fc7c4c0c86046fadc98e6cedf9ebd8a1d",
+  "queries": [
+    {
+      "sql": "SELECT area_title,annual_avg_estabs,annual_avg_emplvl,total_annual_wages,avg_annual_pay\nFROM annual WHERE area_fips='US000' AND own_code='0' AND industry_code='10'\n  AND agglvl_code='10' AND size_code='0' AND year='2025' AND qtr='A'",
+      "columns": [
+        "area_title",
+        "annual_avg_estabs",
+        "annual_avg_emplvl",
+        "total_annual_wages",
+        "avg_annual_pay"
+      ],
+      "rows": [
+        [
+          "U.S. TOTAL",
+          12112924,
+          155732363,
+          12259226899972,
+          78720
+        ]
+      ]
+    },
+    {
+      "sql": "SELECT area_fips,area_title,industry_title,annual_avg_estabs,annual_avg_emplvl,\n       avg_annual_pay,lq_annual_avg_emplvl,disclosure_code,lq_disclosure_code\nFROM annual WHERE agglvl_code='74' AND own_code='5' AND industry_code='62'\n  AND right(area_fips,3)<>'999' AND annual_avg_emplvl>0\nORDER BY annual_avg_emplvl DESC,area_fips LIMIT 20",
+      "columns": [
+        "area_fips",
+        "area_title",
+        "industry_title",
+        "annual_avg_estabs",
+        "annual_avg_emplvl",
+        "avg_annual_pay",
+        "lq_annual_avg_emplvl",
+        "disclosure_code",
+        "lq_disclosure_code"
+      ],
+      "rows": [
+        [
+          "06037",
+          "Los Angeles County, California",
+          "NAICS 62 Health care and social assistance",
+          287445,
+          859824,
+          57293,
+          "1.29",
+          "",
+          ""
+        ],
+        [
+          "17031",
+          "Cook County, Illinois",
+          "NAICS 62 Health care and social assistance",
+          15686,
+          398700,
+          66257,
+          "1.04",
+          "",
+          ""
+        ],
+        [
+          "36047",
+          "Kings County, New York",
+          "NAICS 62 Health care and social assistance",
+          7250,
+          365318,
+          46448,
+          "2.68",
+          "",
+          ""
+        ],
+        [
+          "04013",
+          "Maricopa County, Arizona",
+          "NAICS 62 Health care and social assistance",
+          15358,
+          345778,
+          70797,
+          "1.02",
+          "",
+          ""
+        ],
+        [
+          "48201",
+          "Harris County, Texas",
+          "NAICS 62 Health care and social assistance",
+          15949,
+          288243,
+          71747,
+          "0.79",
+          "",
+          ""
+        ],
+        [
+          "36061",
+          "New York County, New York",
+          "NAICS 62 Health care and social assistance",
+          8718,
+          268810,
+          88267,
+          "0.73",
+          "",
+          ""
+        ],
+        [
+          "06059",
+          "Orange County, California",
+          "NAICS 62 Health care and social assistance",
+          52748,
+          238351,
+          65092,
+          "0.97",
+          "",
+          ""
+        ],
+        [
+          "06073",
+          "San Diego County, California",
+          "NAICS 62 Health care and social assistance",
+          45740,
+          232562,
+          67338,
+          "1.03",
+          "",
+          ""
+        ],
+        [
+          "36081",
+          "Queens County, New York",
+          "NAICS 62 Health care and social assistance",
+          5954,
+          203702,
+          55322,
+          "1.84",
+          "",
+          ""
+        ],
+        [
+          "42101",
+          "Philadelphia County, Pennsylvania",
+          "NAICS 62 Health care and social assistance",
+          6518,
+          202186,
+          68252,
+          "1.89",
+          "",
+          ""
+        ],
+        [
+          "48113",
+          "Dallas County, Texas",
+          "NAICS 62 Health care and social assistance",
+          9590,
+          189773,
+          75085,
+          "0.70",
+          "",
+          ""
+        ],
+        [
+          "12086",
+          "Miami-Dade County, Florida",
+          "NAICS 62 Health care and social assistance",
+          16174,
+          179291,
+          72743,
+          "0.95",
+          "",
+          ""
+        ],
+        [
+          "53033",
+          "King County, Washington",
+          "NAICS 62 Health care and social assistance",
+          8359,
+          166929,
+          80207,
+          "0.79",
+          "",
+          ""
+        ],
+        [
+          "27053",
+          "Hennepin County, Minnesota",
+          "NAICS 62 Health care and social assistance",
+          6465,
+          161134,
+          69907,
+          "1.19",
+          "",
+          ""
+        ],
+        [
+          "06085",
+          "Santa Clara County, California",
+          "NAICS 62 Health care and social assistance",
+          36001,
+          157751,
+          88914,
+          "0.95",
+          "",
+          ""
+        ],
+        [
+          "36059",
+          "Nassau County, New York",
+          "NAICS 62 Health care and social assistance",
+          6263,
+          150413,
+          82208,
+          "1.60",
+          "",
+          ""
+        ],
+        [
+          "25025",
+          "Suffolk County, Massachusetts",
+          "NAICS 62 Health care and social assistance",
+          9327,
+          150397,
+          101625,
+          "1.43",
+          "",
+          ""
+        ],
+        [
+          "06071",
+          "San Bernardino County, California",
+          "NAICS 62 Health care and social assistance",
+          39408,
+          143581,
+          60101,
+          "1.15",
+          "",
+          ""
+        ],
+        [
+          "06065",
+          "Riverside County, California",
+          "NAICS 62 Health care and social assistance",
+          45152,
+          142965,
+          53391,
+          "1.14",
+          "",
+          ""
+        ],
+        [
+          "48029",
+          "Bexar County, Texas",
+          "NAICS 62 Health care and social assistance",
+          8426,
+          136031,
+          60815,
+          "0.98",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "sql": "SELECT disclosure_code,count(*) AS source_cells,\n       count(annual_avg_emplvl) AS published_employment_cells,\n       sum(annual_avg_estabs) AS published_establishments_rounded\nFROM annual WHERE agglvl_code='74' AND own_code='5' AND industry_code='62'\n  AND right(area_fips,3)<>'999'\nGROUP BY disclosure_code ORDER BY disclosure_code",
+      "columns": [
+        "disclosure_code",
+        "source_cells",
+        "published_employment_cells",
+        "published_establishments_rounded"
+      ],
+      "rows": [
+        [
+          "",
+          1773,
+          1773,
+          1918348
+        ],
+        [
+          "N",
+          1436,
+          0,
+          99078
+        ]
+      ]
+    },
+    {
+      "sql": "SELECT area_fips,area_title,annual_avg_emplvl,avg_annual_pay,\n       oty_annual_avg_emplvl_pct_chg,oty_disclosure_code\nFROM annual WHERE agglvl_code='55' AND own_code='5' AND industry_code='621'\nORDER BY annual_avg_emplvl DESC NULLS LAST,area_fips",
+      "columns": [
+        "area_fips",
+        "area_title",
+        "annual_avg_emplvl",
+        "avg_annual_pay",
+        "oty_annual_avg_emplvl_pct_chg",
+        "oty_disclosure_code"
+      ],
+      "rows": [
+        [
+          "06000",
+          "California -- Statewide",
+          1079831,
+          91236,
+          "5.0",
+          ""
+        ],
+        [
+          "48000",
+          "Texas -- Statewide",
+          895257,
+          68749,
+          "3.7",
+          ""
+        ],
+        [
+          "36000",
+          "New York -- Statewide",
+          702328,
+          66599,
+          "-6.8",
+          ""
+        ],
+        [
+          "12000",
+          "Florida -- Statewide",
+          625354,
+          81877,
+          "3.0",
+          ""
+        ],
+        [
+          "42000",
+          "Pennsylvania -- Statewide",
+          387664,
+          85849,
+          "3.0",
+          ""
+        ],
+        [
+          "39000",
+          "Ohio -- Statewide",
+          316554,
+          78304,
+          "6.6",
+          ""
+        ],
+        [
+          "17000",
+          "Illinois -- Statewide",
+          313679,
+          72183,
+          "5.2",
+          ""
+        ],
+        [
+          "13000",
+          "Georgia -- Statewide",
+          285483,
+          79262,
+          "4.9",
+          ""
+        ],
+        [
+          "34000",
+          "New Jersey -- Statewide",
+          279793,
+          82422,
+          "4.8",
+          ""
+        ],
+        [
+          "37000",
+          "North Carolina -- Statewide",
+          252979,
+          75454,
+          "3.9",
+          ""
+        ],
+        [
+          "51000",
+          "Virginia -- Statewide",
+          234870,
+          78990,
+          "4.8",
+          ""
+        ],
+        [
+          "26000",
+          "Michigan -- Statewide",
+          228068,
+          71095,
+          "2.7",
+          ""
+        ],
+        [
+          "04000",
+          "Arizona -- Statewide",
+          218639,
+          77887,
+          "2.4",
+          ""
+        ],
+        [
+          "25000",
+          "Massachusetts -- Statewide",
+          200042,
+          89269,
+          "3.4",
+          ""
+        ],
+        [
+          "18000",
+          "Indiana -- Statewide",
+          181654,
+          79605,
+          "2.1",
+          ""
+        ],
+        [
+          "47000",
+          "Tennessee -- Statewide",
+          181376,
+          81660,
+          "3.1",
+          ""
+        ],
+        [
+          "53000",
+          "Washington -- Statewide",
+          178077,
+          86938,
+          "3.1",
+          ""
+        ],
+        [
+          "27000",
+          "Minnesota -- Statewide",
+          168810,
+          94952,
+          "2.5",
+          ""
+        ],
+        [
+          "24000",
+          "Maryland -- Statewide",
+          166181,
+          81626,
+          "1.6",
+          ""
+        ],
+        [
+          "08000",
+          "Colorado -- Statewide",
+          164733,
+          80298,
+          "5.1",
+          ""
+        ],
+        [
+          "55000",
+          "Wisconsin -- Statewide",
+          141125,
+          92514,
+          "2.9",
+          ""
+        ],
+        [
+          "29000",
+          "Missouri -- Statewide",
+          138092,
+          82790,
+          "2.1",
+          ""
+        ],
+        [
+          "45000",
+          "South Carolina -- Statewide",
+          119888,
+          78732,
+          "3.5",
+          ""
+        ],
+        [
+          "22000",
+          "Louisiana -- Statewide",
+          115409,
+          66828,
+          "1.1",
+          ""
+        ],
+        [
+          "01000",
+          "Alabama -- Statewide",
+          111343,
+          79318,
+          "1.7",
+          ""
+        ],
+        [
+          "41000",
+          "Oregon -- Statewide",
+          107450,
+          85230,
+          "4.0",
+          ""
+        ],
+        [
+          "21000",
+          "Kentucky -- Statewide",
+          103343,
+          80988,
+          "2.7",
+          ""
+        ],
+        [
+          "09000",
+          "Connecticut -- Statewide",
+          100489,
+          90513,
+          "2.1",
+          ""
+        ],
+        [
+          "40000",
+          "Oklahoma -- Statewide",
+          90911,
+          70555,
+          "3.5",
+          ""
+        ],
+        [
+          "49000",
+          "Utah -- Statewide",
+          86980,
+          63533,
+          "4.7",
+          ""
+        ],
+        [
+          "32000",
+          "Nevada -- Statewide",
+          78067,
+          78406,
+          "5.6",
+          ""
+        ],
+        [
+          "05000",
+          "Arkansas -- Statewide",
+          69502,
+          74475,
+          "2.8",
+          ""
+        ],
+        [
+          "20000",
+          "Kansas -- Statewide",
+          67618,
+          79597,
+          "3.5",
+          ""
+        ],
+        [
+          "19000",
+          "Iowa -- Statewide",
+          61290,
+          81069,
+          "0.6",
+          ""
+        ],
+        [
+          "28000",
+          "Mississippi -- Statewide",
+          60074,
+          71047,
+          "3.3",
+          ""
+        ],
+        [
+          "16000",
+          "Idaho -- Statewide",
+          55036,
+          57703,
+          "4.8",
+          ""
+        ],
+        [
+          "31000",
+          "Nebraska -- Statewide",
+          52752,
+          83383,
+          "5.0",
+          ""
+        ],
+        [
+          "35000",
+          "New Mexico -- Statewide",
+          50341,
+          58410,
+          "3.8",
+          ""
+        ],
+        [
+          "72000",
+          "Puerto Rico -- Statewide",
+          47460,
+          36471,
+          "2.5",
+          ""
+        ],
+        [
+          "54000",
+          "West Virginia -- Statewide",
+          43436,
+          72700,
+          "2.1",
+          ""
+        ],
+        [
+          "33000",
+          "New Hampshire -- Statewide",
+          38468,
+          98930,
+          "3.3",
+          ""
+        ],
+        [
+          "23000",
+          "Maine -- Statewide",
+          37554,
+          81264,
+          "3.2",
+          ""
+        ],
+        [
+          "15000",
+          "Hawaii -- Statewide",
+          34620,
+          92037,
+          "2.4",
+          ""
+        ],
+        [
+          "44000",
+          "Rhode Island -- Statewide",
+          30068,
+          78568,
+          "1.6",
+          ""
+        ],
+        [
+          "10000",
+          "Delaware -- Statewide",
+          25993,
+          73100,
+          "1.3",
+          ""
+        ],
+        [
+          "30000",
+          "Montana -- Statewide",
+          24571,
+          76569,
+          "-0.6",
+          ""
+        ],
+        [
+          "02000",
+          "Alaska -- Statewide",
+          23358,
+          80685,
+          "2.3",
+          ""
+        ],
+        [
+          "11000",
+          "District of Columbia, not unknown",
+          21264,
+          108440,
+          "4.7",
+          ""
+        ],
+        [
+          "46000",
+          "South Dakota -- Statewide",
+          20780,
+          92792,
+          "3.3",
+          ""
+        ],
+        [
+          "50000",
+          "Vermont -- Statewide",
+          17286,
+          82117,
+          "1.2",
+          ""
+        ],
+        [
+          "38000",
+          "North Dakota -- Statewide",
+          17039,
+          101052,
+          "4.7",
+          ""
+        ],
+        [
+          "56000",
+          "Wyoming -- Statewide",
+          11422,
+          71045,
+          "1.1",
+          ""
+        ],
+        [
+          "78000",
+          "Virgin Islands -- Statewide",
+          1215,
+          52708,
+          "-12.6",
+          ""
+        ]
+      ]
+    },
+    {
+      "sql": "WITH selected AS (\n SELECT area_fips,area_title,industry_code,annual_avg_emplvl,avg_annual_pay\n FROM annual WHERE agglvl_code='75' AND own_code='5'\n  AND industry_code IN ('621','622') AND right(area_fips,3)<>'999'\n)\nSELECT a.area_fips,a.area_title,a.annual_avg_emplvl AS ambulatory_jobs,\n       h.annual_avg_emplvl AS hospital_jobs,a.avg_annual_pay AS ambulatory_pay,\n       h.avg_annual_pay AS hospital_pay\nFROM selected a JOIN selected h ON a.area_fips=h.area_fips\nWHERE a.industry_code='621' AND h.industry_code='622'\nORDER BY a.area_fips LIMIT 20",
+      "columns": [
+        "area_fips",
+        "area_title",
+        "ambulatory_jobs",
+        "hospital_jobs",
+        "ambulatory_pay",
+        "hospital_pay"
+      ],
+      "rows": [
+        [
+          "01001",
+          "Autauga County, Alabama",
+          590,
+          3,
+          56211,
+          53999
+        ],
+        [
+          "01003",
+          "Baldwin County, Alabama",
+          5075,
+          2768,
+          74693,
+          71500
+        ],
+        [
+          "01005",
+          "Barbour County, Alabama",
+          328,
+          null,
+          62468,
+          null
+        ],
+        [
+          "01009",
+          "Blount County, Alabama",
+          405,
+          null,
+          50804,
+          null
+        ],
+        [
+          "01011",
+          "Bullock County, Alabama",
+          148,
+          null,
+          58283,
+          null
+        ],
+        [
+          "01013",
+          "Butler County, Alabama",
+          210,
+          null,
+          59505,
+          null
+        ],
+        [
+          "01015",
+          "Calhoun County, Alabama",
+          2523,
+          null,
+          60820,
+          null
+        ],
+        [
+          "01019",
+          "Cherokee County, Alabama",
+          226,
+          null,
+          63005,
+          null
+        ],
+        [
+          "01023",
+          "Choctaw County, Alabama",
+          132,
+          null,
+          59817,
+          null
+        ],
+        [
+          "01025",
+          "Clarke County, Alabama",
+          286,
+          null,
+          51513,
+          null
+        ],
+        [
+          "01027",
+          "Clay County, Alabama",
+          84,
+          null,
+          48073,
+          null
+        ],
+        [
+          "01031",
+          "Coffee County, Alabama",
+          1034,
+          null,
+          66765,
+          null
+        ],
+        [
+          "01033",
+          "Colbert County, Alabama",
+          1193,
+          null,
+          62771,
+          null
+        ],
+        [
+          "01035",
+          "Conecuh County, Alabama",
+          109,
+          null,
+          67583,
+          null
+        ],
+        [
+          "01039",
+          "Covington County, Alabama",
+          710,
+          null,
+          54199,
+          null
+        ],
+        [
+          "01041",
+          "Crenshaw County, Alabama",
+          52,
+          null,
+          58782,
+          null
+        ],
+        [
+          "01043",
+          "Cullman County, Alabama",
+          1433,
+          null,
+          63837,
+          null
+        ],
+        [
+          "01047",
+          "Dallas County, Alabama",
+          426,
+          null,
+          70849,
+          null
+        ],
+        [
+          "01049",
+          "DeKalb County, Alabama",
+          1102,
+          null,
+          54459,
+          null
+        ],
+        [
+          "01051",
+          "Elmore County, Alabama",
+          677,
+          null,
+          59799,
+          null
+        ]
+      ]
+    }
+  ]
+}

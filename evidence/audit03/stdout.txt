@@ -1,0 +1,109 @@
+{
+  "status": "passed",
+  "artifact_sha256": "89bf1cef54f42f821965df6e9079b24fc7c4c0c86046fadc98e6cedf9ebd8a1d",
+  "checks": {
+    "disclosure_code correct analytic NULLs": 0,
+    "lq_disclosure_code correct analytic NULLs": 0,
+    "oty_disclosure_code correct analytic NULLs": 0,
+    "establishment measures preserved": 0
+  },
+  "schema_metadata_dictionary_verified": true,
+  "diagnostics": {
+    "disclosure_code": [
+      [
+        "",
+        1229454
+      ],
+      [
+        "N",
+        1860359
+      ]
+    ],
+    "lq_disclosure_code": [
+      [
+        "",
+        1217641
+      ],
+      [
+        "N",
+        1872172
+      ]
+    ],
+    "oty_disclosure_code": [
+      [
+        "",
+        1152022
+      ],
+      [
+        "N",
+        1937791
+      ]
+    ],
+    "published_establishments_on_suppressed_rows": [
+      1860359,
+      8784878,
+      0,
+      56710
+    ],
+    "establishment_values_on_flagged_rows": {
+      "annual_avg_estabs": [
+        1860359,
+        1807791,
+        0,
+        56710
+      ],
+      "lq_annual_avg_estabs": [
+        1872172,
+        1819361,
+        "0.00",
+        "115361.18"
+      ],
+      "oty_annual_avg_estabs_chg": [
+        1937791,
+        588950,
+        -11234,
+        14148
+      ],
+      "oty_annual_avg_estabs_pct_chg": [
+        1937791,
+        588949,
+        "-100.0",
+        "16800.0"
+      ]
+    },
+    "dc_source_labels": [
+      [
+        "11000",
+        "District of Columbia, not unknown"
+      ],
+      [
+        "11001",
+        "District of Columbia, not unknown"
+      ],
+      [
+        "11999",
+        "Unknown Or Undef., District of Columbia"
+      ]
+    ],
+    "california_source_row": [
+      [
+        "06037",
+        "Los Angeles County, California",
+        287445,
+        859824
+      ]
+    ],
+    "national_total": [
+      12112924,
+      155732363,
+      12259226899972,
+      1514,
+      78720
+    ],
+    "disjoint_ownership_sum": [
+      12112925,
+      155732363,
+      12259226899972
+    ]
+  }
+}

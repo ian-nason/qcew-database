@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/datapond-db/datapond-build",
+  "commit": "ba9f7198a0aff3b604953b5f7bd612d15ef1755e",
+  "path": "src/datapond_build/metadata.py",
+  "metadata_py_sha256": "a75c3e140ecba0ed43f0dab91fe2732c32dd40d0a742dab0a982ee8b1f02c3f5",
+  "derivation": "SHA-256 of git show <commit>:<path> bytes; compared by audit_release against the actual imported helper"
+}

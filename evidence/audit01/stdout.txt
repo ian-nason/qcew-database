@@ -1,0 +1,61 @@
+{
+  "status": "passed",
+  "artifact_sha256": "9805c3c275dc29d18bbb4814aa5881d13b961dd8df7675d4a00b2759b197f5d5",
+  "checks": {
+    "disclosure_code correct analytic NULLs": 0,
+    "lq_disclosure_code correct analytic NULLs": 0,
+    "oty_disclosure_code correct analytic NULLs": 0,
+    "establishment measures preserved": 0
+  },
+  "schema_metadata_dictionary_verified": true,
+  "diagnostics": {
+    "disclosure_code": [
+      [
+        "",
+        1229454
+      ],
+      [
+        "N",
+        1860359
+      ]
+    ],
+    "lq_disclosure_code": [
+      [
+        "",
+        1217641
+      ],
+      [
+        "N",
+        1872172
+      ]
+    ],
+    "oty_disclosure_code": [
+      [
+        "",
+        1152022
+      ],
+      [
+        "N",
+        1937791
+      ]
+    ],
+    "published_establishments_on_suppressed_rows": [
+      1860359,
+      8784878,
+      0,
+      56710
+    ],
+    "national_total": [
+      12112924,
+      155732363,
+      12259226899972,
+      1514,
+      78720
+    ],
+    "disjoint_ownership_sum": [
+      12112925,
+      155732363,
+      12259226899972
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/inason/datapond-maintenance/additions-2026-10-18/qcew-database/qcew.py", line 141, in <module>
+    build(a.archive,a.output)
+  File "/home/inason/datapond-maintenance/additions-2026-10-18/qcew-database/qcew.py", line 111, in build
+    con.execute(f'CREATE TABLE {q(table)} AS SELECT {cast} FROM read_csv({lit(file)},columns={{{columns}}},header=true,nullstr=[],strict_mode=true,ignore_errors=false,parallel=false)')
+_duckdb.BinderException: Binder Error: CSV Reader function option nullstr requires a non-empty list of possible null strings (varchar) as input
+
+LINE 1: ..." AS DECIMAL(18,1)) AS "oty_avg_annual_pay_pct_chg" FROM read_csv('releases/2025-candidate-01/annual-source.csv'...
+                                                                    ^

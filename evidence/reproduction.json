@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "release_artifact_sha256": "89bf1cef54f42f821965df6e9079b24fc7c4c0c86046fadc98e6cedf9ebd8a1d",
+  "earlier_candidate_sha256": "e89f9ed648cdf6d3c36020c593108e13be8e2e58d812c58e676d491f5449b6a6",
+  "all_typed_rows_null_counts_source_samples_and_invariants_identical": true,
+  "dictionary_bytes_identical": true,
+  "ingestion_change": "Audit fixes: explicit UTF-8 reference reads, atomic verified extraction cache, and restriction of outputs to the guarded repository. Data/schema/source pins and transformations unchanged.",
+  "byte_reproducibility": "Not byte-identical: build timestamps differ and DuckDB physical layout is not a reproducibility contract. Every typed data fingerprint and dictionary byte is verified separately."
+}

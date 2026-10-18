@@ -1,0 +1,13 @@
+data/*.zip
+releases/
+__pycache__/
+*.pyc
+.build.lock
+*.duckdb*
+evidence/*cache*/
+evidence/consumer-registry.json
+claude-evidence/*-prompt.txt
+claude-evidence/*-stdout.json
+claude-evidence/*-stderr.txt
+data/annual-source.csv
+data/*.partial

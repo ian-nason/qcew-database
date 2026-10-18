@@ -1,0 +1,112 @@
+{
+  "release": "2025 annual; snapshot acquired 2026-10-18",
+  "archive": {
+    "url": "https://data.bls.gov/cew/data/files/2025/csv/2025_annual_singlefile.zip",
+    "bytes": 62799396,
+    "sha256": "94ebbc589b1b500671c1fd507e2589a9eeb24dcd30eb07f1ce37b0018643f865",
+    "retrieved_utc": "2026-10-18T14:00:20.064869+00:00",
+    "headers": {
+      "Content-Length": "62799396",
+      "Last-Modified": "Fri, 21 Aug 2026 13:12:50 GMT",
+      "ETag": "\"3be3e24-6598e64b8ff63\"",
+      "Content-Type": "application/zip"
+    },
+    "path": "data/2025_annual_singlefile.zip",
+    "members": [
+      {
+        "name": "2025.annual.singlefile.csv",
+        "bytes": 439538562,
+        "sha256": "53ca18a0d19db1901894b9f27c153d9abb17cc3e816c4d49fa88527326f08be2",
+        "crc32": 1299105031
+      }
+    ]
+  },
+  "documentation": {
+    "layout": {
+      "url": "https://www.bls.gov/cew/about-data/downloadable-file-layouts/annual/naics-based-annual-layout.htm",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    "industries": {
+      "url": "https://www.bls.gov/cew/classifications/industry/industry-titles.htm",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    "areas": {
+      "url": "https://www.bls.gov/cew/classifications/areas/area-titles.htm",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    "ownership": {
+      "url": "https://www.bls.gov/cew/classifications/ownerships/ownership-titles.htm",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    "aggregation": {
+      "url": "https://www.bls.gov/cew/classifications/aggregation/agg-level-titles.htm",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    "size": {
+      "url": "https://www.bls.gov/cew/classifications/size/size-titles.htm",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    "copyright": {
+      "url": "https://www.bls.gov/opub/copyright-information.htm",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    "guide": {
+      "url": "https://www.bls.gov/cew/about-data/data-files-guide.htm",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    "downloads": {
+      "url": "https://www.bls.gov/cew/downloadable-data-files.htm",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    }
+  },
+  "dictionaries": {},
+  "label_archive": {
+    "url": "https://data.bls.gov/cew/data/files/2025/csv/2025_annual_by_area.zip",
+    "bytes": 114997862,
+    "sha256": "b2f6ed3b854af15bea207c1ef5ab8f1c22ee5b7abf79687505292beb44585921",
+    "headers": {
+      "Last-Modified": "Fri, 21 Aug 2026 13:06:05 GMT",
+      "ETag": "\"6daba66-6598e4c955b4d\"",
+      "Content-Length": "114997862"
+    },
+    "retrieved_utc": "2026-10-18T14:02:47.309546+00:00",
+    "path": "data/2025_annual_by_area.zip"
+  },
+  "derived_dictionaries": {
+    "area_fips": {
+      "path": "data/area_fips_labels.csv",
+      "rows": 4451,
+      "sha256": "9ebedc6873fcea68665719371303a37a3cc60bb2b8dbc80b5481abb6685d88a3",
+      "bytes": 152095,
+      "source": "label_archive; distinct exact code/title pairs; sorted by code"
+    },
+    "own_code": {
+      "path": "data/own_code_labels.csv",
+      "rows": 7,
+      "sha256": "9e7b4ef729834ef7a6fb2e6ddadfb87e118122492cecc0be69c3d9189a29b03d",
+      "bytes": 182,
+      "source": "label_archive; distinct exact code/title pairs; sorted by code"
+    },
+    "industry_code": {
+      "path": "data/industry_code_labels.csv",
+      "rows": 2159,
+      "sha256": "df50d8e10959db158817d4a108d2d496a9fa4f80799e37219a59bfbf38c6368b",
+      "bytes": 125567,
+      "source": "label_archive; distinct exact code/title pairs; sorted by code"
+    },
+    "agglvl_code": {
+      "path": "data/agglvl_code_labels.csv",
+      "rows": 36,
+      "sha256": "edda34aed96e25397f92b470e85565eac009698db9067c1d8b4d4a570995abc7",
+      "bytes": 1596,
+      "source": "label_archive; distinct exact code/title pairs; sorted by code"
+    },
+    "size_code": {
+      "path": "data/size_code_labels.csv",
+      "rows": 1,
+      "sha256": "dc5d7d7adad023f26ac97f4fdaf21bfa05e9f9d3f5dc51cfa10e15787feb6791",
+      "bytes": 49,
+      "source": "label_archive; distinct exact code/title pairs; sorted by code"
+    }
+  }
+}

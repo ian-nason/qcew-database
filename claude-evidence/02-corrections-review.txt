@@ -1,0 +1,26 @@
+All ten earlier findings are addressed in the supplied follow-up. I verified each against the new code and evidence by reading only. I did not execute anything or recompute any hash.
+
+## Reconciliation
+
+- **Establishment passthrough evidence.** Resolved. `audit_release.py:35-38` now counts flagged rows and nonzero retained values for all four fields, and release-audit.json carries the results. README and HF wording now say retained as published, which matches the evidence.
+- **UTF-8 reference reads.** Resolved at `qcew.py:95`.
+- **National benchmark wording.** Resolved at `audit_release.py:27` and `README.md:87`.
+- **Test binding.** Resolved. The fixture run precedes the final build, and the ingestion hash in tests03-inputs.json equals the one in build-report.json. The audit script hash in that file is supplied evidence I cannot check against the text.
+- **Partial extraction.** Resolved by `extract_cache` at `qcew.py:97-105` with two fixtures covering interrupted and corrupt extraction.
+- **Output disk check.** Resolved by the repository-containment requirement at `qcew.py:110` with a fixture. The existing-output refusal still runs first, which the two fixtures rely on.
+- **Local paths in evidence.** Dispositioned as intentional. This is Ian's call and not a correctness issue.
+- **DC labels.** Resolved. Diagnostics show both DC codes carry the same official title, and the documentation states this.
+- **California establishment count.** Resolved. Documented as source-faithful without asserting an unverified explanation.
+- **R doubles.** Resolved at `README.md:91`.
+
+## Unresolved or new
+
+- **Low, operational. Workspace is near the guard's file cap.** The read-only audit run sampled peak workspace files at about 1.91 GB against a 2 GiB stop threshold (`evidence/audit03/resources.json:12`). Retained candidates, caches and evidence accumulate, so the next guarded rebuild in this checkout will likely be killed by the cap. This is fail-closed and does not affect the current artifact. Prune retained candidates or document the required cleanup before any rebuild.
+
+## Consistency checks that passed
+
+Artifact hash and byte count agree across build-report.json, HF-README, CODEX-REVIEW, reproduction.json, release-audit.json, examples.json, consumer-report.json and sources-2025.json. Fixture count, build time, peak RSS and registry size agree with the resource files. Example query outputs are unchanged from the earlier candidate, consistent with the claim that only ingestion safety code changed.
+
+## Conclusion
+
+No local blocker remains in the supplied materials. The one new item is an operational note for future rebuilds, not a defect in this release. Remaining gates are external: naming approval, upload, and public-host hash, range and client verification. My review covers supplied text and evidence only, not independent re-execution.

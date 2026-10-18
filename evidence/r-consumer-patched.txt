@@ -1,0 +1,28 @@
+R R version 4.5.3 (2026-03-11) duckdb 1.5.5 datapond 0.1.1 
+  area_title annual_avg_emplvl total_annual_wages avg_annual_pay
+1 U.S. TOTAL         155732363       1.225923e+13          78720
+# A tibble: 3 × 43
+  area_fips own_code industry_code agglvl_code size_code year  qtr  
+  <chr>     <chr>    <chr>         <chr>       <chr>     <chr> <chr>
+1 01000     0        10            50          0         2025  A    
+2 01000     1        10            51          0         2025  A    
+3 01000     1        101           52          0         2025  A    
+# ℹ 36 more variables: disclosure_code <chr>, annual_avg_estabs <dbl>,
+#   annual_avg_emplvl <dbl>, total_annual_wages <dbl>,
+#   taxable_annual_wages <dbl>, annual_contributions <dbl>,
+#   annual_avg_wkly_wage <dbl>, avg_annual_pay <dbl>, lq_disclosure_code <chr>,
+#   lq_annual_avg_estabs <dbl>, lq_annual_avg_emplvl <dbl>,
+#   lq_total_annual_wages <dbl>, lq_taxable_annual_wages <dbl>,
+#   lq_annual_contributions <dbl>, lq_annual_avg_wkly_wage <dbl>, …
+R localhost HTTP consumer PASS
+duckdb is storing downloaded extensions and secrets under ~/.duckdb:
+ℹ /home/inason/.duckdb
+This persists across sessions and is shared with the DuckDB CLI and other clients.
+ℹ Run duckdb(shared_home = FALSE) to use a temporary directory instead.
+ℹ See ?duckdb_storage for details and alternatives.
+duckdb is storing downloaded extensions and secrets under ~/.duckdb:
+ℹ /home/inason/.duckdb
+This persists across sessions and is shared with the DuckDB CLI and other clients.
+ℹ Run duckdb(shared_home = FALSE) to use a temporary directory instead.
+ℹ See ?duckdb_storage for details and alternatives.
+Ran 2/2 deferred expressions

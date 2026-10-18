@@ -1,0 +1,338 @@
+{
+  "annual_raw": {
+    "rows": 3089813,
+    "columns": [
+      {
+        "name": "area_fips",
+        "source_header": "area_fips",
+        "type": "VARCHAR",
+        "description": "Exact 5-character QCEW area code. Includes state, county-equivalent, metropolitan, national and special aggregates; not all are county FIPS."
+      },
+      {
+        "name": "own_code",
+        "source_header": "own_code",
+        "type": "VARCHAR",
+        "description": "Ownership code; 0 total covered, 1 federal, 2 state, 3 local government, 5 private, 8 total government, 9 total UI covered excluding federal government. Exact source labels are in ownerships; do not sum overlapping sectors."
+      },
+      {
+        "name": "industry_code",
+        "source_header": "industry_code",
+        "type": "VARCHAR",
+        "description": "Original NAICS/supersector/domain/total code. The 2025 release is based on 2022 NAICS; codes include aggregate groups and are not uniformly 6-digit NAICS."
+      },
+      {
+        "name": "agglvl_code",
+        "source_header": "agglvl_code",
+        "type": "VARCHAR",
+        "description": "Aggregation level identifies geographic and industry depth plus ownership grouping; use one level in a comparison."
+      },
+      {
+        "name": "size_code",
+        "source_header": "size_code",
+        "type": "VARCHAR",
+        "description": "Establishment-size code; all annual source records use 0, all sizes."
+      },
+      {
+        "name": "year",
+        "source_header": "year",
+        "type": "VARCHAR",
+        "description": "Source reference year as text; 2025."
+      },
+      {
+        "name": "qtr",
+        "source_header": "qtr",
+        "type": "VARCHAR",
+        "description": "Original quarter field; A means annual average, not a fifth quarter."
+      },
+      {
+        "name": "disclosure_code",
+        "source_header": "disclosure_code",
+        "type": "VARCHAR",
+        "description": "Empty string means published; N means not disclosed. annual_raw preserves zeros. annual nulls employment/wage/contribution levels on N, preserving establishment counts."
+      },
+      {
+        "name": "annual_avg_estabs",
+        "source_header": "annual_avg_estabs",
+        "type": "BIGINT",
+        "description": "Annual mean of quarterly establishment counts, rounded by BLS; published even when employment/wages are suppressed."
+      },
+      {
+        "name": "annual_avg_emplvl",
+        "source_header": "annual_avg_emplvl",
+        "type": "BIGINT",
+        "description": "Annual mean of 12 monthly employment levels, rounded; jobs at covered establishments, not unique employed persons."
+      },
+      {
+        "name": "total_annual_wages",
+        "source_header": "total_annual_wages",
+        "type": "BIGINT",
+        "description": "Sum of quarterly covered wages, nominal dollars. Includes bonuses and other covered pay, not hourly earnings."
+      },
+      {
+        "name": "taxable_annual_wages",
+        "source_header": "taxable_annual_wages",
+        "type": "BIGINT",
+        "description": "Sum of taxable wages under UI programs, nominal dollars; applicability varies by ownership/state. Preserve published zeros."
+      },
+      {
+        "name": "annual_contributions",
+        "source_header": "annual_contributions",
+        "type": "BIGINT",
+        "description": "Annual UI contributions, nominal dollars; applicability varies. Preserve published zeros."
+      },
+      {
+        "name": "annual_avg_wkly_wage",
+        "source_header": "annual_avg_wkly_wage",
+        "type": "BIGINT",
+        "description": "Published average weekly wage in nominal dollars, based on annual wages and average employment; not an unweighted mean of county or industry wages."
+      },
+      {
+        "name": "avg_annual_pay",
+        "source_header": "avg_annual_pay",
+        "type": "BIGINT",
+        "description": "Published average annual pay in nominal dollars, based on covered wages and average employment; includes full-/part-time and partial-year jobs."
+      },
+      {
+        "name": "lq_disclosure_code",
+        "source_header": "lq_disclosure_code",
+        "type": "VARCHAR",
+        "description": "Separate location-quotient disclosure flag: empty published, N not disclosed. Establishment quotient remains published; annual nulls other quotient measures on N."
+      },
+      {
+        "name": "lq_annual_avg_estabs",
+        "source_header": "lq_annual_avg_estabs",
+        "type": "DECIMAL(18,2)",
+        "description": "Published location quotient relative to the U.S. for annual_avg_estabs, rounded to hundredths. Use lq_disclosure_code; not a percentage or additive statistic."
+      },
+      {
+        "name": "lq_annual_avg_emplvl",
+        "source_header": "lq_annual_avg_emplvl",
+        "type": "DECIMAL(18,2)",
+        "description": "Published location quotient relative to the U.S. for annual_avg_emplvl, rounded to hundredths. Use lq_disclosure_code; not a percentage or additive statistic."
+      },
+      {
+        "name": "lq_total_annual_wages",
+        "source_header": "lq_total_annual_wages",
+        "type": "DECIMAL(18,2)",
+        "description": "Published location quotient relative to the U.S. for total_annual_wages, rounded to hundredths. Use lq_disclosure_code; not a percentage or additive statistic."
+      },
+      {
+        "name": "lq_taxable_annual_wages",
+        "source_header": "lq_taxable_annual_wages",
+        "type": "DECIMAL(18,2)",
+        "description": "Published location quotient relative to the U.S. for taxable_annual_wages, rounded to hundredths. Use lq_disclosure_code; not a percentage or additive statistic."
+      },
+      {
+        "name": "lq_annual_contributions",
+        "source_header": "lq_annual_contributions",
+        "type": "DECIMAL(18,2)",
+        "description": "Published location quotient relative to the U.S. for annual_contributions, rounded to hundredths. Use lq_disclosure_code; not a percentage or additive statistic."
+      },
+      {
+        "name": "lq_annual_avg_wkly_wage",
+        "source_header": "lq_annual_avg_wkly_wage",
+        "type": "DECIMAL(18,2)",
+        "description": "Published location quotient relative to the U.S. for annual_avg_wkly_wage, rounded to hundredths. Use lq_disclosure_code; not a percentage or additive statistic."
+      },
+      {
+        "name": "lq_avg_annual_pay",
+        "source_header": "lq_avg_annual_pay",
+        "type": "DECIMAL(18,2)",
+        "description": "Published location quotient relative to the U.S. for avg_annual_pay, rounded to hundredths. Use lq_disclosure_code; not a percentage or additive statistic."
+      },
+      {
+        "name": "oty_disclosure_code",
+        "source_header": "oty_disclosure_code",
+        "type": "VARCHAR",
+        "description": "Separate over-the-year disclosure flag: empty published, N not disclosed. Establishment changes remain published; annual nulls other change measures on N."
+      },
+      {
+        "name": "oty_annual_avg_estabs_chg",
+        "source_header": "oty_annual_avg_estabs_chg",
+        "type": "BIGINT",
+        "description": "Published year-over-year absolute change for annual_avg_estabs. Use oty_disclosure_code; underlying prior-year universe is not supplied in this snapshot."
+      },
+      {
+        "name": "oty_annual_avg_estabs_pct_chg",
+        "source_header": "oty_annual_avg_estabs_pct_chg",
+        "type": "DECIMAL(18,1)",
+        "description": "Published year-over-year percent change for annual_avg_estabs, rounded to tenths. Use oty_disclosure_code; do not recompute from suppressed/rounded values or interpret as a longitudinal employer panel."
+      },
+      {
+        "name": "oty_annual_avg_emplvl_chg",
+        "source_header": "oty_annual_avg_emplvl_chg",
+        "type": "BIGINT",
+        "description": "Published year-over-year absolute change for annual_avg_emplvl. Use oty_disclosure_code; underlying prior-year universe is not supplied in this snapshot."
+      },
+      {
+        "name": "oty_annual_avg_emplvl_pct_chg",
+        "source_header": "oty_annual_avg_emplvl_pct_chg",
+        "type": "DECIMAL(18,1)",
+        "description": "Published year-over-year percent change for annual_avg_emplvl, rounded to tenths. Use oty_disclosure_code; do not recompute from suppressed/rounded values or interpret as a longitudinal employer panel."
+      },
+      {
+        "name": "oty_total_annual_wages_chg",
+        "source_header": "oty_total_annual_wages_chg",
+        "type": "BIGINT",
+        "description": "Published year-over-year absolute change for total_annual_wages. Use oty_disclosure_code; underlying prior-year universe is not supplied in this snapshot."
+      },
+      {
+        "name": "oty_total_annual_wages_pct_chg",
+        "source_header": "oty_total_annual_wages_pct_chg",
+        "type": "DECIMAL(18,1)",
+        "description": "Published year-over-year percent change for total_annual_wages, rounded to tenths. Use oty_disclosure_code; do not recompute from suppressed/rounded values or interpret as a longitudinal employer panel."
+      },
+      {
+        "name": "oty_taxable_annual_wages_chg",
+        "source_header": "oty_taxable_annual_wages_chg",
+        "type": "BIGINT",
+        "description": "Published year-over-year absolute change for taxable_annual_wages. Use oty_disclosure_code; underlying prior-year universe is not supplied in this snapshot."
+      },
+      {
+        "name": "oty_taxable_annual_wages_pct_chg",
+        "source_header": "oty_taxable_annual_wages_pct_chg",
+        "type": "DECIMAL(18,1)",
+        "description": "Published year-over-year percent change for taxable_annual_wages, rounded to tenths. Use oty_disclosure_code; do not recompute from suppressed/rounded values or interpret as a longitudinal employer panel."
+      },
+      {
+        "name": "oty_annual_contributions_chg",
+        "source_header": "oty_annual_contributions_chg",
+        "type": "BIGINT",
+        "description": "Published year-over-year absolute change for annual_contributions. Use oty_disclosure_code; underlying prior-year universe is not supplied in this snapshot."
+      },
+      {
+        "name": "oty_annual_contributions_pct_chg",
+        "source_header": "oty_annual_contributions_pct_chg",
+        "type": "DECIMAL(18,1)",
+        "description": "Published year-over-year percent change for annual_contributions, rounded to tenths. Use oty_disclosure_code; do not recompute from suppressed/rounded values or interpret as a longitudinal employer panel."
+      },
+      {
+        "name": "oty_annual_avg_wkly_wage_chg",
+        "source_header": "oty_annual_avg_wkly_wage_chg",
+        "type": "BIGINT",
+        "description": "Published year-over-year absolute change for annual_avg_wkly_wage. Use oty_disclosure_code; underlying prior-year universe is not supplied in this snapshot."
+      },
+      {
+        "name": "oty_annual_avg_wkly_wage_pct_chg",
+        "source_header": "oty_annual_avg_wkly_wage_pct_chg",
+        "type": "DECIMAL(18,1)",
+        "description": "Published year-over-year percent change for annual_avg_wkly_wage, rounded to tenths. Use oty_disclosure_code; do not recompute from suppressed/rounded values or interpret as a longitudinal employer panel."
+      },
+      {
+        "name": "oty_avg_annual_pay_chg",
+        "source_header": "oty_avg_annual_pay_chg",
+        "type": "BIGINT",
+        "description": "Published year-over-year absolute change for avg_annual_pay. Use oty_disclosure_code; underlying prior-year universe is not supplied in this snapshot."
+      },
+      {
+        "name": "oty_avg_annual_pay_pct_chg",
+        "source_header": "oty_avg_annual_pay_pct_chg",
+        "type": "DECIMAL(18,1)",
+        "description": "Published year-over-year percent change for avg_annual_pay, rounded to tenths. Use oty_disclosure_code; do not recompute from suppressed/rounded values or interpret as a longitudinal employer panel."
+      }
+    ],
+    "source_file": "2025.annual.singlefile.csv",
+    "source_sha256": "53ca18a0d19db1901894b9f27c153d9abb17cc3e816c4d49fa88527326f08be2",
+    "description": "2025 annual QCEW rows preserving all 38 source fields, numeric placeholders and disclosure flags. Mixed nested geographies, industries and ownership totals; do not sum unfiltered."
+  },
+  "areas": {
+    "rows": 4451,
+    "columns": [
+      {
+        "name": "area_fips",
+        "source_header": "area_fips",
+        "type": "VARCHAR",
+        "description": "Exact code present in the 2025 annual release; preserves leading zeros and special aggregate codes."
+      },
+      {
+        "name": "area_title",
+        "source_header": "area_title",
+        "type": "VARCHAR",
+        "description": "Exact BLS title embedded in the same 2025 by-area archive; one unambiguous title per code."
+      }
+    ],
+    "source_file": "data/area_fips_labels.csv",
+    "source_sha256": "9ebedc6873fcea68665719371303a37a3cc60bb2b8dbc80b5481abb6685d88a3",
+    "description": "Distinct exact code/title pairs from the pinned 2025 BLS by-area archive. Covers codes used in this release, not all historical classifications."
+  },
+  "ownerships": {
+    "rows": 7,
+    "columns": [
+      {
+        "name": "own_code",
+        "source_header": "own_code",
+        "type": "VARCHAR",
+        "description": "Exact code present in the 2025 annual release; preserves leading zeros and special aggregate codes."
+      },
+      {
+        "name": "own_title",
+        "source_header": "own_title",
+        "type": "VARCHAR",
+        "description": "Exact BLS title embedded in the same 2025 by-area archive; one unambiguous title per code."
+      }
+    ],
+    "source_file": "data/own_code_labels.csv",
+    "source_sha256": "9e7b4ef729834ef7a6fb2e6ddadfb87e118122492cecc0be69c3d9189a29b03d",
+    "description": "Distinct exact code/title pairs from the pinned 2025 BLS by-area archive. Covers codes used in this release, not all historical classifications."
+  },
+  "industries": {
+    "rows": 2159,
+    "columns": [
+      {
+        "name": "industry_code",
+        "source_header": "industry_code",
+        "type": "VARCHAR",
+        "description": "Exact code present in the 2025 annual release; preserves leading zeros and special aggregate codes."
+      },
+      {
+        "name": "industry_title",
+        "source_header": "industry_title",
+        "type": "VARCHAR",
+        "description": "Exact BLS title embedded in the same 2025 by-area archive; one unambiguous title per code."
+      }
+    ],
+    "source_file": "data/industry_code_labels.csv",
+    "source_sha256": "df50d8e10959db158817d4a108d2d496a9fa4f80799e37219a59bfbf38c6368b",
+    "description": "Distinct exact code/title pairs from the pinned 2025 BLS by-area archive. Covers codes used in this release, not all historical classifications."
+  },
+  "aggregation_levels": {
+    "rows": 36,
+    "columns": [
+      {
+        "name": "agglvl_code",
+        "source_header": "agglvl_code",
+        "type": "VARCHAR",
+        "description": "Exact code present in the 2025 annual release; preserves leading zeros and special aggregate codes."
+      },
+      {
+        "name": "agglvl_title",
+        "source_header": "agglvl_title",
+        "type": "VARCHAR",
+        "description": "Exact BLS title embedded in the same 2025 by-area archive; one unambiguous title per code."
+      }
+    ],
+    "source_file": "data/agglvl_code_labels.csv",
+    "source_sha256": "edda34aed96e25397f92b470e85565eac009698db9067c1d8b4d4a570995abc7",
+    "description": "Distinct exact code/title pairs from the pinned 2025 BLS by-area archive. Covers codes used in this release, not all historical classifications."
+  },
+  "size_classes": {
+    "rows": 1,
+    "columns": [
+      {
+        "name": "size_code",
+        "source_header": "size_code",
+        "type": "VARCHAR",
+        "description": "Exact code present in the 2025 annual release; preserves leading zeros and special aggregate codes."
+      },
+      {
+        "name": "size_title",
+        "source_header": "size_title",
+        "type": "VARCHAR",
+        "description": "Exact BLS title embedded in the same 2025 by-area archive; one unambiguous title per code."
+      }
+    ],
+    "source_file": "data/size_code_labels.csv",
+    "source_sha256": "dc5d7d7adad023f26ac97f4fdaf21bfa05e9f9d3f5dc51cfa10e15787feb6791",
+    "description": "Distinct exact code/title pairs from the pinned 2025 BLS by-area archive. Covers codes used in this release, not all historical classifications."
+  }
+}

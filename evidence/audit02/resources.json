@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/inason/datapond-maintenance/fjc-judges-database/.venv/bin/python",
+    "audit_release.py",
+    "releases/2025-release/qcew.duckdb"
+  ],
+  "guard_sha256": "f27a2795c873ab19f6154656f29c049a9c733b323cbf1ce7cd74167149148493",
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 10.617329577999953,
+  "peak_process_group_rss_bytes_sampled": 452313088,
+  "peak_workspace_file_bytes_sampled": 1747787360,
+  "workspace_file_scope": "All files under this isolated repository, including retained attempts and .git",
+  "minimum_available_memory_bytes": 9326002176,
+  "sample_interval_seconds": 0.25,
+  "completed_utc": "2026-10-18T14:25:11.628717+00:00"
+}

@@ -1,0 +1,819 @@
+{
+  "snapshot_kind": "Immutable local evidence before publication; statuses and paths inside evidence_snapshot describe this historical snapshot, not current hosting.",
+  "snapshot_recorded_utc": "2026-10-18T14:38:12.091779+00:00",
+  "evidence_snapshot": {
+    "build": {
+      "status": "validated_local_not_published",
+      "release": "2025 annual; snapshot acquired 2026-10-18",
+      "built_at_utc": "2026-10-18T14:36:07.716126+00:00",
+      "duckdb": "1.5.5",
+      "database_sha256": "89bf1cef54f42f821965df6e9079b24fc7c4c0c86046fadc98e6cedf9ebd8a1d",
+      "database_bytes": 195571712,
+      "rows": 3096467,
+      "data_tables": 6,
+      "dictionary_columns": 48,
+      "validation": {
+        "annual_raw duplicate keys": 0,
+        "annual_raw NULL area_fips": 0,
+        "annual_raw NULL own_code": 0,
+        "annual_raw NULL industry_code": 0,
+        "annual_raw NULL agglvl_code": 0,
+        "annual_raw NULL size_code": 0,
+        "annual_raw NULL year": 0,
+        "annual_raw NULL qtr": 0,
+        "annual_raw NULL disclosure_code": 0,
+        "annual_raw NULL annual_avg_estabs": 0,
+        "annual_raw NULL annual_avg_emplvl": 0,
+        "annual_raw NULL total_annual_wages": 0,
+        "annual_raw NULL taxable_annual_wages": 0,
+        "annual_raw NULL annual_contributions": 0,
+        "annual_raw NULL annual_avg_wkly_wage": 0,
+        "annual_raw NULL avg_annual_pay": 0,
+        "annual_raw NULL lq_disclosure_code": 0,
+        "annual_raw NULL lq_annual_avg_estabs": 0,
+        "annual_raw NULL lq_annual_avg_emplvl": 0,
+        "annual_raw NULL lq_total_annual_wages": 0,
+        "annual_raw NULL lq_taxable_annual_wages": 0,
+        "annual_raw NULL lq_annual_contributions": 0,
+        "annual_raw NULL lq_annual_avg_wkly_wage": 0,
+        "annual_raw NULL lq_avg_annual_pay": 0,
+        "annual_raw NULL oty_disclosure_code": 0,
+        "annual_raw NULL oty_annual_avg_estabs_chg": 0,
+        "annual_raw NULL oty_annual_avg_estabs_pct_chg": 0,
+        "annual_raw NULL oty_annual_avg_emplvl_chg": 0,
+        "annual_raw NULL oty_annual_avg_emplvl_pct_chg": 0,
+        "annual_raw NULL oty_total_annual_wages_chg": 0,
+        "annual_raw NULL oty_total_annual_wages_pct_chg": 0,
+        "annual_raw NULL oty_taxable_annual_wages_chg": 0,
+        "annual_raw NULL oty_taxable_annual_wages_pct_chg": 0,
+        "annual_raw NULL oty_annual_contributions_chg": 0,
+        "annual_raw NULL oty_annual_contributions_pct_chg": 0,
+        "annual_raw NULL oty_annual_avg_wkly_wage_chg": 0,
+        "annual_raw NULL oty_annual_avg_wkly_wage_pct_chg": 0,
+        "annual_raw NULL oty_avg_annual_pay_chg": 0,
+        "annual_raw NULL oty_avg_annual_pay_pct_chg": 0,
+        "areas duplicate keys": 0,
+        "areas NULL area_fips": 0,
+        "areas NULL area_title": 0,
+        "ownerships duplicate keys": 0,
+        "ownerships NULL own_code": 0,
+        "ownerships NULL own_title": 0,
+        "industries duplicate keys": 0,
+        "industries NULL industry_code": 0,
+        "industries NULL industry_title": 0,
+        "aggregation_levels duplicate keys": 0,
+        "aggregation_levels NULL agglvl_code": 0,
+        "aggregation_levels NULL agglvl_title": 0,
+        "size_classes duplicate keys": 0,
+        "size_classes NULL size_code": 0,
+        "size_classes NULL size_title": 0,
+        "reference area_fips": 0,
+        "reference own_code": 0,
+        "reference industry_code": 0,
+        "reference agglvl_code": 0,
+        "reference size_code": 0,
+        "disclosure_code valid": 0,
+        "lq_disclosure_code valid": 0,
+        "oty_disclosure_code valid": 0,
+        "year/quarter/size": 0,
+        "area code length": 0,
+        "ownership code": 0,
+        "nonnegative levels": 0
+      },
+      "source_comparison": {
+        "annual_raw": {
+          "rows": 3089813,
+          "all_cells_equal": true,
+          "typed_rows_sha256": "7b267140589fe4753f653b8e60cb1b2181025329c88096d22967c7f6a94b2f42",
+          "null_counts": {
+            "area_fips": 0,
+            "own_code": 0,
+            "industry_code": 0,
+            "agglvl_code": 0,
+            "size_code": 0,
+            "year": 0,
+            "qtr": 0,
+            "disclosure_code": 0,
+            "annual_avg_estabs": 0,
+            "annual_avg_emplvl": 0,
+            "total_annual_wages": 0,
+            "taxable_annual_wages": 0,
+            "annual_contributions": 0,
+            "annual_avg_wkly_wage": 0,
+            "avg_annual_pay": 0,
+            "lq_disclosure_code": 0,
+            "lq_annual_avg_estabs": 0,
+            "lq_annual_avg_emplvl": 0,
+            "lq_total_annual_wages": 0,
+            "lq_taxable_annual_wages": 0,
+            "lq_annual_contributions": 0,
+            "lq_annual_avg_wkly_wage": 0,
+            "lq_avg_annual_pay": 0,
+            "oty_disclosure_code": 0,
+            "oty_annual_avg_estabs_chg": 0,
+            "oty_annual_avg_estabs_pct_chg": 0,
+            "oty_annual_avg_emplvl_chg": 0,
+            "oty_annual_avg_emplvl_pct_chg": 0,
+            "oty_total_annual_wages_chg": 0,
+            "oty_total_annual_wages_pct_chg": 0,
+            "oty_taxable_annual_wages_chg": 0,
+            "oty_taxable_annual_wages_pct_chg": 0,
+            "oty_annual_contributions_chg": 0,
+            "oty_annual_contributions_pct_chg": 0,
+            "oty_annual_avg_wkly_wage_chg": 0,
+            "oty_annual_avg_wkly_wage_pct_chg": 0,
+            "oty_avg_annual_pay_chg": 0,
+            "oty_avg_annual_pay_pct_chg": 0
+          },
+          "samples": [
+            {
+              "source_record": 1,
+              "source": [
+                "01000",
+                "0",
+                "10",
+                "50",
+                "0",
+                "2025",
+                "A",
+                "",
+                "164183",
+                "2118878",
+                "136622236995",
+                "17592792057",
+                "76768668",
+                "1240",
+                "64479",
+                "",
+                "1.00",
+                "1.00",
+                "1.00",
+                "1.00",
+                "1.00",
+                "1.00",
+                "1.00",
+                "",
+                "3296",
+                "2.0",
+                "13204",
+                "0.6",
+                "5977419925",
+                "4.6",
+                "38718930",
+                "0.2",
+                "-12580563",
+                "-14.1",
+                "47",
+                "3.9",
+                "2435",
+                "3.9"
+              ],
+              "typed": [
+                "01000",
+                "0",
+                "10",
+                "50",
+                "0",
+                "2025",
+                "A",
+                "",
+                164183,
+                2118878,
+                136622236995,
+                17592792057,
+                76768668,
+                1240,
+                64479,
+                "",
+                "1.00",
+                "1.00",
+                "1.00",
+                "1.00",
+                "1.00",
+                "1.00",
+                "1.00",
+                "",
+                3296,
+                "2.0",
+                13204,
+                "0.6",
+                5977419925,
+                "4.6",
+                38718930,
+                "0.2",
+                -12580563,
+                "-14.1",
+                47,
+                "3.9",
+                2435,
+                "3.9"
+              ]
+            },
+            {
+              "source_record": 1544906,
+              "source": [
+                "30047",
+                "5",
+                "2373",
+                "76",
+                "0",
+                "2025",
+                "A",
+                "N",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "N",
+                "0.77",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "N",
+                "0",
+                "0.0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "typed": [
+                "30047",
+                "5",
+                "2373",
+                "76",
+                "0",
+                "2025",
+                "A",
+                "N",
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                "N",
+                "0.77",
+                "0.00",
+                "0.00",
+                "0.00",
+                "0.00",
+                "0.00",
+                "0.00",
+                "N",
+                0,
+                "0.0",
+                0,
+                "0.0",
+                0,
+                "0.0",
+                0,
+                "0.0",
+                0,
+                "0.0",
+                0,
+                "0.0",
+                0,
+                "0.0"
+              ]
+            },
+            {
+              "source_record": 3089813,
+              "source": [
+                "USNMS",
+                "0",
+                "10",
+                "93",
+                "0",
+                "2025",
+                "A",
+                "",
+                "2561372",
+                "22192227",
+                "1602555268107",
+                "336467093668",
+                "5069267936",
+                "1389",
+                "72212",
+                "",
+                "0.21",
+                "0.14",
+                "0.13",
+                "0.16",
+                "0.14",
+                "0.92",
+                "0.92",
+                "",
+                "-1490",
+                "-0.1",
+                "131562",
+                "0.6",
+                "92747968683",
+                "6.1",
+                "9029301543",
+                "2.8",
+                "128113982",
+                "2.6",
+                "73",
+                "5.5",
+                "3773",
+                "5.5"
+              ],
+              "typed": [
+                "USNMS",
+                "0",
+                "10",
+                "93",
+                "0",
+                "2025",
+                "A",
+                "",
+                2561372,
+                22192227,
+                1602555268107,
+                336467093668,
+                5069267936,
+                1389,
+                72212,
+                "",
+                "0.21",
+                "0.14",
+                "0.13",
+                "0.16",
+                "0.14",
+                "0.92",
+                "0.92",
+                "",
+                -1490,
+                "-0.1",
+                131562,
+                "0.6",
+                92747968683,
+                "6.1",
+                9029301543,
+                "2.8",
+                128113982,
+                "2.6",
+                73,
+                "5.5",
+                3773,
+                "5.5"
+              ]
+            }
+          ]
+        },
+        "areas": {
+          "rows": 4451,
+          "all_cells_equal": true,
+          "typed_rows_sha256": "859b0c7ee661ebfb16d49ffc60b2f34ad3b1db083ff33a0e244a6b8d37745a48",
+          "null_counts": {
+            "area_fips": 0,
+            "area_title": 0
+          },
+          "samples": [
+            {
+              "source_record": 1,
+              "source": [
+                "01000",
+                "Alabama -- Statewide"
+              ],
+              "typed": [
+                "01000",
+                "Alabama -- Statewide"
+              ]
+            },
+            {
+              "source_record": 2225,
+              "source": [
+                "40039",
+                "Custer County, Oklahoma"
+              ],
+              "typed": [
+                "40039",
+                "Custer County, Oklahoma"
+              ]
+            },
+            {
+              "source_record": 4451,
+              "source": [
+                "USNMS",
+                "U.S. Nonmetropolitan Area Counties (combined)"
+              ],
+              "typed": [
+                "USNMS",
+                "U.S. Nonmetropolitan Area Counties (combined)"
+              ]
+            }
+          ]
+        },
+        "ownerships": {
+          "rows": 7,
+          "all_cells_equal": true,
+          "typed_rows_sha256": "487833fc34c1633c81686fca61b99388f5833fc2d95b635afcb934b6b9a81304",
+          "null_counts": {
+            "own_code": 0,
+            "own_title": 0
+          },
+          "samples": [
+            {
+              "source_record": 1,
+              "source": [
+                "0",
+                "Total Covered"
+              ],
+              "typed": [
+                "0",
+                "Total Covered"
+              ]
+            },
+            {
+              "source_record": 3,
+              "source": [
+                "2",
+                "State Government"
+              ],
+              "typed": [
+                "2",
+                "State Government"
+              ]
+            },
+            {
+              "source_record": 7,
+              "source": [
+                "9",
+                "Total U.I. Covered (Excludes Federal Government)"
+              ],
+              "typed": [
+                "9",
+                "Total U.I. Covered (Excludes Federal Government)"
+              ]
+            }
+          ]
+        },
+        "industries": {
+          "rows": 2159,
+          "all_cells_equal": true,
+          "typed_rows_sha256": "3d9c3a996de5764b51014adc36dba60f77a6cfa63d2679471af24c7c8cf5c758",
+          "null_counts": {
+            "industry_code": 0,
+            "industry_title": 0
+          },
+          "samples": [
+            {
+              "source_record": 1,
+              "source": [
+                "10",
+                "10 Total, all industries"
+              ],
+              "typed": [
+                "10",
+                "10 Total, all industries"
+              ]
+            },
+            {
+              "source_record": 1079,
+              "source": [
+                "424910",
+                "NAICS 424910 Farm supplies merchant wholesalers"
+              ],
+              "typed": [
+                "424910",
+                "NAICS 424910 Farm supplies merchant wholesalers"
+              ]
+            },
+            {
+              "source_record": 2159,
+              "source": [
+                "999999",
+                "NAICS 999999 Unclassified"
+              ],
+              "typed": [
+                "999999",
+                "NAICS 999999 Unclassified"
+              ]
+            }
+          ]
+        },
+        "aggregation_levels": {
+          "rows": 36,
+          "all_cells_equal": true,
+          "typed_rows_sha256": "7ab9e33744c00a0c61c01029edbc5763985198a2cd37eb26de1a8e1e2286bedc",
+          "null_counts": {
+            "agglvl_code": 0,
+            "agglvl_title": 0
+          },
+          "samples": [
+            {
+              "source_record": 1,
+              "source": [
+                "10",
+                "National, Total Covered"
+              ],
+              "typed": [
+                "10",
+                "National, Total Covered"
+              ]
+            },
+            {
+              "source_record": 18,
+              "source": [
+                "56",
+                "State, NAICS 4-digit -- by ownership sector"
+              ],
+              "typed": [
+                "56",
+                "State, NAICS 4-digit -- by ownership sector"
+              ]
+            },
+            {
+              "source_record": 36,
+              "source": [
+                "96",
+                "Total Government, by State"
+              ],
+              "typed": [
+                "96",
+                "Total Government, by State"
+              ]
+            }
+          ]
+        },
+        "size_classes": {
+          "rows": 1,
+          "all_cells_equal": true,
+          "typed_rows_sha256": "a0f54ebf0bde8c804a628b1804595d46d007ccfa277954b121497910cb8de23e",
+          "null_counts": {
+            "size_code": 0,
+            "size_title": 0
+          },
+          "samples": [
+            {
+              "source_record": 1,
+              "source": [
+                "0",
+                "All establishment sizes"
+              ],
+              "typed": [
+                "0",
+                "All establishment sizes"
+              ]
+            }
+          ]
+        }
+      },
+      "all_cells_reverified_after_read_only_reopen": true,
+      "build_input_sha256": {
+        "qcew.py": "8c081248c6ff2b53eb5865b3ce5a56eb5fdbb42e9f0299a5583bcd70ca7363c4",
+        "schema.json": "2192df3dc909ed070c52723a7d853f7ff6b055e6ee72dff841a7b872b39909dd",
+        "source-lock.json": "94d0a19573b9045296f1e86a41ba32013714c645021198e4548277172ef2cfaf",
+        "pyproject.toml": "2705c5cf6f2fa8f60a1893606346b9378ecf2c9b739209e83d1b8ab2abd2c14a"
+      }
+    },
+    "source_lock": {
+      "release": "2025 annual; snapshot acquired 2026-10-18",
+      "archive": {
+        "url": "https://data.bls.gov/cew/data/files/2025/csv/2025_annual_singlefile.zip",
+        "bytes": 62799396,
+        "sha256": "94ebbc589b1b500671c1fd507e2589a9eeb24dcd30eb07f1ce37b0018643f865",
+        "retrieved_utc": "2026-10-18T14:00:20.064869+00:00",
+        "headers": {
+          "Content-Length": "62799396",
+          "Last-Modified": "Fri, 21 Aug 2026 13:12:50 GMT",
+          "ETag": "\"3be3e24-6598e64b8ff63\"",
+          "Content-Type": "application/zip"
+        },
+        "path": "data/2025_annual_singlefile.zip",
+        "members": [
+          {
+            "name": "2025.annual.singlefile.csv",
+            "bytes": 439538562,
+            "sha256": "53ca18a0d19db1901894b9f27c153d9abb17cc3e816c4d49fa88527326f08be2",
+            "crc32": 1299105031
+          }
+        ]
+      },
+      "documentation": {
+        "layout": {
+          "url": "https://www.bls.gov/cew/about-data/downloadable-file-layouts/annual/naics-based-annual-layout.htm",
+          "error": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        "industries": {
+          "url": "https://www.bls.gov/cew/classifications/industry/industry-titles.htm",
+          "error": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        "areas": {
+          "url": "https://www.bls.gov/cew/classifications/areas/area-titles.htm",
+          "error": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        "ownership": {
+          "url": "https://www.bls.gov/cew/classifications/ownerships/ownership-titles.htm",
+          "error": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        "aggregation": {
+          "url": "https://www.bls.gov/cew/classifications/aggregation/agg-level-titles.htm",
+          "error": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        "size": {
+          "url": "https://www.bls.gov/cew/classifications/size/size-titles.htm",
+          "error": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        "copyright": {
+          "url": "https://www.bls.gov/opub/copyright-information.htm",
+          "error": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        "guide": {
+          "url": "https://www.bls.gov/cew/about-data/data-files-guide.htm",
+          "error": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        "downloads": {
+          "url": "https://www.bls.gov/cew/downloadable-data-files.htm",
+          "error": "HTTPError: HTTP Error 403: Forbidden"
+        }
+      },
+      "dictionaries": {},
+      "label_archive": {
+        "url": "https://data.bls.gov/cew/data/files/2025/csv/2025_annual_by_area.zip",
+        "bytes": 114997862,
+        "sha256": "b2f6ed3b854af15bea207c1ef5ab8f1c22ee5b7abf79687505292beb44585921",
+        "headers": {
+          "Last-Modified": "Fri, 21 Aug 2026 13:06:05 GMT",
+          "ETag": "\"6daba66-6598e4c955b4d\"",
+          "Content-Length": "114997862"
+        },
+        "retrieved_utc": "2026-10-18T14:02:47.309546+00:00",
+        "path": "data/2025_annual_by_area.zip"
+      },
+      "derived_dictionaries": {
+        "area_fips": {
+          "path": "data/area_fips_labels.csv",
+          "rows": 4451,
+          "sha256": "9ebedc6873fcea68665719371303a37a3cc60bb2b8dbc80b5481abb6685d88a3",
+          "bytes": 152095,
+          "source": "label_archive; distinct exact code/title pairs; sorted by code"
+        },
+        "own_code": {
+          "path": "data/own_code_labels.csv",
+          "rows": 7,
+          "sha256": "9e7b4ef729834ef7a6fb2e6ddadfb87e118122492cecc0be69c3d9189a29b03d",
+          "bytes": 182,
+          "source": "label_archive; distinct exact code/title pairs; sorted by code"
+        },
+        "industry_code": {
+          "path": "data/industry_code_labels.csv",
+          "rows": 2159,
+          "sha256": "df50d8e10959db158817d4a108d2d496a9fa4f80799e37219a59bfbf38c6368b",
+          "bytes": 125567,
+          "source": "label_archive; distinct exact code/title pairs; sorted by code"
+        },
+        "agglvl_code": {
+          "path": "data/agglvl_code_labels.csv",
+          "rows": 36,
+          "sha256": "edda34aed96e25397f92b470e85565eac009698db9067c1d8b4d4a570995abc7",
+          "bytes": 1596,
+          "source": "label_archive; distinct exact code/title pairs; sorted by code"
+        },
+        "size_code": {
+          "path": "data/size_code_labels.csv",
+          "rows": 1,
+          "sha256": "dc5d7d7adad023f26ac97f4fdaf21bfa05e9f9d3f5dc51cfa10e15787feb6791",
+          "bytes": 49,
+          "source": "label_archive; distinct exact code/title pairs; sorted by code"
+        }
+      }
+    },
+    "runtime": {
+      "python": "3.12.3",
+      "interpreter": "/home/inason/datapond-maintenance/fjc-judges-database/.venv/bin/python",
+      "duckdb": "1.5.5",
+      "datapond_build_version": "0.1.1",
+      "datapond_build_install_origin": {
+        "url": "https://github.com/datapond-db/datapond-build",
+        "vcs_info": {
+          "vcs": "git",
+          "commit_id": "cee5ea7efcb4cab8650216f96fdadc6a6ac4c8c0",
+          "requested_revision": "v0.1.1"
+        }
+      },
+      "helper_source_pin": {
+        "repository": "https://github.com/datapond-db/datapond-build",
+        "commit": "ba9f7198a0aff3b604953b5f7bd612d15ef1755e",
+        "path": "src/datapond_build/metadata.py",
+        "metadata_py_sha256": "a75c3e140ecba0ed43f0dab91fe2732c32dd40d0a742dab0a982ee8b1f02c3f5",
+        "derivation": "SHA-256 of git show <commit>:<path> bytes; compared by audit_release against the actual imported helper"
+      },
+      "used_helpers": {
+        "ensure_metadata": {
+          "path": "/home/inason/datapond-maintenance/fjc-judges-database/.venv/lib/python3.12/site-packages/datapond_build/metadata.py",
+          "sha256": "a75c3e140ecba0ed43f0dab91fe2732c32dd40d0a742dab0a982ee8b1f02c3f5"
+        },
+        "build_columns_table": {
+          "path": "/home/inason/datapond-maintenance/fjc-judges-database/.venv/lib/python3.12/site-packages/datapond_build/metadata.py",
+          "sha256": "a75c3e140ecba0ed43f0dab91fe2732c32dd40d0a742dab0a982ee8b1f02c3f5"
+        },
+        "export_dictionary": {
+          "path": "/home/inason/datapond-maintenance/fjc-judges-database/.venv/lib/python3.12/site-packages/datapond_build/metadata.py",
+          "sha256": "a75c3e140ecba0ed43f0dab91fe2732c32dd40d0a742dab0a982ee8b1f02c3f5"
+        }
+      },
+      "installed_packages": [
+        {
+          "name": "anyio",
+          "version": "4.15.1"
+        },
+        {
+          "name": "certifi",
+          "version": "2026.7.22"
+        },
+        {
+          "name": "charset-normalizer",
+          "version": "3.5.1"
+        },
+        {
+          "name": "click",
+          "version": "8.5.0"
+        },
+        {
+          "name": "datapond-build",
+          "version": "0.1.1"
+        },
+        {
+          "name": "duckdb",
+          "version": "1.5.5"
+        },
+        {
+          "name": "filelock",
+          "version": "3.32.6"
+        },
+        {
+          "name": "fsspec",
+          "version": "2026.7.0"
+        },
+        {
+          "name": "h11",
+          "version": "0.16.0"
+        },
+        {
+          "name": "hf-xet",
+          "version": "1.6.0"
+        },
+        {
+          "name": "httpcore",
+          "version": "1.0.9"
+        },
+        {
+          "name": "httpx",
+          "version": "0.28.1"
+        },
+        {
+          "name": "huggingface_hub",
+          "version": "1.31.0"
+        },
+        {
+          "name": "idna",
+          "version": "3.19"
+        },
+        {
+          "name": "packaging",
+          "version": "26.3"
+        },
+        {
+          "name": "PyYAML",
+          "version": "6.0.3"
+        },
+        {
+          "name": "requests",
+          "version": "2.34.2"
+        },
+        {
+          "name": "tqdm",
+          "version": "4.70.1"
+        },
+        {
+          "name": "typing_extensions",
+          "version": "4.16.0"
+        },
+        {
+          "name": "urllib3",
+          "version": "2.7.0"
+        }
+      ]
+    },
+    "public_host_verified": false,
+    "publication_status": "local; naming approval pending"
+  }
+}

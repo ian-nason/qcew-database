@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "rows": 3089813,
+  "original_non_title_field_strings_identical_across_both_official_archives": true,
+  "ordered_record_strings_sha256": "e3f43a28af432304626dbe86fad9a041a79d23034f7c090ed9faa90d49339ae7",
+  "full_profile_sha256": "59546863abd53182ccd033f75005488fdf2f2a43b48f9365229b377fb35a403b",
+  "singlefile_zip_sha256": "94ebbc589b1b500671c1fd507e2589a9eeb24dcd30eb07f1ce37b0018643f865",
+  "label_zip_sha256": "b2f6ed3b854af15bea207c1ef5ab8f1c22ee5b7abf79687505292beb44585921",
+  "derived_dictionary_identities": {
+    "area_fips": {
+      "path": "data/area_fips_labels.csv",
+      "rows": 4451,
+      "sha256": "9ebedc6873fcea68665719371303a37a3cc60bb2b8dbc80b5481abb6685d88a3",
+      "bytes": 152095,
+      "source": "label_archive; distinct exact code/title pairs; sorted by code"
+    },
+    "own_code": {
+      "path": "data/own_code_labels.csv",
+      "rows": 7,
+      "sha256": "9e7b4ef729834ef7a6fb2e6ddadfb87e118122492cecc0be69c3d9189a29b03d",
+      "bytes": 182,
+      "source": "label_archive; distinct exact code/title pairs; sorted by code"
+    },
+    "industry_code": {
+      "path": "data/industry_code_labels.csv",
+      "rows": 2159,
+      "sha256": "df50d8e10959db158817d4a108d2d496a9fa4f80799e37219a59bfbf38c6368b",
+      "bytes": 125567,
+      "source": "label_archive; distinct exact code/title pairs; sorted by code"
+    },
+    "agglvl_code": {
+      "path": "data/agglvl_code_labels.csv",
+      "rows": 36,
+      "sha256": "edda34aed96e25397f92b470e85565eac009698db9067c1d8b4d4a570995abc7",
+      "bytes": 1596,
+      "source": "label_archive; distinct exact code/title pairs; sorted by code"
+    },
+    "size_code": {
+      "path": "data/size_code_labels.csv",
+      "rows": 1,
+      "sha256": "dc5d7d7adad023f26ac97f4fdaf21bfa05e9f9d3f5dc51cfa10e15787feb6791",
+      "bytes": 49,
+      "source": "label_archive; distinct exact code/title pairs; sorted by code"
+    }
+  }
+}

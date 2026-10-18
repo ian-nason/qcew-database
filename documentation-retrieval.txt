@@ -1,0 +1,145 @@
+Official BLS pages retrieved through web browsing on 2026-10-18. This is rendered tool output, not an original HTML byte-for-byte copy. Direct www.bls.gov downloads received HTTP 403. Dataset and label archives are independently pinned from data.bls.gov.
+
+QCEW Open Data Access: CSV Data Slices : U.S. Bureau of Labor Statistics (https://www.bls.gov/cew/additional-resources/open-data/csv-data-slices.htm)
+citeturn11view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.bls.gov/cew/additional-resources/open-data/csv-data-slices.htm","lineno":null}); Total lines: 325
+L0: cite0†Skip to Content L1: 
+L2:   *   * cite1†Home L3:     * cite2†About BLS L4:     * cite3†History L5:     * cite4†Our Leadership L6:     * cite5†Budget and Performance L7:     * cite6†Questions and Answers L8:     * cite7†A-Z Index L9:     * cite8†Glossary L10:     * cite9†BLS Speakers Available L11:     * cite10†Errata L12:     * cite11†Contact BLS L13:     * cite12†Overview of BLS Statistics L14:     * cite13†Guide to Programs & Services L15:     * cite14†Demographics L16:     * cite15†Industries L17:     * cite16†Business Costs L18:     * cite17†Occupations L19:     * cite18†Geography L20:     * cite19†Resources For L21:     * cite20†Business Leaders L22:     * cite21†Consumers L23:     * cite22†Developers L24:     * cite23†Economists L25:     * cite24†Investors L26:     * cite25†Jobseekers L27:     * cite26†Media L28:     * cite27†Public Policymakers L29:     * cite28†Researcher L30:     * cite29†Students & Teachers L31:     * cite30†Survey Respondents L32:   * cite31†Subjects L33:     * cite32†Inflation & Prices L34:     * cite33†Consumer Price Index L35:     * cite34†Producer Price Indexes L36:     * cite35†Import/Export Price Indexes L37:     * cite36†Contract Escalation L38:     * cite37†Price Index Research L39:     * cite38†Pay & Benefits L40:     * cite39†Employment Cost Index L41:     * cite40†Employer Costs for Employee Compensation L42:     * cite41†Wage Data by Occupation L43:     * cite42†Earnings by Demographics L44:     * cite43†Earnings by Industry L45:     * cite44†County Wages L46:     * cite45†Benefits L47:     * cite46†Modeled Wage Estimates L48:     * cite47†Compensation Research L49:     * cite48†Strikes & Lockouts L50:     * cite49†Wage Records from Unemployment Insurance L51:     * cite50†Occupational Requirements L52:     * cite51†Unemployment L53:     * cite52†National Unemployment Rate L54:     * cite53†State & Local Unemployment Rates L55:     * cite54†Unemployment Research L56:     * cite55†Employment L57:     * cite43†National Employment L58:     * cite56†State & Local Employment L59:     * cite44†County Employment L60:     * cite52†Worker Characteristics L61:     * cite57†American Indian Report L62:     * cite58†Employment Projections L63:     * cite59†Job Openings & Labor Turnover Survey L64:     * cite60†Business Response Survey L65:     * cite41†Employment by Occupation L66:     * cite61†Work Experience Over Time L67:     * cite62†Business Employment Dynamics L68:     * cite63†Foreign Direct Investment L69:     * cite54†Employment Research L70:     * cite64†Workplace Injuries L71:     * cite65†Productivity L72:     * cite66†Labor and Total Factor Productivity L73:     * cite67†Productivity Research L74:     * cite68†Spending & Time Use L75:     * cite69†Consumer Expenditures L76:     * cite70†How Americans Spend Time L77:     * cite71†International L78:     * cite72†International Technical Cooperation L79:     * cite35†Import/Export Price Indexes L80:     * cite73†Geographic Information L81:     * cite74†Northeast (Boston-New York) L82:     * cite75†Mid-Atlantic (Philadelphia) L83:     * cite76†Southeast (Atlanta) L84:     * cite77†Midwest (Chicago) L85:     * cite78†Southwest (Dallas) L86:     * cite79†Mountain-Plains (Kansas City) L87:     * cite80†West (San Francisco) L88:   * cite81†Data Tools L89:     * cite82†Data Retrieval Tools L90:     * cite83†BLS Popular Series†data.bls.gov L91:     * cite84†Series Report†data.bls.gov L92:     * cite85†Top Picks, One Screen, Multi-Screen, and Maps L93:     * cite86†Data Finder†data.bls.gov L94:     * cite87†Public Data API L95:     * cite88†Charts and Applications L96:     * cite89†Charts for Economic News Releases L97:     * cite90†CPI Inflation Calculator L98:     * cite91†Injury and Illness Calculator†data.bls.gov L99:     * cite92†Pay Measure Comparison†data.bls.gov L100:     * cite93†Demographic Data Sources†data.bls.gov L101:     * cite94†COVID-19 Economic Trends†data.bls.gov L102:     * cite95†Industry Productivity Viewer†data.bls.gov L103:     * cite96†Employment and Wages Data Viewer†data.bls.gov L104:     * cite97†Industry Finder from the Quarterly Census of Employment and Wages†data.bls.gov L105:     * cite98†Customized Tables L106:     * cite99†U.S. Economy at a Glance L107:     * cite100†Regions, States & Areas at a Glance L108:     * cite101†Industry at a Glance L109:     * cite102†Text Files†download.bls.gov L110:     * cite103†News Release Tables L111:     * cite104†More Sources of Data L112:     * cite105†Restricted Data Access L113:     * cite106†Discontinued Databases L114:     * cite107†Questions & Answers L115:     * cite108†Special Notices L116:   * cite109†Publications L117: 
+L118:     * cite109†Latest Publications L119:     * cite110†The Economics Daily L120:     * cite111†Monthly Labor Review L121:     * cite112†Beyond the Numbers L122:     * cite113†Spotlight on Statistics L123:     * cite114†Reports L124:     * cite115†Videos L125:     * cite116†Career Outlook L126:     * cite117†Occupational Outlook Handbook L127:     * cite118†Geographic Profile L128:     * cite119†Handbook of Methods L129:     * cite120†Research Papers L130:     * cite121†Copyright Information L131:     * cite122†Contact & Help L132:     * cite123†Weekly Update L133: 
+L134:   * cite124†Economic Releases L135:     * cite125†Latest Releases L136:     * cite126†Major Economic Indicators L137:     * cite127†Schedules for news Releases L138:     * cite128†By Month L139:     * cite129†By News Release L140:     * cite130†Current Year L141:     * cite131†Prior Years L142:     * cite132†Archived News Releases L143:     * cite133†Employment & Unemployment L144:     * cite133†Monthly L145:     * cite133†Quarterly, annual, and other L146:     * cite134†Inflation & Prices L147:     * cite135†Pay & Benefits & Workplace Injuries L148:     * cite136†Productivity & Technology L149:     * cite137†Employment Projections L150:     * cite138†Regional News Releases L151:   * cite139†Classroom L152: 
+L153:     * cite139†K-12 Student & Teacher Resources L154:     * cite140†Games & Quizzes L155:     * cite141†Student's Desk L156:     * cite142†Teacher's Desk L157:     * cite143†Questions & Answers L158: # QCEW Open Data Access: CSV Data Slices
+L159: QCEW provides a collection of CSV files representing logical slices of data. Data are sliced by industry, by area, and by establishment size-class. An industry slice contains all the records associated with the industry for a single time period. An area slice contains all the records associated with the area for a single time period. A size slice contains all records published within a specific size class for the first quarter of a specified year. These three types of slices are detailed below.
+L160: These data slices are stored as CSV files. (Comma Separated Values) This file layout is defined below.
+L161:   * cite144†Data Slices by Industry L162:   * cite145†Data Slices by Area L163:   * cite146†Data Slices by Size Class L164:   * cite147†Quarterly Data Slice Layout L165:   * cite148†Annual-Average Data Slice Layout L166: In June 2016, the entire collection of CSV files was migrated to data.bls.gov. The rest of the URL structure remains the same. A server-side redirect points to the new location. This redirect will be turned off at some point in the future. If you downloaded any of the code examples in the past, We recommend you update your codebase with the new versions from the cite149†QCEW Open Data Sample Code page.
+L167: Example:
+L168: 
+L169:     	OLD:  https://www.bls.gov/cew/data/api/2026/1/area/US000.csv
+L170:     	NEW: https://data.bls.gov/cew/data/api/2026/1/area/US000.csv
+L171: ## Data Slices by Industry
+L172: An industry slice contains all the records associated with the industry for a single time period. Industry slices are stored in folders by year and quarter. Consider the following URL:
+L173:     cite150†https://data.bls.gov/cew/data/api/2026/1/industry/10.csv†data.bls.gov L174: This URL points to the total, all industries (NAICS 10) CSV file for first quarter 2026. Notice the year, quarter, and industry codes (2026,1, and 10) are all visible in the URL. You can change these values to point at different time periods and industries. The URL above also contains the word "industry". This designates the type of data you're requesting. In this case we're requesting industry data. Some NAICS codes are hyphenated. For example, the NAICS code for manufacturing is 31-33.
+L175: Industry file names do not contain hyphens, only numbers and underscores. So, the file for manufacturing is actually "31_33.csv" and to request first quarter manufacturing data for 2026, you'd use the following URL: cite151†https://data.bls.gov/cew/data/api/2026/1/industry/31_33.csv†data.bls.gov . For a complete list of industry titles and codes see the cite152†QCEW Industry Titles page.
+L176: ## Data Slices by Area
+L177: An area slice contains all the records associated with the area for a single time period. Area slices are stored in folders by year and quarter. Consider the following URL:
+L178:     cite153†https://data.bls.gov/cew/data/api/2026/1/area/26000.csv†data.bls.gov L179: This URL points to the Michigan, State-level CSV file for first quarter 2026. Notice the year, quarter, and area code (2026,1, and 26000) are all visible in the URL. You can change these values to point at different time periods and areas. The URL above also contains the word "area". This designates the type of data you're requesting. In this case we're requesting area data. For a complete list of area titles and codes see the cite154†QCEW Area Titles page.
+L180: ## Data Slices by Size Class
+L181: A size slice contains all records published within a specific size class for the first quarter of a specified year. Consider the following URL:
+L182:     cite155†https://data.bls.gov/cew/data/api/2026/1/size/3.csv†data.bls.gov L183: This URL points to the size-class 3 CSV file for first quarter 2026. Notice the year, quarter, and size code (2026,1, and 3) are all visible in the URL. You can change these values to point at different time periods and size classes. Note that size data is only available for the first quarter of each year. The URL above also contains the word "size". This designates the type of data you're requesting. In this case we're requesting size data. For a complete list of size-class titles and codes see the
+L184: cite156†QCEW Size Titles page.
+L185: Note: Data slices by size class do not include data for "All Establishment Sizes" (Size code=0). Please use the data slices by area or industry for these concepts.
+L186: ## Quarterly Data Slice Layout
+L187: 
+L188: Quarterly data slices are stored in CSV files. These quarterly files conform to the layout detailed in the table below.
+L189: QCEW CSV Quarterly Data Slice Fields
+L190: Field
+L191: Number  | Field
+L192: Name  | Data
+L193: Type  | Maximum
+L194: Length  | Field
+L195: Description
+L196: --- | --- | --- | --- | ---
+L197: 1  | area_fips  | Text  | 5  | 5-character cite154†FIPS code L198: 2  | own_code  | Text  | 1  | 1-character cite157†ownership code L199: 3  | industry_code  | Text  | 6  | 6-character cite152†industry code (NAICS, SuperSector) L200: 4  | agglvl_code  | Text  | 2  | 2-character cite158†aggregation level code L201: 5  | size_code  | Text  | 1  | 1-character cite156†size code L202: 6  | year  | Text  | 4  | 4-character year
+L203: 7  | qtr  | Text  | 1  | 1-character quarter (always A for annual)
+L204: 8  | disclosure_code  | Text  | 1  | 1-character disclosure code (either ' '(blank) or 'N' not disclosed)
+L205: 9  | qtrly_estabs  | Numeric  | 8  | Count of establishments for a given quarter
+L206: 10  | month1_emplvl  | Numeric  | 9  | Employment level for the first month of a given quarter
+L207: 11  | month2_emplvl  | Numeric  | 9  | Employment level for the second month of a given quarter
+L208: 12  | month3_emplvl  | Numeric  | 9  | Employment level for the third month of a given quarter
+L209: 13  | total_qtrly_wages  | Numeric  | 15  | Total wages for a given quarter
+L210: 14  | total_qtrly_wages  | Numeric  | 15  | Taxable wages for a given quarter
+L211: 15  | qtrly_contributions  | Numeric  | 13  | Quarterly contributions for a given quarter
+L212: 16  | avg_wkly_wage  | Numeric  | 8  | Average weekly wage for a given quarter
+L213: 17  | lq_disclosure_code  | Text  | 1  | 1-character location-quotient disclosure code (either ' '(blank) or 'N' not disclosed
+L214: 18  | lq_qtrly_estabs  | Numeric  | 8  | cite159†Location quotient of the quarterly establishment count relative to the U.S. (Rounded to the hundredths place)
+L215: 19  | lq_month1_emplvl  | Numeric  | 8  | cite159†Location quotient of the employment level for the first month of a given quarter relative to the U.S. (Rounded to the hundredths place)
+L216: 20  | lq_month2_emplvl  | Numeric  | 8  | cite159†Location quotient of the employment level for the second month of a given quarter relative to the U.S. (Rounded to the hundredths place)
+L217: 21  | lq_month3_emplvl  | Numeric  | 8  | cite159†Location quotient of the employment level for the third month of a given quarter relative to the U.S. (Rounded to the hundredths place)
+L218: 22  | lq_total_qtrly_wages  | Numeric  | 8  | cite159†Location quotient of the total wages for a given quarter relative to the U.S. (Rounded to the hundredths place)
+L219: 23  | lq_taxable_qtrly_wages  | Numeric  | 8  | cite159†Location quotient of the total taxable wages for a given quarter relative to the U.S. (Rounded to the hundredths place)
+L220: 24  | lq_qtrly_contributions  | Numeric  | 8  | cite159†Location quotient of the total contributions for a given quarter relative to the U.S. (Rounded to the hundredths place)
+L221: 25  | lq_avg_wkly_wage  | Numeric  | 8  | cite159†Location quotient of the average weekly wage for a given quarter relative to the U.S. (Rounded to the hundredths place)
+L222: 26  | oty_disclosure_code  | Text  | 1  | 1-character over-the-year disclosure code (either ' '(blank) or 'N' not disclosed)
+L223: 27  | oty_qtrly_estabs_chg  | Numeric  | 8  | cite160†Over-the-year change in the count of establishments for a given quarter
+L224: 28  | oty_qtrly_estabs_pct_chg  | Numeric  | 8  | cite160†Over-the-year percent change in the count of establishments for a given quarter (Rounded to the tenths place)
+L225: 29  | oty_month1_emplvl_chg  | Numeric  | 9  | cite160†Over-the-year change in the first month's employment level of a given quarter
+L226: 30  | oty_month1_emplvl_pct_chg  | Numeric  | 8  | cite160†Over-the-year percent change in the first month's employment level of a given quarter (Rounded to the tenths place)
+L227: 31  | oty_month2_emplvl_chg  | Numeric  | 9  | cite160†Over-the-year change in the second month's employment level of a given quarter
+L228: 32  | oty_month2_emplvl_pct_chg  | Numeric  | 8  | cite160†Over-the-year percent change in the second month's employment level of a given quarter (Rounded to the tenths place)
+L229: 33  | oty_month3_emplvl_chg  | Numeric  | 9  | cite160†Over-the-year change in the third month's employment level of a given quarter
+L230: 34  | oty_month3_emplvl_pct_chg  | Numeric  | 8  | cite160†Over-the-year percent change in the third month's employment level of a given quarter (Rounded to the tenths place)
+L231: 35  | oty_total_qtrly_wages_chg  | Numeric  | 15  | cite160†Over-the-year change in total quarterly wages for a given quarter
+L232: 36  | oty_total_qtrly_wages_pct_chg  | Numeric  | 8  | cite160†Over-the-year percent change in total quarterly wages for a given quarter (Rounded to the tenths place)
+L233: 37  | oty_taxable_qtrly_wages_chg  | Numeric  | 15  | cite160†Over-the-year change in taxable quarterly wages for a given quarter
+L234: 38  | oty_taxable_qtrly_wages_pct_chg  | Numeric  | 8  | cite160†Over-the-year percent change in taxable quarterly wages for a given quarter (Rounded to the tenths place)
+L235: 39  | oty_qtrly_contributions_chg  | Numeric  | 13  | cite160†Over-the-year change in quarterly contributions for a given quarter
+L236: 40  | oty_qtrly_contributions_pct_chg  | Numeric  | 8  | cite160†Over-the-year percent change in quarterly contributions for a given quarter (Rounded to the tenths place)
+L237: 41  | oty_avg_wkly_wage_chg  | Numeric  | 8  | cite160†Over-the-year change in average weekly wage for a given quarter
+L238: 42  | oty_avg_wkly_wage_pct_chg  | Numeric  | 8  | cite160†Over-the-year percent change in average weekly wage for a given quarter (Rounded to the tenths place)
+L239: ## Annual Average Data Slice Layout
+L240: 
+L241: Annual-average data slices are stored in CSV files. These annual-average files conform to the layout detailed in the table below.
+L242: QCEW CSV Annual Average Data Slice Fields
+L243: Field
+L244: Number  | Field
+L245: Name  | Data
+L246: Type  | Maximum
+L247: Length  | Field
+L248: Description
+L249: --- | --- | --- | --- | ---
+L250: 1  | area_fips  | Text  | 5  | 5-character cite154†FIPS code L251: 2  | own_code  | Text  | 1  | 1-character cite157†ownership code L252: 3  | industry_code  | Text  | 6  | 6-character cite152†industry code (NAICS, SuperSector) L253: 4  | agglvl_code  | Text  | 2  | 2-character cite158†aggregation level code L254: 5  | size_code  | Text  | 1  | 1-character cite156†size code L255: 6  | year  | Text  | 4  | 4-character year
+L256: 7  | qtr  | Text  | 1  | 1-character quarter (always A for annual)
+L257: 8  | disclosure_code  | Text  | 1  | 1-character disclosure code (either ' '(blank) or 'N' not disclosed)
+L258: 9  | annual_avg_estabs  | Numeric  | 8  | Annual average of quarterly establishment counts for a given year
+L259: 10  | annual_avg_emplvl  | Numeric  | 9  | Annual average of monthly employment levels for a given year
+L260: 11  | total_annual_wages  | Numeric  | 15  | Sum of the four quarterly total wage levels for a given year
+L261: 12  | taxable_annual_wages  | Numeric  | 15  | Sum of the four quarterly total taxable wage totals for a given year
+L262: 13  | annual_contributions  | Numeric  | 13  | Sum of the four quarterly contribution totals for a given year
+L263: 14  | annual_avg_wkly_wage  | Numeric  | 8  | Average weekly wage based on the 12-monthly employment levels and total annual wage levels
+L264: 15  | avg_annual_pay  | Numeric  | 8  | Average annual pay based on employment and wage levels for a given year
+L265: 16  | lq_disclosure_code  | Text  | 1  | 1-character location-quotient disclosure code (either '' (blank) or 'N' not disclosed)
+L266: 17  | lq_annual_avg_estabs  | Numeric  | 8  | cite159†Location quotient of annual average establishment count relative to the U.S. (Rounded to the hundredths place)
+L267: 18  | lq_annual_avg_emplvl  | Numeric  | 8  | cite159†Location quotient of annual average employment relative to the U.S. (Rounded to the hundredths place)
+L268: 19  | lq_total_annual_wages  | Numeric  | 8  | cite159†Location quotient of total annual wages relative to the U.S. (Rounded to the hundredths place)
+L269: 20  | lq_taxable_annual_wages  | Numeric  | 8  | cite159†Location quotient of taxable annual wages relative to the U.S. (Rounded to the hundredths place)
+L270: 21  | lq_annual_contributions  | Numeric  | 8  | cite159†Location quotient of total annual contributions relative to the U.S. (Rounded to the hundredths place)
+L271: 22  | lq_annual_avg_wkly_wage  | Numeric  | 8  | cite159†Location quotient of annual average weekly wage relative to the U.S. (Rounded to the hundredths place)
+L272: 23  | lq_avg_annual_pay  | Numeric  | 8  | cite159†Location quotient of annual average pay relative to the U.S. (Rounded to the hundredths place)
+L273: 24  | oty_disclosure_code  | Text  | 1  | 1-character over-the-year disclosure code (either ' '(blank) or 'N' not disclosed)
+L274: 25  | oty_annual_avg_estabs_chg  | Numeric  | 8  | cite160†Over-the-year change in annual average establishments for a given year
+L275: 26  | oty_annual_avg_estabs_pct_chg  | Numeric  | 8  | cite160†Over-the-year percent change in annual average establishments for a given year (Rounded to the tenths place)
+L276: 27  | oty_annual_avg_emplvl_chg  | Numeric  | 9  | cite160†Over-the-year change in annual average employment for a given year
+L277: 28  | oty_annual_avg_emplvl_pct_chg  | Numeric  | 8  | cite160†Over-the-year percent change in annual average employment for a given year (Rounded to the tenths place)
+L278: 29  | oty_total_annual_wages_chg  | Numeric  | 15  | cite160†Over-the-year change in the total annual wages for a given year
+L279: 30  | oty_total_annual_wages_pct_chg  | Numeric  | 8  | cite160†Over-the-year percent change in total annual wages for a given year (Rounded to the tenths place)
+L280: 31  | oty_taxable_annual_wages_chg  | Numeric  | 15  | cite160†Over-the-year change in taxable annual wages for a given year
+L281: 32  | oty_taxable_annual_wages_pct_chg  | Numeric  | 8  | cite160†Over-the-year percent change in taxable annual wages for a given year (Rounded to the tenths place)
+L282: 33  | oty_annual_contributions_chg  | Numeric  | 13  | cite160†Over-the-year change in annual contributions for a given year
+L283: 34  | oty_annual_contributions_pct_chg  | Numeric  | 8  | cite160†Over-the-year percent change in annual contributions for a given year (Rounded to the tenths place)
+L284: 35  | oty_annual_avg_wkly_wage_chg  | Numeric  | 8  | cite160†Over-the-year change in annual average weekly wage for a given year
+L285: 36  | oty_annual_avg_wkly_wage_pct_chg  | Numeric  | 8  | cite160†Over-the-year percent change in annual average weekly wage for a given year (Rounded to the tenths place)
+L286: 37  | oty_avg_annual_pay_chg  | Numeric  | 8  | cite160†Over-the-year change in average annual pay for a given year
+L287: 38  | oty_avg_annual_pay_pct_chg  | Numeric  | 8  | cite160†Over-the-year percent change in average annual pay for a given year (Rounded to the tenths place)
+L288: 
+L289: 
+L290: Last Modified Date: September 15, 2026
+L291: 
+L292:   * cite44†Quarterly Census of Employment and Wages L293:   * Methods
+L294: 
+L295:   * cite1†Home L296:   * cite31†Subjects L297:   * cite81†Data Tools L298:   * cite109†Publications L299:   * cite124†Economic Releases L300:   * cite139†Classroom L301:   * cite161†Beta L302: 
+L303: cite162†Image: U.S. Bureau of Labor Statistics Logo  L304: U.S. Bureau of Labor Statistics Quarterly Census of Employment and Wages Office of Employment and Unemployment Statistics Suitland Federal Center Floor 3 4600 Silver Hill Road Washington, DC 20212-0002 Telephone: 202-691-6567 cite163†www.bls.gov/CEW cite164†Contact QCEW†data.bls.gov L305: 
+L306: resources
+L307: 
+L308:   * cite165†Inspector General (OIG)†www.oig.dol.gov L309:   * cite5†Budget and Performance L310:   * cite166†Department of Labor Grants†www.dol.gov L311:   * cite167†No Fear Act L312:   * cite168†USA.gov†www.usa.gov L313: 
+L314: about the site
+L315:   * cite169†Sitemap L316:   * cite170†Freedom of Information Act L317:   * cite171†Privacy and Security Statement L318:   * cite172†Disclaimers L319:   * cite173†Linking and Copyright Info L320:   * cite174†Important Website Notices L321:   * cite175†Help and Tutorials L322:   * cite176†Accessibility Statement L323: 
+L324: Connect With BLS
+--------------------------------------------------------------------------------
+Employment and Wages Online Annual Averages, 2025 : U.S. Bureau of Labor Statistics (https://www.bls.gov/cew/publications/employment-and-wages-annual-averages/2025/home.htm)
+citeturn11view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.bls.gov/cew/publications/employment-and-wages-annual-averages/2025/home.htm","lineno":null}); Total lines: 476
+L0: cite0†Skip to Content L1: 
+L2:   *   * cite1†Home L3:     * cite2†About BLS L4:     * cite3†History L5:     * cite4†Our Leadership L6:     * cite5†Budget and Performance L7:     * cite6†Questions and Answers L8:     * cite7†A-Z Index L9:     * cite8†Glossary L10:     * cite9†BLS Speakers Available L11:     * cite10†Errata L12:     * cite11†Contact BLS L13:     * cite12†Overview of BLS Statistics L14:     * cite13†Guide to Programs & Services L15:     * cite14†Demographics L16:     * cite15†Industries L17:     * cite16†Business Costs L18:     * cite17†Occupations L19:     * cite18†Geography L20:     * cite19†Resources For L21:     * cite20†Business Leaders L22:     * cite21†Consumers L23:     * cite22†Developers L24:     * cite23†Economists L25:     * cite24†Investors L26:     * cite25†Jobseekers L27:     * cite26†Media L28:     * cite27†Public Policymakers L29:     * cite28†Researcher L30:     * cite29†Students & Teachers L31:     * cite30†Survey Respondents L32:   * cite31†Subjects L33:     * cite32†Inflation & Prices L34:     * cite33†Consumer Price Index L35:     * cite34†Producer Price Indexes L36:     * cite35†Import/Export Price Indexes L37:     * cite36†Contract Escalation L38:     * cite37†Price Index Research L39:     * cite38†Pay & Benefits L40:     * cite39†Employment Cost Index L41:     * cite40†Employer Costs for Employee Compensation L42:     * cite41†Wage Data by Occupation L43:     * cite42†Earnings by Demographics L44:     * cite43†Earnings by Industry L45:     * cite44†County Wages L46:     * cite45†Benefits L47:     * cite46†Modeled Wage Estimates L48:     * cite47†Compensation Research L49:     * cite48†Strikes & Lockouts L50:     * cite49†Wage Records from Unemployment Insurance L51:     * cite50†Occupational Requirements L52:     * cite51†Unemployment L53:     * cite52†National Unemployment Rate L54:     * cite53†State & Local Unemployment Rates L55:     * cite54†Unemployment Research L56:     * cite55†Employment --------------------------------------------------------------------------------
+QCEW Aggregation Level Codes : U.S. Bureau of Labor Statistics (https://www.bls.gov/cew/classifications/aggregation/agg-level-titles.htm)
+citeturn11view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.bls.gov/cew/classifications/aggregation/agg-level-titles.htm","lineno":null}); Total lines: 327
+--------------------------------------------------------------------------------
+BLS Copyright Information : U.S. Bureau of Labor Statistics (https://www.bls.gov/opub/copyright-information.htm)
+citeturn11view3 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.bls.gov/opub/copyright-information.htm","lineno":null}); Total lines: 203
+

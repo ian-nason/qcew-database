@@ -1,0 +1,9 @@
+{
+  "removed_duplicate_path": "releases/2025-candidate-01/annual-source.csv",
+  "bytes": 439538562,
+  "sha256": "53ca18a0d19db1901894b9f27c153d9abb17cc3e816c4d49fa88527326f08be2",
+  "retained_exact_cache": "data/annual-source.csv",
+  "retained_pinned_archive": "data/2025_annual_singlefile.zip",
+  "reason": "Avoid duplicate extracted public source consuming bounded workspace; failed build logs and empty candidate retained",
+  "verified_utc": "2026-10-18T14:14:17.993876+00:00"
+}

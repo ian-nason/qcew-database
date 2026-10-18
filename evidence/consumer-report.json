@@ -1,0 +1,1422 @@
+{
+  "status": "passed_localhost_not_public_host",
+  "artifact_sha256": "89bf1cef54f42f821965df6e9079b24fc7c4c0c86046fadc98e6cedf9ebd8a1d",
+  "python_client": "/home/inason/datapond-maintenance/.venv-datapond/lib/python3.12/site-packages/datapond/__init__.py",
+  "python_duckdb": "1.5.4",
+  "http_requests": [
+    {
+      "method": "HEAD",
+      "range": null,
+      "bytes": 0
+    },
+    {
+      "method": "GET",
+      "range": "bytes=0-1048575",
+      "bytes": 1048576
+    },
+    {
+      "method": "HEAD",
+      "range": null,
+      "bytes": 0
+    },
+    {
+      "method": "GET",
+      "range": "bytes=8-11",
+      "bytes": 4
+    },
+    {
+      "method": "GET",
+      "range": "bytes=0-4095",
+      "bytes": 4096
+    },
+    {
+      "method": "GET",
+      "range": "bytes=4096-8191",
+      "bytes": 4096
+    },
+    {
+      "method": "GET",
+      "range": "bytes=8192-12287",
+      "bytes": 4096
+    },
+    {
+      "method": "GET",
+      "range": "bytes=193736704-193998847",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=193212416-193474559",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=195309568-195571711",
+      "bytes": 262144
+    },
+    {
+      "method": "HEAD",
+      "range": null,
+      "bytes": 0
+    },
+    {
+      "method": "GET",
+      "range": "bytes=0-1048575",
+      "bytes": 1048576
+    },
+    {
+      "method": "HEAD",
+      "range": null,
+      "bytes": 0
+    },
+    {
+      "method": "GET",
+      "range": "bytes=8-11",
+      "bytes": 4
+    },
+    {
+      "method": "GET",
+      "range": "bytes=0-4095",
+      "bytes": 4096
+    },
+    {
+      "method": "GET",
+      "range": "bytes=4096-8191",
+      "bytes": 4096
+    },
+    {
+      "method": "GET",
+      "range": "bytes=8192-12287",
+      "bytes": 4096
+    },
+    {
+      "method": "GET",
+      "range": "bytes=193736704-193998847",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=193212416-193474559",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=195309568-195571711",
+      "bytes": 262144
+    },
+    {
+      "method": "HEAD",
+      "range": null,
+      "bytes": 0
+    },
+    {
+      "method": "GET",
+      "range": "bytes=0-1048575",
+      "bytes": 1048576
+    },
+    {
+      "method": "HEAD",
+      "range": null,
+      "bytes": 0
+    },
+    {
+      "method": "GET",
+      "range": "bytes=8-11",
+      "bytes": 4
+    },
+    {
+      "method": "GET",
+      "range": "bytes=0-4095",
+      "bytes": 4096
+    },
+    {
+      "method": "GET",
+      "range": "bytes=4096-8191",
+      "bytes": 4096
+    },
+    {
+      "method": "GET",
+      "range": "bytes=8192-12287",
+      "bytes": 4096
+    },
+    {
+      "method": "GET",
+      "range": "bytes=193736704-193998847",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=193212416-193474559",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=195047424-195309567",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=195309568-195571711",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=194785280-195047423",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=193474560-193736703",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=194260992-194523135",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=194523136-194785279",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=193998848-194260991",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=187969536-189280255",
+      "bytes": 1310720
+    },
+    {
+      "method": "GET",
+      "range": "bytes=189804544-190066687",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=12288-1060863",
+      "bytes": 1048576
+    },
+    {
+      "method": "GET",
+      "range": "bytes=2109440-2371583",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=3944448-4206591",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=2895872-3158015",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=2371584-2633727",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=6303744-7090175",
+      "bytes": 786432
+    },
+    {
+      "method": "GET",
+      "range": "bytes=7352320-8138751",
+      "bytes": 786432
+    },
+    {
+      "method": "GET",
+      "range": "bytes=8925184-9449471",
+      "bytes": 524288
+    },
+    {
+      "method": "GET",
+      "range": "bytes=9711616-9973759",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=10235904-10498047",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=9449472-9711615",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=11284480-11546623",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=13381632-14430207",
+      "bytes": 1048576
+    },
+    {
+      "method": "GET",
+      "range": "bytes=14692352-15478783",
+      "bytes": 786432
+    },
+    {
+      "method": "GET",
+      "range": "bytes=16527360-16789503",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=17051648-17313791",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=17575936-17838079",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=16789504-17051647",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=20459520-21508095",
+      "bytes": 1048576
+    },
+    {
+      "method": "GET",
+      "range": "bytes=21770240-22556671",
+      "bytes": 786432
+    },
+    {
+      "method": "GET",
+      "range": "bytes=23605248-23867391",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=24129536-24391679",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=24653824-24915967",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=23867392-24129535",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=28323840-29372415",
+      "bytes": 1048576
+    },
+    {
+      "method": "GET",
+      "range": "bytes=29634560-30158847",
+      "bytes": 524288
+    },
+    {
+      "method": "GET",
+      "range": "bytes=32256000-32518143",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=31731712-31993855",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=32780288-33042431",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=31993856-32255999",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=36450304-37498879",
+      "bytes": 1048576
+    },
+    {
+      "method": "GET",
+      "range": "bytes=37761024-38285311",
+      "bytes": 524288
+    },
+    {
+      "method": "GET",
+      "range": "bytes=40382464-40644607",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=39858176-40120319",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=40906752-41168895",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=40120320-40382463",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=44314624-45101055",
+      "bytes": 786432
+    },
+    {
+      "method": "GET",
+      "range": "bytes=45363200-46411775",
+      "bytes": 1048576
+    },
+    {
+      "method": "GET",
+      "range": "bytes=46673920-46936063",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=47984640-48246783",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=49819648-50081791",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=48771072-49033215",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=45101056-45363199",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=48246784-48508927",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=52441088-54013951",
+      "bytes": 1572864
+    },
+    {
+      "method": "GET",
+      "range": "bytes=54276096-54538239",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=55324672-55586815",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=55848960-56111103",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=56373248-56635391",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=55586816-55848959",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=59518976-60567551",
+      "bytes": 1048576
+    },
+    {
+      "method": "GET",
+      "range": "bytes=61878272-62140415",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=61353984-61616127",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=60829696-61091839",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=62402560-62664703",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=62926848-63188991",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=63451136-63713279",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=62664704-62926847",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=66334720-67383295",
+      "bytes": 1048576
+    },
+    {
+      "method": "GET",
+      "range": "bytes=67645440-68431871",
+      "bytes": 786432
+    },
+    {
+      "method": "GET",
+      "range": "bytes=69480448-69742591",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=72888320-73150463",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=70266880-70529023",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=69742592-70004735",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=73150464-74199039",
+      "bytes": 1048576
+    },
+    {
+      "method": "GET",
+      "range": "bytes=74461184-74985471",
+      "bytes": 524288
+    },
+    {
+      "method": "GET",
+      "range": "bytes=77082624-77344767",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=76558336-76820479",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=77606912-77869055",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=76820480-77082623",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=81276928-82325503",
+      "bytes": 1048576
+    },
+    {
+      "method": "GET",
+      "range": "bytes=82587648-83111935",
+      "bytes": 524288
+    },
+    {
+      "method": "GET",
+      "range": "bytes=83898368-84160511",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=84684800-84946943",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=86519808-86781951",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=85471232-85733375",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=84946944-85209087",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=89141248-90714111",
+      "bytes": 1572864
+    },
+    {
+      "method": "GET",
+      "range": "bytes=93073408-93597695",
+      "bytes": 524288
+    },
+    {
+      "method": "GET",
+      "range": "bytes=91500544-91762687",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=92286976-92549119",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=92549120-92811263",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=96743424-97791999",
+      "bytes": 1048576
+    },
+    {
+      "method": "GET",
+      "range": "bytes=98054144-98578431",
+      "bytes": 524288
+    },
+    {
+      "method": "GET",
+      "range": "bytes=99627008-100413439",
+      "bytes": 786432
+    },
+    {
+      "method": "GET",
+      "range": "bytes=100675584-100937727",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=104083456-105132031",
+      "bytes": 1048576
+    },
+    {
+      "method": "GET",
+      "range": "bytes=105394176-105918463",
+      "bytes": 524288
+    },
+    {
+      "method": "GET",
+      "range": "bytes=106704896-107491327",
+      "bytes": 786432
+    },
+    {
+      "method": "GET",
+      "range": "bytes=110374912-110637055",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=110637056-111947775",
+      "bytes": 1310720
+    },
+    {
+      "method": "GET",
+      "range": "bytes=112209920-112734207",
+      "bytes": 524288
+    },
+    {
+      "method": "GET",
+      "range": "bytes=114569216-114831359",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=114044928-114307071",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=115093504-115355647",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=114307072-114569215",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=119025664-120074239",
+      "bytes": 1048576
+    },
+    {
+      "method": "GET",
+      "range": "bytes=120336384-120860671",
+      "bytes": 524288
+    },
+    {
+      "method": "GET",
+      "range": "bytes=122695680-122957823",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=122171392-122433535",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=123219968-123482111",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=122433536-122695679",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=126365696-127414271",
+      "bytes": 1048576
+    },
+    {
+      "method": "GET",
+      "range": "bytes=127676416-128200703",
+      "bytes": 524288
+    },
+    {
+      "method": "GET",
+      "range": "bytes=129511424-130297855",
+      "bytes": 786432
+    },
+    {
+      "method": "GET",
+      "range": "bytes=130560000-130822143",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=133705728-134754303",
+      "bytes": 1048576
+    },
+    {
+      "method": "GET",
+      "range": "bytes=135016448-135540735",
+      "bytes": 524288
+    },
+    {
+      "method": "GET",
+      "range": "bytes=136851456-137637887",
+      "bytes": 786432
+    },
+    {
+      "method": "GET",
+      "range": "bytes=137900032-138162175",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=141307904-142356479",
+      "bytes": 1048576
+    },
+    {
+      "method": "GET",
+      "range": "bytes=142618624-143142911",
+      "bytes": 524288
+    },
+    {
+      "method": "GET",
+      "range": "bytes=143929344-144191487",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=144715776-144977919",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=145240064-145502207",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=145764352-146026495",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=144977920-145240063",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=149434368-150220799",
+      "bytes": 786432
+    },
+    {
+      "method": "GET",
+      "range": "bytes=152317952-153104383",
+      "bytes": 786432
+    },
+    {
+      "method": "GET",
+      "range": "bytes=157036544-157298687",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=151531520-151793663",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=150482944-150745087",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=153366528-153628671",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=157298688-158609407",
+      "bytes": 1310720
+    },
+    {
+      "method": "GET",
+      "range": "bytes=160706560-160968703",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=160182272-160444415",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=161230848-161492991",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=160444416-160706559",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=164900864-165949439",
+      "bytes": 1048576
+    },
+    {
+      "method": "GET",
+      "range": "bytes=167784448-168308735",
+      "bytes": 524288
+    },
+    {
+      "method": "GET",
+      "range": "bytes=167260160-167522303",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=166211584-166473727",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=169881600-170143743",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=168833024-169095167",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=168308736-168570879",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=172765184-174338047",
+      "bytes": 1572864
+    },
+    {
+      "method": "GET",
+      "range": "bytes=176173056-176435199",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=175648768-175910911",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=176697344-176959487",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=175910912-176173055",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=179843072-180891647",
+      "bytes": 1048576
+    },
+    {
+      "method": "GET",
+      "range": "bytes=181153792-181678079",
+      "bytes": 524288
+    },
+    {
+      "method": "GET",
+      "range": "bytes=182988800-183513087",
+      "bytes": 524288
+    },
+    {
+      "method": "GET",
+      "range": "bytes=183775232-184037375",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=184299520-184561663",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=183513088-183775231",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=190066688-190590975",
+      "bytes": 524288
+    },
+    {
+      "method": "GET",
+      "range": "bytes=191639552-191901695",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=14430208-14692351",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=18624512-18886655",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=25702400-25964543",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=29372416-29634559",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=33828864-34091007",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=41955328-42217471",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=58470400-58732543",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=64237568-64499711",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=70791168-71053311",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=78655488-78917631",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=80490496-80752639",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=88354816-88616959",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=95432704-95694847",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=97792000-98054143",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=101724160-101986303",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=116142080-116404223",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=108015616-108277759",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=117714944-117977087",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=123744256-124006399",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=131608576-131870719",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=138424320-138686463",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=146812928-147075071",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=148647936-148910079",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=154415104-154677247",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=155201536-155463679",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=162279424-162541567",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=171454464-171716607",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=179580928-179843071",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=178532352-178794495",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=185348096-185610239",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=190853120-191115263",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=191377408-191639551",
+      "bytes": 262144
+    },
+    {
+      "method": "HEAD",
+      "range": null,
+      "bytes": 0
+    },
+    {
+      "method": "GET",
+      "range": "bytes=0-1048575",
+      "bytes": 1048576
+    },
+    {
+      "method": "HEAD",
+      "range": null,
+      "bytes": 0
+    },
+    {
+      "method": "GET",
+      "range": "bytes=8-11",
+      "bytes": 4
+    },
+    {
+      "method": "GET",
+      "range": "bytes=0-4095",
+      "bytes": 4096
+    },
+    {
+      "method": "GET",
+      "range": "bytes=4096-8191",
+      "bytes": 4096
+    },
+    {
+      "method": "GET",
+      "range": "bytes=8192-12287",
+      "bytes": 4096
+    },
+    {
+      "method": "GET",
+      "range": "bytes=193736704-193998847",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=193212416-193474559",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=195309568-195571711",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=195047424-195309567",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=194785280-195047423",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=193474560-193736703",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=194260992-194523135",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=194523136-194785279",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=193998848-194260991",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=187969536-189280255",
+      "bytes": 1310720
+    },
+    {
+      "method": "GET",
+      "range": "bytes=189804544-190066687",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=12288-1060863",
+      "bytes": 1048576
+    },
+    {
+      "method": "GET",
+      "range": "bytes=1060864-1585151",
+      "bytes": 524288
+    },
+    {
+      "method": "GET",
+      "range": "bytes=1847296-6828031",
+      "bytes": 4980736
+    },
+    {
+      "method": "GET",
+      "range": "bytes=7090176-7614463",
+      "bytes": 524288
+    },
+    {
+      "method": "GET",
+      "range": "bytes=191639552-191901695",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=55586816-55848959",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=11284480-11546623",
+      "bytes": 262144
+    },
+    {
+      "method": "HEAD",
+      "range": null,
+      "bytes": 0
+    },
+    {
+      "method": "GET",
+      "range": "bytes=0-1048575",
+      "bytes": 1048576
+    },
+    {
+      "method": "HEAD",
+      "range": null,
+      "bytes": 0
+    },
+    {
+      "method": "GET",
+      "range": "bytes=8-11",
+      "bytes": 4
+    },
+    {
+      "method": "GET",
+      "range": "bytes=0-4095",
+      "bytes": 4096
+    },
+    {
+      "method": "GET",
+      "range": "bytes=4096-8191",
+      "bytes": 4096
+    },
+    {
+      "method": "GET",
+      "range": "bytes=8192-12287",
+      "bytes": 4096
+    },
+    {
+      "method": "GET",
+      "range": "bytes=193736704-193998847",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=193212416-193474559",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=195309568-195571711",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=195047424-195309567",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=194785280-195047423",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=193474560-193736703",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=194260992-194523135",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=194523136-194785279",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=193998848-194260991",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=187969536-189280255",
+      "bytes": 1310720
+    },
+    {
+      "method": "GET",
+      "range": "bytes=189804544-190066687",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=12288-1060863",
+      "bytes": 1048576
+    },
+    {
+      "method": "GET",
+      "range": "bytes=1060864-1585151",
+      "bytes": 524288
+    },
+    {
+      "method": "GET",
+      "range": "bytes=1847296-6828031",
+      "bytes": 4980736
+    },
+    {
+      "method": "GET",
+      "range": "bytes=7090176-7614463",
+      "bytes": 524288
+    },
+    {
+      "method": "GET",
+      "range": "bytes=191639552-191901695",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=55586816-55848959",
+      "bytes": 262144
+    },
+    {
+      "method": "GET",
+      "range": "bytes=11284480-11546623",
+      "bytes": 262144
+    }
+  ],
+  "transferred_bytes": 112521236,
+  "r_output": [
+    "r-consumer-cran.txt",
+    "r-consumer-patched.txt"
+  ],
+  "r_client_provenance": {
+    "cran": {
+      "installed_files_sha256": {
+        "DESCRIPTION": "c6be4a8a88f6eda1fbcf9c7dcb057c80c72eec8103ddc8f71a31c2df8c117800",
+        "INDEX": "a436399fc6a2967b3a8f2f61309d23679c30d613112402e5e1f24c459f9fd01e",
+        "LICENSE": "19c4566c98cc428077ff2a0c8306c4fd3b7262e5032cab5261b29b3ab50d5144",
+        "Meta/Rd.rds": "80ab8b7125a69b67dd9e9af3e10056977c1de7734524bfe4294c6c0960a57eb9",
+        "Meta/features.rds": "3d0dc41bc2f8db966da9c2b0e2a291e6137e628e676f88a64a127d73b459b93e",
+        "Meta/hsearch.rds": "f095ef8abadd071b2dc283b1a8d9b3f0156d501d5525dd4ea1fbf156d71ab06d",
+        "Meta/links.rds": "bf90953ba50a26d3233303e466226273cc095186d1d5e35d16875c5ad1787d20",
+        "Meta/nsInfo.rds": "edf70be297cd1c0fab37c01b53612a4c558a584ac8199aa4f461c32c65a33406",
+        "Meta/package.rds": "3ede01ba288b6b55c160b7a71890f1e11a4dbada4e2a8ce2638e122f3a82b9a7",
+        "Meta/vignette.rds": "5ea3b913eb6299b4e9ce463255ac30f08b3ae1098826ad8b699626fa04c706f6",
+        "NAMESPACE": "2b34b9a1928b532268a713f2aa5b293d694bf4dfd34e93312bf76a22c84c30f9",
+        "NEWS.md": "950b8aaf81e245d1aa898157346e470f156d0fcc9c08fba9a0f651aebdb77b55",
+        "R/datapond": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "R/datapond.rdb": "5355bf813373cdabb238756187ba23f9a3bba4e892687e33375bf5339c0c45e1",
+        "R/datapond.rdx": "c7961225524caf58c8d4e0120ca79246cdf262ce6043b6f8cc325952f09c4e52",
+        "WORDLIST": "55db6e05b58eb30d29f606bf0d943d467eb6a405aebfc17038d23215b59719b4",
+        "doc/datapond.R": "b1a21a6fd3f2f0cc390144a530a41f90afc275d4c301ef6707fb6a3d8c45cefb",
+        "doc/datapond.Rmd": "176cc6cd700b3efa0c10e5197b9dba54fdd35b6b8b30467340cc70c44b7f44e9",
+        "doc/datapond.html": "df0e03013fc6599cd146b2ce800603fa611f17f32b41c675ae97306acfe35199",
+        "doc/index.html": "870c658cefad3c8cfd2508141669fa69c42095004caf1409e2e451abccbd39f9",
+        "help/AnIndex": "4422615141ac6939b966b886aca2f81bece192f24c9afde7f63a5656f273a890",
+        "help/aliases.rds": "3c03a4636ba9325f02caead03dcc219a1050e21725f0b6f4625d63fff6f62656",
+        "help/datapond.rdb": "5e844b91c1e158ea8196978e635fdcf17b7405be4452b6fb3ad8e51866ce9d76",
+        "help/datapond.rdx": "b49ec0bb232a9bf555aa785507520be18604c6b280c8be6506f6b2a7347b6d19",
+        "help/paths.rds": "f4bf897947ff300d1b067a56f7fa406725cc8ee410c8366e6fc68e73f09fb636",
+        "html/00Index.html": "9bf61c91f9738711cb73c901ef7a1c1808dda62137dd2801b018ad1df5a6656b",
+        "html/R.css": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b"
+      },
+      "installed_manifest_sha256": "7bf460c432fd266030b4560814e679fe8a4118ef7297f9ac7a010d5b6b6a3367"
+    },
+    "patched": {
+      "installed_files_sha256": {
+        "DESCRIPTION": "236878b062c25b025cfcf188d0908b4645db8a94e0215da9d695971fda91c61d",
+        "INDEX": "88b0ab6bad98d39c97cf926f027c342d6b712200ff6464cf9f88a16881159cb0",
+        "LICENSE": "19c4566c98cc428077ff2a0c8306c4fd3b7262e5032cab5261b29b3ab50d5144",
+        "Meta/Rd.rds": "ad529c9e8702435a0b60800d1e0e9cf42d7f6dca06086ea1ccfd7690df370019",
+        "Meta/features.rds": "3d0dc41bc2f8db966da9c2b0e2a291e6137e628e676f88a64a127d73b459b93e",
+        "Meta/hsearch.rds": "b7b23cfdef7dc6e4061b02853088acbc322943bf004d3e6ac0308e41be2622ab",
+        "Meta/links.rds": "bf90953ba50a26d3233303e466226273cc095186d1d5e35d16875c5ad1787d20",
+        "Meta/nsInfo.rds": "edf70be297cd1c0fab37c01b53612a4c558a584ac8199aa4f461c32c65a33406",
+        "Meta/package.rds": "d88e9042215486569cd64bf04fa1b05c39169f2deb2300deae47b83abb47047c",
+        "Meta/vignette.rds": "5ea3b913eb6299b4e9ce463255ac30f08b3ae1098826ad8b699626fa04c706f6",
+        "NAMESPACE": "2b34b9a1928b532268a713f2aa5b293d694bf4dfd34e93312bf76a22c84c30f9",
+        "NEWS.md": "4be1b78818d2980719e0d404d22f6c4f228a24e3e5900103230ef6ef1b84d660",
+        "R/datapond": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "R/datapond.rdb": "1d68d1ce062ec8697d1f391a753b9534635932ec5bb59fb692413d9b897a9f10",
+        "R/datapond.rdx": "f3da9e79f80fb13cdf39714ef3ab6a3e40078a44b2010c4a76abeb68700a5baa",
+        "WORDLIST": "55db6e05b58eb30d29f606bf0d943d467eb6a405aebfc17038d23215b59719b4",
+        "doc/datapond.R": "4bf881be8f3353a3ee2f7aa4537ae197e7fac1a58fa97d77a79c8ab340f4c91c",
+        "doc/datapond.Rmd": "3150ba1281868a0a3bc0830a11945095ab8b148120934c7e8a35c8393881fbb3",
+        "doc/datapond.html": "7fa3ca39f697f79df38e39cb54f9028d46725217808f314a18e49e38b7cb11d8",
+        "doc/index.html": "870c658cefad3c8cfd2508141669fa69c42095004caf1409e2e451abccbd39f9",
+        "help/AnIndex": "4422615141ac6939b966b886aca2f81bece192f24c9afde7f63a5656f273a890",
+        "help/aliases.rds": "3c03a4636ba9325f02caead03dcc219a1050e21725f0b6f4625d63fff6f62656",
+        "help/datapond.rdb": "bea5c70616c6113ee861ca21814dbebea614019091d27592e5d4262ccee11236",
+        "help/datapond.rdx": "c74190c0b083ded7cad542c5944292a648b375d2ea244e4c3f4532496a75fa25",
+        "help/paths.rds": "197785819eaa6edb60c75b6f3cdfecd222cbaaa14db88165e7398f343bf4c9fb",
+        "html/00Index.html": "c387e6cf3ab54de94599e909347742d86b2d0538e2e785bee98c0303ecde0ab1",
+        "html/R.css": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b"
+      },
+      "installed_manifest_sha256": "db693dd8735561cbc54c487a847aca929a59c51e6155f29ada04d29e9ad38f23"
+    }
+  },
+  "artifact_unchanged": true,
+  "resource_limits": "128 MiB per client, one thread, no spill; outer guard covers process group",
+  "note": "Local HTTP confirms reader/range compatibility. Actual Hugging Face verification remains required after authorized publication."
+}
