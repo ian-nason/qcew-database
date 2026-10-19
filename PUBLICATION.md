@@ -1,5 +1,7 @@
 # Verified public release
 
+> Historical checkpoint, recorded before catalog integration. The dataset is now in the public catalog: [registry PR #6](https://github.com/datapond-db/registry/pull/6) merged on October 18, 2026. The dated checks and version labels below are preserved; see [current consumer guidance](docs/CONSUMERS.md).
+
 Published October 18, 2026. [Dataset](https://huggingface.co/datasets/Nason/qcew-database) and [immutable dataset commit](https://huggingface.co/datasets/Nason/qcew-database/commit/334c467dba413928233fb1d8cd1c0ff8de5c0105). The corresponding registry submission is a draft PR; global datapond discovery is not claimed until that PR is merged.
 
 Artifact: `qcew.duckdb`, 195,571,712 bytes, SHA-256 `89bf1cef54f42f821965df6e9079b24fc7c4c0c86046fadc98e6cedf9ebd8a1d`. All four uploaded files were streamed anonymously from the immutable public commit and matched their frozen sizes/checksums. A 4096-byte range request returned HTTP 206 with the exact Content-Range and original bytes. See publication/public-byte-verification.json.

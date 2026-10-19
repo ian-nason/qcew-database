@@ -10,6 +10,8 @@ Download/query the [Hugging Face dataset](https://huggingface.co/datasets/Nason/
 
 ## Quick Start
 
+Choose one route: the [datapond package](#datapond-package) finds the database by catalog ID; the direct [Python](#python-duckdb), [R](#r-with-dbi-and-duckdb) and SQL examples use a fixed artifact URL. These are alternatives, not steps that must all be run. The SQL block requires a DuckDB SQL client.
+
 ### DuckDB CLI
 
 ```sql
@@ -27,13 +29,17 @@ WHERE area_fips = 'US000' AND own_code = '0' AND industry_code = '10'
   AND agglvl_code = '10' AND size_code = '0' AND year = '2025' AND qtr = 'A';
 ```
 
-The database is 196 MB. Filtered queries fetch only the byte ranges they touch; an unfiltered scan of `annual_raw` reads most of the file, so download it locally if you plan to scan repeatedly. The examples use this immutable artifact URL:
+The database file is 186.5 MiB. Filtered queries fetch only the byte ranges they touch; an unfiltered scan of `annual_raw` reads most of the file, so download it locally if you plan to scan repeatedly. File size is disk storage, not a RAM estimate. Remote queries still run on your machine and can transfer much of the file. A filter or `LIMIT` after a join or aggregate does not guarantee a small scan. The 128 MiB setting limits DuckDB's buffer pool, not the whole Python/R process; with spill disabled, a larger query can fail at that limit. Download only if you have room for the file, temporary download bytes and any existing copy.
+
+The examples use this immutable artifact URL:
 
 ```
 https://huggingface.co/datasets/Nason/qcew-database/resolve/334c467dba413928233fb1d8cd1c0ff8de5c0105/qcew.duckdb
 ```
 
 ### Python (duckdb)
+
+Install the Python dependency once in the environment that runs your query: `python -m pip install duckdb`.
 
 ```python
 import duckdb
@@ -51,7 +57,9 @@ con.sql("""
 con.close()
 ```
 
-### R (DBI + duckdb)
+### R with DBI and duckdb
+
+Install the R dependencies once: `install.packages(c("DBI", "duckdb"))`.
 
 ```r
 library(DBI)
@@ -70,13 +78,16 @@ In the tested R DuckDB 1.5.5 configuration, BIGINT and DECIMAL results are expos
 
 ### datapond package
 
-These examples use the public default catalog and the package's normal discovery and connection API:
+Install or upgrade the Python client with `python -m pip install --upgrade datapond`, or install the released R client from [CRAN](https://cran.r-project.org/package=datapond) with `install.packages("datapond")`. Remote examples are tested with Python datapond 0.1.5 (DuckDB 1.5.4) and CRAN R datapond 0.1.0 (DuckDB 1.5.5); older DuckDB reader versions are not verified here. R 0.1.1 is a separate development version, not the CRAN release.
+
+The examples below use the public default catalog. For limits set before attachment, use the direct DuckDB examples above; package examples here set limits immediately after connecting:
 
 ```python
 import datapond
 print(datapond.list())
 datapond.describe('qcew', table='annual_raw')
 con = datapond.connect('qcew')
+con.execute("SET memory_limit='128MiB'; SET threads=1; SET max_temp_directory_size='0B'")
 con.sql("SELECT annual_avg_emplvl, total_annual_wages FROM annual WHERE area_fips = 'US000' AND own_code = '0' AND industry_code = '10' AND agglvl_code = '10'").show()
 con.close()
 ```
@@ -85,6 +96,7 @@ con.close()
 library(datapond)
 dp_list()
 con <- dp_connect('qcew')
+DBI::dbExecute(con, "SET memory_limit='128MiB'; SET threads=1; SET max_temp_directory_size='0B'")
 dp_describe(con, table = 'annual_raw')
 DBI::dbGetQuery(con, "SELECT annual_avg_emplvl, total_annual_wages FROM annual WHERE area_fips = 'US000' AND own_code = '0' AND industry_code = '10' AND agglvl_code = '10'")
 dp_disconnect(con)
@@ -108,12 +120,14 @@ DBI::dbGetQuery(con, "SELECT annual_avg_emplvl, total_annual_wages FROM annual W
 dp_disconnect(con)
 ```
 
-Verify the recorded artifact SHA-256 after downloading. In tested Python 0.1.1, the optional Hugging Face download path follows the default branch rather than the pinned URL; see [consumer verification](https://github.com/ian-nason/qcew-database/blob/main/docs/CONSUMERS.md) for the tested configuration.
+Verify the recorded artifact SHA-256 after downloading. In Python datapond 0.1.5 as well as 0.1.1, the optional `huggingface_hub` download path follows the repository default branch rather than the pinned URL. For an exact-version copy, download the immutable URL shown above and verify its checksum; see [consumer verification](https://github.com/ian-nason/qcew-database/blob/main/docs/CONSUMERS.md) for the tested configuration.
 
 Default-catalog discovery and representative remote queries were verified after the registry merge. Earlier full-download checks used an isolated candidate registry. See [consumer verification](https://github.com/ian-nason/qcew-database/blob/main/docs/CONSUMERS.md) for exact client versions, paths, resource limits and download behavior. The direct URL examples above work independently of the catalog. The SQL examples below use the `qcew` catalog alias from the direct-URL quick start.
 
 
 ## Tables
+
+One annual data row is one area × ownership group × industry × aggregation level × size class for 2025. These rows include overlapping totals and detail; choose one level before summing. Start with the `annual` view so suppressed measures become NULL.
 
 | Table | Description | Rows | Columns |
 |---|---|---:|---:|
@@ -181,7 +195,7 @@ The full set is in [examples.sql](https://github.com/ian-nason/qcew-database/blo
 
 1. **Suppression flags are independent and partial.** Three flags (`disclosure_code`, `lq_disclosure_code`, `oty_disclosure_code`) each govern their own measures. There are 1,860,359 suppressed level rows, 1,872,172 suppressed quotient rows and 1,937,791 suppressed change rows. Suppressed rows still carry valid establishment counts. Never read a suppressed zero as zero employment or pay.
 2. **Suppressed cells are inside published totals.** Summing disclosed detail gives an incomplete total; the view does not estimate or back out suppressed values. Report how many eligible cells have published values ([BLS disclosure note](https://www.bls.gov/cew/publications/employment-and-wages-annual-averages/2025/home.htm#disclosure-restrictions)).
-3. **Rows nest; pick one grain.** National, state, county, metro and combined-area rows overlap, industry totals nest, and ownership 0 (total), 8 (total government) and 9 (UI covered excluding federal) overlap sectors 1, 2, 3 and 5. Filter on `agglvl_code` (for example 74 county/sector/ownership, 75 county/3-digit, 55 state/3-digit), not on code length.
+3. **Rows overlap; choose one level.** National, state, county, metro and combined-area rows overlap, industry totals nest, and ownership 0 (total), 8 (total government) and 9 (UI covered excluding federal) overlap sectors 1, 2, 3 and 5. Filter on `agglvl_code` (for example 74 county/sector/ownership, 75 county/3-digit, 55 state/3-digit), not on code length.
 4. **Geography moves.** Connecticut uses planning-region codes from 2024 data; codes ending `999` are unallocated. Check `areas` before fixing a study universe.
 5. **Industry is 2022 NAICS.** `62` is health care and social assistance; `621` ambulatory care; `622` hospitals. Do not splice historical series without checking classification changes.
 6. **Employment counts covered jobs, not people.** A worker with two covered employers counts twice; the self-employed and other uncovered groups are absent. Annual employment averages 12 monthly levels; establishments average four quarters; rounding can break exact additivity.

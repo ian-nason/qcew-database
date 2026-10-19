@@ -1,5 +1,7 @@
 # Independent audit disposition
 
+> Historical October 18, 2026 checkpoint: the text below is retained as the record of that stage, including its then-pending gates and earlier candidate hashes. It is not current availability or a new approval. Publication and catalog integration are now complete; see the [current README](README.md), [publication receipt](PUBLICATION.md) and [consumer guidance](docs/CONSUMERS.md).
+
 Session e54f89e5-c01a-468b-8418-436671219b59, initial review 01, 2026-10-18. No independent execution by Claude is claimed.
 
 1. Medium establishment evidence: audit_release.py now reports flagged-row and nonzero counts for all four retained establishment fields. On N rows, LQ has 1,819,361 nonzero values, absolute change 588,950, and percentage change 588,949. README/HF wording says retained exactly as published. This is empirical source evidence, not a claim that every flagged zero is an independently estimated value.

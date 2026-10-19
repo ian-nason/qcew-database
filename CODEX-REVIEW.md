@@ -1,5 +1,7 @@
 # Codex implementation and verification review
 
+> Historical October 18, 2026 checkpoint: the text below is retained as the record of that stage, including its then-pending gates and earlier candidate hashes. It is not current availability or a new approval. Publication and catalog integration are now complete; see the [current README](README.md), [publication receipt](PUBLICATION.md) and [consumer guidance](docs/CONSUMERS.md).
+
 Release artifact `89bf1cef54f42f821965df6e9079b24fc7c4c0c86046fadc98e6cedf9ebd8a1d`, 195,571,712 bytes. This is the primary Codex agent's review, not a claim of an independent second Codex agent.
 
 Data: all 3,089,813 raw rows and typed cells were compared with independent Python CSV/Decimal parsing of the pinned official singlefile ZIP before checkpoint and after read-only reopen. All 6,654 reference rows match exact code/title pairs from the same-year official by-area ZIP. Regenerating the reference CSVs produced byte-identical files. Both official representations have identical ordered non-title string-record SHA-256s. Schemas, 48 dictionary columns, metadata, full keys, references, flags, numeric ranges and counts pass.
