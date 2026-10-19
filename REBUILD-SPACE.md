@@ -1,5 +1,7 @@
 # Required space preparation before another rebuild
 
+> Historical October 18, 2026 checkpoint: the text below is retained as the record of that stage, including its then-pending gates and earlier candidate hashes. It is not current availability or a new approval. Publication and catalog integration are now complete; see the [current README](README.md), [publication receipt](PUBLICATION.md) and [consumer guidance](docs/CONSUMERS.md).
+
 The completed read-only audit peaked at 1,913,445,049 bytes under the 2 GiB isolated-repository cap. This checkout retains multiple audited candidates and extraction caches; another guarded build here may hit the cap.
 
 Use a fresh isolated clone/worktree for a future pinned rebuild, with one ingestion worker and the same guard. Download or copy only the checksum-pinned inputs required for that build. Keep this release checkout and its evidence intact. If reuse is necessary, first inventory and hash individually named redundant source extractions or superseded local candidate databases, check ownership and retained originals, and record any removal; never blanket-delete release/evidence directories or touch FEC/shared checkouts. Do not raise the guard or assume ZIP size predicts peak disk/RAM.

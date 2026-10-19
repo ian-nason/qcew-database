@@ -10,7 +10,7 @@ A version-pinned DuckDB edition of the U.S. Bureau of Labor Statistics [Quarterl
 
 Use it for descriptive questions about covered employment, establishments and nominal pay in places and industries. The examples focus on county health care and social assistance and state ambulatory health care. This is establishment-based industry data, not occupational wages, unique people, a longitudinal employer panel or a causal analysis. It has no direct O*NET occupation or ATUS respondent crosswalk.
 
-## Tables and grain
+## Tables and what one row represents
 
 | Table | Rows | Meaning |
 |---|---:|---|
@@ -56,11 +56,11 @@ Suppressed detailed values are included in published higher-level totals. Summin
 
 ## Examples
 
-Open a locally built candidate read-only:
+If you already have a local copy, replace the path below with its location. Otherwise use the remote quick start in the [overview](../README.md#quick-start). The SQL examples here assume this single database is the default catalog:
 
 ```python
 import duckdb
-con = duckdb.connect('releases/2025-release-final/qcew.duckdb', read_only=True)
+con = duckdb.connect('/path/to/qcew.duckdb', read_only=True)
 con.sql("SELECT * FROM _metadata").show()
 ```
 
@@ -73,7 +73,7 @@ WHERE agglvl_code='74' AND own_code='5' AND industry_code='62'
 ORDER BY annual_avg_emplvl DESC, area_fips LIMIT 20;
 ```
 
-[examples.sql](../examples.sql) also selects one national total, reports disclosure coverage, compares state ambulatory-care employment/pay, and joins ambulatory and hospital rows after fixing their grain. Saved results bind to the artifact checksum. These queries establish useful behavior, not demand or adoption.
+[examples.sql](../examples.sql) also selects one national total, reports disclosure coverage, compares state ambulatory-care employment/pay, and joins ambulatory and hospital rows after fixing their grain. Saved results bind to the artifact checksum.
 
 
 ## Dictionary, update and license

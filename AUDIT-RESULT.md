@@ -1,5 +1,7 @@
 # QCEW 2025 local release checkpoint
 
+> Historical October 18, 2026 checkpoint: the text below is retained as the record of that stage, including its then-pending gates and earlier candidate hashes. It is not current availability or a new approval. Publication and catalog integration are now complete; see the [current README](README.md), [publication receipt](PUBLICATION.md) and [consumer guidance](docs/CONSUMERS.md).
+
 **Locally audited and committed; not published, uploaded, registered or merged.** New public destination approval is pending in the parent task. This checkpoint does not request approval again.
 
 The final artifact has **3,089,813 annual records plus 6,654 version-matched dictionary records: 3,096,467 rows, six data tables, one view, 48 documented columns**. It is **195,571,712 bytes**; SHA-256 **`89bf1cef54f42f821965df6e9079b24fc7c4c0c86046fadc98e6cedf9ebd8a1d`**. Both official source archives are pinned by SHA-256; every original non-title row agrees across the singlefile and by-area archives. Exact labels are derived from the latter because standalone BLS dictionary downloads returned HTTP403.

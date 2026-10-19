@@ -1,5 +1,7 @@
 # Documentation review — October 18, 2026
 
+> Historical checkpoint, recorded before catalog integration. The dataset is now in the public catalog: [registry PR #6](https://github.com/datapond-db/registry/pull/6) merged on October 18, 2026. The dated checks and version labels below are preserved; see [current consumer guidance](docs/CONSUMERS.md).
+
 The public cards and source overview now follow the existing EOIR/Open Payments pattern: quick starts, described tables with row/column counts, views, useful queries, researcher caveats, provenance, license, navigation and changelog. Detailed build and interpretation notes remain linked; every original README section is preserved, with relative links adjusted for the new directory.
 
 Actual Claude Code collaboration used persistent session `6945c837-efac-4ee7-8206-17354fdf79f8` in the existing authenticated included-Max environment. Claude drafted the cards and specific website/style changes, then reviewed the proposed text and required two corrections. Its [final closure](evidence/documentation/05-doc-closure.txt) confirms both were addressed. [Session metadata](evidence/documentation/claude-session.json) records prompt/output hashes and timestamps; the original persistent session and prompts remain inspectable in the project workspace. No new credentials, paid extras, or tool access were enabled. Claude's review was text-only: it did not execute commands, recompute hashes or inspect rendered screenshots.
